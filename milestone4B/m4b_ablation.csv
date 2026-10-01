@@ -1,0 +1,6 @@
+model,D_structure,val_loss,mean_FPT_ps,FPT_error,KS_p,BIC
+Ablation_A,Constant Isotropic: D0 * I,0.50077,50.86,145.79%,0.0003,-1400.0
+Ablation_B,"Constant Anisotropic: diag(D_phi, D_psi)",0.50077,37.29,80.23%,0.0263,-1392.2
+Ablation_C,State-Dependent Isotropic: d(z) * I,0.50077,52.44,153.45%,0.0002,-1368.9
+Ablation_D,"State-Dependent Diagonal: diag(D_phi(z), D_psi(z))",0.50077,24.41,17.98%,0.2515,-1330.0
+Ablation_E,Full State-Dependent Tensor: D_ij(z) >= 0,0.50077,22.3,7.78%,0.388,-1291.1

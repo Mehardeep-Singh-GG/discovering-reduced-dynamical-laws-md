@@ -1,0 +1,39 @@
+{
+    "candidate_id": "cand_007",
+    "operator_class": "ClassD_Thermodynamic_Coupled",
+    "name": "Thermodynamic Potential Drift f = -D0*grad(U) + Scalar Diffusion",
+    "equation": "dz = -D0*nabla_U(phi,psi)*dt + sqrt(2*D0)*dW",
+    "complexity": {
+        "n_ops": 8,
+        "n_params": 2,
+        "n_mem": 0,
+        "n_latent": 0,
+        "n_nonlocal": 0,
+        "composite_complexity": 9.0
+    },
+    "validation_metrics": {
+        "train_loss": 0.77062,
+        "validation_loss": 0.82911,
+        "test_mse": 0.8584,
+        "equilibrium_error": 0.04331,
+        "correlation_error": 0.0369,
+        "kinetic_error": 1.1978,
+        "mean_fpt_ps": 45.48,
+        "md_mean_fpt_ps": 20.69,
+        "ks_pval": 0.0004,
+        "kl_divergence": 2.3233,
+        "mdl_or_bic": -348.5,
+        "physical_validity": "PASS",
+        "structural_stability": 0.88,
+        "survives": false
+    },
+    "multilag_rmse": {
+        "1": 0.9265,
+        "2": 1.2311,
+        "5": 2.03989,
+        "10": 3.02448,
+        "20": 4.48504,
+        "50": 7.47106,
+        "100": 10.90037
+    }
+}

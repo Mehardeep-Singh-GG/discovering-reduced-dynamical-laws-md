@@ -1,0 +1,4 @@
+Kernel_Family,Parameters,RSS,BIC,Selected
+Exponential,"A=0.080, tau=5.35 ps",0.027415,-367.61,True
+Bi-Exponential,"A1=0.009, tau1=20.00, A2=0.073, tau2=4.49",0.027267,-360.06,False
+Power-Law (Fractional),"A=0.116, beta=0.857",0.028763,-365.21,False

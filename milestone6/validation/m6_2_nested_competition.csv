@@ -1,0 +1,7 @@
+Model_Tier,Formula,Free_Temperature_Params,Equilibrium_Drift_Error,Diffusion_Deformation_Error,Mean_FPT_RelError_pct,Mean_KS_pvalue,MDL_Score,Parsimony_Verdict
+H0_No_Temperature_Dependence,L_T = L_0 (Canonical Frozen),0,0.03771,0.3516,18.86,0.2525,-18374.6,VIABLE_COMPETITOR
+H1_Scalar_Mobility,L_T = f_0 + a(T)*D_0,1,0.03771,0.3516,19.35,0.2634,-18248.7,VIABLE_COMPETITOR
+H2_Mobility_Plus_Diffusion_Mode_G1,L_T = f_0 + [a(T)*D_0 + b1(T)*G1],3,0.03771,0.0961,19.46,0.2844,-30522.1,VIABLE_COMPETITOR
+H3_Drift_Mode_g1,L_T = [f_0 + c1(T)*g1] + a(T)*D_0,3,0.01178,0.3516,16.92,0.3399,-18793.3,VIABLE_COMPETITOR
+H4_Joint_LowRank_Deformation,L_T = [f_0 + c1*g1] + [a(T)*D_0 + b1*G1],5,0.01178,0.0961,16.76,0.3173,-32837.3,VIABLE_COMPETITOR
+H5_Fully_Temperature_Specific,Independent refit at each temperature,45,0.0,0.0,24.77,0.1502,-27495.0,VIABLE_COMPETITOR

@@ -1,0 +1,8 @@
+Condition,MD_Mean_TP_ps,Sim_Mean_TP_ps,TP_RelError_pct,MD_Mean_Recrossings,Sim_Mean_Recrossings
+Layer_B_300K,1.87,3.22,72.68,0.7,1.25
+Layer_B_325K,1.81,3.17,75.44,0.7,1.29
+Layer_B_350K,2.22,3.03,36.63,0.91,1.23
+Layer_B_375K,1.98,3.06,55.0,0.81,1.25
+Layer_D_400K_Extrap,2.03,3.02,48.81,0.93,1.25
+Layer_D_Gamma0.5,1.96,3.24,64.71,0.83,1.22
+Layer_D_Gamma2.0,1.71,3.1,81.47,0.7,1.22

@@ -1,0 +1,13 @@
+{
+    "milestone": "Milestone 7 (Terminal Blind Falsification)",
+    "model_name": "Tier H2: Mobility + Low-Rank Diffusion Mode G1",
+    "operator_equation": "L_T = f_0(z)*grad + div * [ (T/T0)^1.5731 * D0(z) - 0.09607*(T-T0)*G1(z) ] * grad",
+    "status": "FROZEN_AND_SEALED",
+    "rules": [
+        "NO parameter fitting on test data",
+        "NO basis modification",
+        "NO representation modification",
+        "NO threshold modification",
+        "NO post-hoc rescues"
+    ]
+}

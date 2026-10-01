@@ -1,0 +1,12 @@
+{
+    "law_type": "Power Law",
+    "formula": "a(T) = (T / T_0)^alpha",
+    "reference_temperature_T0_K": 300.0,
+    "alpha": 1.5731,
+    "alpha_se": 0.082,
+    "alpha_ci95": [
+        1.412,
+        1.734
+    ],
+    "selection_criterion": "Minimum Description Length (MDL) and Leave-One-Temperature-Out MSE"
+}

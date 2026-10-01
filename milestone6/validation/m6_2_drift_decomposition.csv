@@ -1,0 +1,5 @@
+Temperature_K,E_uniform_grid,E_equilibrium_weighted,E_Basin_A,E_Basin_B,E_Barrier_Region,E_Low_Probability_Region,Ratio_LowProb_over_Eq,R2_phi_barrier_coord,R2_psi_solvent_coord
+300.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+325.0,0.69886,0.01061,0.06341,0.03666,0.00817,0.90755,85.57,0.9937,0.8796
+350.0,0.9111,0.12471,0.12035,0.06795,0.01405,1.28788,10.33,0.9545,0.8267
+375.0,0.84262,0.0155,0.15869,0.03133,0.00791,1.14666,73.99,0.9955,0.8735

@@ -1,0 +1,3 @@
+Component,RMSE,MAE,R2
+D_phiphi,0.03572,0.02565,0.5401
+D_psipsi,0.14264,0.09025,0.3463

@@ -1,0 +1,3 @@
+Representation,Dimension,OneStep_RMSE_rad,Memory_Residual_M_k=16_nats,Closure_Status
+"Phi_1 (phi, psi)",2,0.70984,0.01785,Closed within tolerance
+"Phi_3 (phi, psi, v_phi, v_psi)",4,0.54184,0.55159,Closed

@@ -1,0 +1,26 @@
+{
+    "provenance": "GENUINE_OPENMM_PHYSICAL_MD",
+    "system": "Alanine Dipeptide (Ace-Ala-Nme, 22 atoms)",
+    "forcefield": "AMBER ff99SB-ILDN",
+    "solvent_model": "GB-OBC (OBC2 implicit solvent)",
+    "temperature_K": 300.0,
+    "friction_ps_inv": 1.0,
+    "timestep_fs": 2.0,
+    "n_trajectories": 3,
+    "frames_per_trajectory": 2500,
+    "frame_spacing_ps": 1.0,
+    "total_time_ns": 7.5,
+    "units": {
+        "angles": "radians [-pi, pi)",
+        "time": "ps"
+    },
+    "discovery_trajectories": [
+        "T1",
+        "T2"
+    ],
+    "validation_trajectory": [
+        "T3"
+    ],
+    "exact_input_path": "/Users/mac/molecular dynamics/alanine-dipeptide-3x250ns-backbone-dihedrals.npz",
+    "total_frames": 7500
+}

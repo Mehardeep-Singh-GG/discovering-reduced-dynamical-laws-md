@@ -1,0 +1,4 @@
+Model,RMSE_1ps,RMSE_20ps,RMSE_50ps,KL_equilibrium,Autocorr_error,Mean_FPT,FPT_error_ratio,Complexity
+Constant-D unconstrained,0.7405,7.8094,20.0104,1.6749,0.0534,31.5,1.52,1
+PMF + constant-D,0.8964,14.4627,36.3254,2.0905,0.0336,24.5,1.18,2
+PMF + state-dependent-D,1.0712,18.0178,44.9673,2.11,0.0351,24.27,1.17,3

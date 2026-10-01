@@ -1,0 +1,39 @@
+{
+    "candidate_id": "cand_002",
+    "operator_class": "ClassA_Linear_Markov",
+    "name": "Linear Coupled Drift + Constant Covariance",
+    "equation": "dz = (f0 + A*z)*dt + B0*dW",
+    "complexity": {
+        "n_ops": 6,
+        "n_params": 9,
+        "n_mem": 0,
+        "n_latent": 0,
+        "n_nonlocal": 0,
+        "composite_complexity": 10.5
+    },
+    "validation_metrics": {
+        "train_loss": 0.56779,
+        "validation_loss": 0.57857,
+        "test_mse": 0.57557,
+        "equilibrium_error": 0.02676,
+        "correlation_error": 0.0217,
+        "kinetic_error": 0.0511,
+        "mean_fpt_ps": 21.75,
+        "md_mean_fpt_ps": 20.69,
+        "ks_pval": 0.348,
+        "kl_divergence": 0.8922,
+        "mdl_or_bic": -1246.9,
+        "physical_validity": "FAIL",
+        "structural_stability": 0.88,
+        "survives": false
+    },
+    "multilag_rmse": {
+        "1": 0.75866,
+        "2": 0.86388,
+        "5": 1.12584,
+        "10": 1.54492,
+        "20": 2.14034,
+        "50": 3.43978,
+        "100": 4.96145
+    }
+}

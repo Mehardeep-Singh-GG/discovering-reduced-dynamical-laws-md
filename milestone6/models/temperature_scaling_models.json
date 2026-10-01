@@ -1,0 +1,19 @@
+{
+    "reference_temperature_K": 300.0,
+    "candidate_models": {
+        "Linear_Thermal": {
+            "formula": "a(T) = T / T0",
+            "R2": -0.9165
+        },
+        "Power_Law_Ensemble": {
+            "formula": "a(T) = (T / T0)^alpha",
+            "alpha": 2.2115,
+            "alpha_ci_95": [
+                1.8624,
+                2.7037
+            ],
+            "R2": 0.7463
+        }
+    },
+    "selected_model": "Power_Law_Ensemble"
+}

@@ -1,0 +1,3 @@
+Model_Variant,Off_Diagonal_Included,Mean_FPT_ps,CI_95_Mean_ps,Median_FPT_ps,Transitions_N,Kinetic_RelError_vs_MD,KS_p_vs_MD,Wasserstein_vs_MD_ps
+"D_full(z) [Full Tensor, cand006]",True,22.29,"[20.46, 24.08]",17.0,408,7.72%,0.3181,4.44
+"D_diag(z) [Same Diag, Zero Off-Diag]",False,23.33,"[21.36, 25.49]",17.0,347,12.74%,0.5008,5.11

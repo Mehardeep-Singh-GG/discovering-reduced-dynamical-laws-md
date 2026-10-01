@@ -1,0 +1,39 @@
+{
+    "candidate_id": "cand_008",
+    "operator_class": "ClassD_Thermodynamic_Coupled",
+    "name": "Complete Thermodynamic Operator f = -D(z)*grad(U) + div(D) + b(z) + Tensor D",
+    "equation": "dz_i = [-sum_j D_ij*partial_j U + sum_j partial_j D_ij + b_i]*dt + L(z)*dW",
+    "complexity": {
+        "n_ops": 30,
+        "n_params": 25,
+        "n_mem": 0,
+        "n_latent": 0,
+        "n_nonlocal": 0,
+        "composite_complexity": 42.5
+    },
+    "validation_metrics": {
+        "train_loss": 0.65707,
+        "validation_loss": 0.63979,
+        "test_mse": 0.68736,
+        "equilibrium_error": 0.04509,
+        "correlation_error": 0.2231,
+        "kinetic_error": 3.2915,
+        "mean_fpt_ps": 88.8,
+        "md_mean_fpt_ps": 20.69,
+        "ks_pval": 0.0963,
+        "kl_divergence": 2.4736,
+        "mdl_or_bic": -699.3,
+        "physical_validity": "PASS",
+        "structural_stability": 0.88,
+        "survives": false
+    },
+    "multilag_rmse": {
+        "1": 0.82907,
+        "2": 1.04592,
+        "5": 1.67291,
+        "10": 2.41762,
+        "20": 3.56647,
+        "50": 5.90617,
+        "100": 8.63811
+    }
+}

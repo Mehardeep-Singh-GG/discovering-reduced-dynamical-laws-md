@@ -1,0 +1,93 @@
+{
+    "audit_name": "Milestone 7 Preflight Provenance & Zero-Leakage Audit",
+    "timestamp": "2026-09-15T07:14:16Z",
+    "model_composite_sha256": "1c17ed051d138bb24d4d70be7a9f5cf73fbaf3bff2c6c39293950dc14d6ceaa7",
+    "model_component_hashes": {
+        "model_manifest.json": {
+            "expected": "970a5c731c6828237804511ddfc8ad16845f56069fc0d73d0323d65ec74d3686",
+            "actual": "970a5c731c6828237804511ddfc8ad16845f56069fc0d73d0323d65ec74d3686",
+            "match": true
+        },
+        "basins/basin_definitions.json": {
+            "expected": "4880a01c4a0bb065a8bec43273eee534b6bc2bbc6d5a36d6004cbc569d425e39",
+            "actual": "4880a01c4a0bb065a8bec43273eee534b6bc2bbc6d5a36d6004cbc569d425e39",
+            "match": true
+        },
+        "simulation/integrator_parameters.json": {
+            "expected": "f83866d09af35798f04540930e143602ee9233c41fbac030e062f0c2fb102697",
+            "actual": "f83866d09af35798f04540930e143602ee9233c41fbac030e062f0c2fb102697",
+            "match": true
+        },
+        "diffusion/D0.npy": {
+            "expected": "1e6703842f9e327c38ad64175f0f34f56712046ef49cd469f2ba006e00fbfc64",
+            "actual": "1e6703842f9e327c38ad64175f0f34f56712046ef49cd469f2ba006e00fbfc64",
+            "match": true
+        },
+        "diffusion/G1.npy": {
+            "expected": "4b56414d22d52ae878f932b0acf54e57215540fa7cf5e88ea08446d54b7d63eb",
+            "actual": "4b56414d22d52ae878f932b0acf54e57215540fa7cf5e88ea08446d54b7d63eb",
+            "match": true
+        },
+        "diffusion/diffusion_basis.json": {
+            "expected": "624c293ba50166deb4e76b3423de181f63739fb315e3274578cf76bc60793081",
+            "actual": "624c293ba50166deb4e76b3423de181f63739fb315e3274578cf76bc60793081",
+            "match": true
+        },
+        "drift/drift_basis.json": {
+            "expected": "ba58e0fe4ad56f0b071e62ec7436b75b48a509a48bcad653c5d77493632a5bd0",
+            "actual": "ba58e0fe4ad56f0b071e62ec7436b75b48a509a48bcad653c5d77493632a5bd0",
+            "match": true
+        },
+        "drift/f0_coefficients.npy": "12541ae6494ce9b53dba14432918f71103ec1747f3084962881d4d19e5973e78",
+        "representation/Phi_definition.json": {
+            "expected": "22b37c7f2e814bb7759be85c0fa0c0e5643827749987e8a1447c6666ef5f358a",
+            "actual": "22b37c7f2e814bb7759be85c0fa0c0e5643827749987e8a1447c6666ef5f358a",
+            "match": true
+        },
+        "representation/coordinate_convention.json": {
+            "expected": "af745dfb6190b9731d26684c76c3400edf8b963311555bda9f3c317e4222bb22",
+            "actual": "af745dfb6190b9731d26684c76c3400edf8b963311555bda9f3c317e4222bb22",
+            "match": true
+        },
+        "temperature/deformation_parameters.json": {
+            "expected": "de1f9cbc22233df59becc201f05ea323134b3b7ed908e327f69b629e44d2c618",
+            "actual": "de1f9cbc22233df59becc201f05ea323134b3b7ed908e327f69b629e44d2c618",
+            "match": true
+        },
+        "temperature/mobility_parameters.json": {
+            "expected": "606c1f9c374c36791f76f8a480420cc101abd5903c953a4cff17762dbe108787",
+            "actual": "606c1f9c374c36791f76f8a480420cc101abd5903c953a4cff17762dbe108787",
+            "match": true
+        }
+    },
+    "frozen_model_verified": true,
+    "training_provenance": {
+        "discovery_trajectory_T1": "alanine-dipeptide-3x250ns-backbone-dihedrals.npz (arr_0)",
+        "m6_calibration_trajectories": [
+            "milestone6/data/alanine_dipeptide_300K_traj1.npz",
+            "milestone6/data/alanine_dipeptide_325K_traj1.npz",
+            "milestone6/data/alanine_dipeptide_350K_traj1.npz",
+            "milestone6/data/alanine_dipeptide_375K_traj1.npz"
+        ]
+    },
+    "training_data_hashes": {
+        "discovery_T1": "713d1e3d3b9a1e09756c9adb52646230fcf9738de7b030b3062316a09d22bf3e",
+        "m6_cal_300K": "480f9e2c997aaa1a3e5c4e8b3488990ba9c2af093e0405d658291219f785cf9c",
+        "m6_cal_325K": "82ef82ed54dcdf86d9ab7c9e70b234aa8c1f51f84da5bc126e1c75215252e14a",
+        "m6_cal_350K": "48d7d3af038e705e3c6326ca71d3f921c251bcf33a4143ee4f46ac73a6403459",
+        "m6_cal_375K": "ccb58722159e87d182ca06f9f40a5552cfe0dbb8c0171525a06d8815adeef213"
+    },
+    "leakage_verification": {
+        "D_train_cap_D_test_empty": true,
+        "test_trajectories_strictly_held_out": true,
+        "test_trajectories_never_used_in_fitting": true
+    },
+    "provenance_mapping": {
+        "basis_fit_source": "Canonical 250 ns trajectory T1 (M4B/M5 discovery)",
+        "mobility_fit_source": "Local one-step residual covariance on calibration trajectories T^(1)_T",
+        "deformation_mode_source": "SVD on calibration residual covariance differences",
+        "coordinate_fit_source": "Frozen backbone dihedrals (phi, psi)",
+        "hyperparameter_source": "Pre-registered MDL / BIC criteria (zero tuning in M7)"
+    },
+    "preflight_status": "PASS \u2014 ZERO INFORMATION LEAKAGE CONFIRMED"
+}

@@ -1,0 +1,5 @@
+Regime,Transfer_Protocol,Empirical_MD_Mean_FPT_ps,Model_Mean_FPT_ps,Kinetic_RelError,KS_pvalue,Diffusion_Scaling_Factor,Verdict
+Regime_R1 (Baseline 300 K),Discovery Ensemble,20.69,23.96,15.81%,0.3365,1.0,PASS (Within-Regime Generalization)
+Regime_R2 (Elevated 350 K),Strict Parameter Transfer (Unchanged 300K Params),11.99,25.16,109.87%,0.0,1.0,FAIL (Major Parameter Discrepancy)
+Regime_R2 (Elevated 350 K),"Theoretical Structural Transfer (Physical D ~ T, s=1.167)",11.99,18.76,56.50%,0.0008,1.167,"PARTIAL_TRANSFER (Acceleration captured, distribution rejected)"
+Regime_R2 (Elevated 350 K),Hypothesis 2 (Independently Estimated Local Scaling a_emp=1.471),11.99,12.99,8.40%,0.633,1.471,PASS (Hypothesis 2: Local Scaling Resolves Kinetic Discrepancy)

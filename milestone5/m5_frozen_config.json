@@ -1,0 +1,70 @@
+{
+    "milestone": "Milestone 5 \u2014 Frozen-Law Held-Out and Cross-Regime Validation",
+    "frozen_status": {
+        "representation": "FROZEN: z_t = (phi_t, psi_t) in [-pi, pi)^2",
+        "operator_structure": "FROZEN: dz_t = f*(z_t)dt + L*(z_t)dW_t, D*(z) = diag(D_phi(z), D_psi(z))",
+        "parameters": "FROZEN: cand_005 coefficients fitted on T1",
+        "diffusion_field": "FROZEN: 50x50 SPSD regularized diagonal field from T1",
+        "drift_field": "FROZEN: 15-harmonic periodic Fourier basis from T1",
+        "basin_definitions": {
+            "Basin_A": {
+                "phi": [
+                    -1.8,
+                    -0.4
+                ],
+                "psi": [
+                    -1.5,
+                    0.2
+                ]
+            },
+            "Basin_B": {
+                "phi": [
+                    -3.141592653589793,
+                    -1.2
+                ],
+                "psi": [
+                    1.0,
+                    3.141592653589793
+                ]
+            }
+        },
+        "random_seed_simulation": 42,
+        "random_seed_bootstrap": 1042
+    },
+    "cryptographic_provenance_hashes_sha256": {
+        "milestone4B/m4b_config.json": "e11e7466660a12e7139e99a51591eef22a38c18221d716a1c18940c18289c4b2",
+        "milestone4B/candidates/cand_005.json": "a53e2a2e9b58073d40be93c782494a021629b6c933cb21ce8cdb162d62b89e3d",
+        "milestone4B/candidate_equations.txt": "ae8f3151237444352d08d6b2dcbc7178f2d03ad0ff60ff702964649194de5bee",
+        "milestone4B/m4b_candidate_models.csv": "74aa800b5e4729e47b03fa53e6d6c98f6d706fb8125c839f58f31d402a1cf686"
+    },
+    "datasets": {
+        "regime_R1_baseline_300K": {
+            "file": "/Users/mac/molecular dynamics/alanine-dipeptide-3x250ns-backbone-dihedrals.npz",
+            "T1_train_id": "arr_0",
+            "T2_val_id": "arr_1",
+            "T3_test_id": "arr_2",
+            "temperature_K": 300.0,
+            "friction_ps": 1.0,
+            "frames": 2500,
+            "dt_frame_ps": 1.0
+        },
+        "regime_R2_cross_regime_350K": {
+            "file": "/Users/mac/molecular dynamics/alanine-dipeptide-regime2-350K.npz",
+            "temperature_K": 350.0,
+            "friction_ps": 1.0,
+            "frames": 2500,
+            "dt_frame_ps": 1.0
+        }
+    },
+    "validation_horizons_ps": [
+        1,
+        2,
+        5,
+        10,
+        20,
+        50,
+        100
+    ],
+    "bootstrap_resamples": 1000,
+    "block_size_frames": 50
+}

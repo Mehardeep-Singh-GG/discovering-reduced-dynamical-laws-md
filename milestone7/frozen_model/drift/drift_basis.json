@@ -1,0 +1,25 @@
+{
+    "basis_type": "2D Fourier trigonometric series",
+    "max_harmonic": 2,
+    "cross_harmonics": true,
+    "num_terms": 15,
+    "terms": [
+        "const",
+        "sin(phi)",
+        "cos(phi)",
+        "sin(psi)",
+        "cos(psi)",
+        "sin(2phi)",
+        "cos(2phi)",
+        "sin(2psi)",
+        "cos(2psi)",
+        "sin(phi-psi)",
+        "cos(phi-psi)",
+        "sin(phi+psi)",
+        "cos(phi+psi)",
+        "sin(phi)*cos(psi)",
+        "cos(phi)*sin(psi)"
+    ],
+    "regularization": "Ridge (alpha=1.0)",
+    "training_provenance": "M4B/M5 canonical discovery trajectory T1 (250 ns, 300K)"
+}

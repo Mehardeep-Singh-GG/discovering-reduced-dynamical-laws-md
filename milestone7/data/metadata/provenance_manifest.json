@@ -1,0 +1,177 @@
+{
+    "milestone": "Milestone 7 Blind Test Data",
+    "engine": "OpenMM 8.x LangevinMiddleIntegrator",
+    "forcefield": "AMBER ff99SB-ILDN with OBC2 implicit solvent",
+    "total_trajectories": 21,
+    "total_simulated_time_ns": 52.5,
+    "trajectories": [
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_300K_test_rep1.npz",
+            "temp": 300.0,
+            "gamma": 1.0,
+            "seed": 93001,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_300K_test_rep2.npz",
+            "temp": 300.0,
+            "gamma": 1.0,
+            "seed": 93002,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_300K_test_rep3.npz",
+            "temp": 300.0,
+            "gamma": 1.0,
+            "seed": 93003,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_325K_test_rep1.npz",
+            "temp": 325.0,
+            "gamma": 1.0,
+            "seed": 93251,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_325K_test_rep2.npz",
+            "temp": 325.0,
+            "gamma": 1.0,
+            "seed": 93252,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_325K_test_rep3.npz",
+            "temp": 325.0,
+            "gamma": 1.0,
+            "seed": 93253,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_350K_test_rep1.npz",
+            "temp": 350.0,
+            "gamma": 1.0,
+            "seed": 93501,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_350K_test_rep2.npz",
+            "temp": 350.0,
+            "gamma": 1.0,
+            "seed": 93502,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_350K_test_rep3.npz",
+            "temp": 350.0,
+            "gamma": 1.0,
+            "seed": 93503,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_375K_test_rep1.npz",
+            "temp": 375.0,
+            "gamma": 1.0,
+            "seed": 93751,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_375K_test_rep2.npz",
+            "temp": 375.0,
+            "gamma": 1.0,
+            "seed": 93752,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_B_Independent_Test",
+            "file": "milestone7/data/independent_md/alanine_dipeptide_375K_test_rep3.npz",
+            "temp": 375.0,
+            "gamma": 1.0,
+            "seed": 93753,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_D_Adversarial_400K",
+            "file": "milestone7/data/adversarial_md/alanine_dipeptide_400K_rep1.npz",
+            "temp": 400.0,
+            "gamma": 1.0,
+            "seed": 94001,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_D_Adversarial_400K",
+            "file": "milestone7/data/adversarial_md/alanine_dipeptide_400K_rep2.npz",
+            "temp": 400.0,
+            "gamma": 1.0,
+            "seed": 94002,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_D_Adversarial_400K",
+            "file": "milestone7/data/adversarial_md/alanine_dipeptide_400K_rep3.npz",
+            "temp": 400.0,
+            "gamma": 1.0,
+            "seed": 94003,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_D_Adversarial_Friction_gamma0.5",
+            "file": "milestone7/data/adversarial_md/alanine_dipeptide_gamma0.5_rep1.npz",
+            "temp": 300.0,
+            "gamma": 0.5,
+            "seed": 90501,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_D_Adversarial_Friction_gamma0.5",
+            "file": "milestone7/data/adversarial_md/alanine_dipeptide_gamma0.5_rep2.npz",
+            "temp": 300.0,
+            "gamma": 0.5,
+            "seed": 90502,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_D_Adversarial_Friction_gamma0.5",
+            "file": "milestone7/data/adversarial_md/alanine_dipeptide_gamma0.5_rep3.npz",
+            "temp": 300.0,
+            "gamma": 0.5,
+            "seed": 90503,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_D_Adversarial_Friction_gamma2.0",
+            "file": "milestone7/data/adversarial_md/alanine_dipeptide_gamma2.0_rep1.npz",
+            "temp": 300.0,
+            "gamma": 2.0,
+            "seed": 92001,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_D_Adversarial_Friction_gamma2.0",
+            "file": "milestone7/data/adversarial_md/alanine_dipeptide_gamma2.0_rep2.npz",
+            "temp": 300.0,
+            "gamma": 2.0,
+            "seed": 92002,
+            "frames": 2500
+        },
+        {
+            "type": "Layer_D_Adversarial_Friction_gamma2.0",
+            "file": "milestone7/data/adversarial_md/alanine_dipeptide_gamma2.0_rep3.npz",
+            "temp": 300.0,
+            "gamma": 2.0,
+            "seed": 92003,
+            "frames": 2500
+        }
+    ]
+}

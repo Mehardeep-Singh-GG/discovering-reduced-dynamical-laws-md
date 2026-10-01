@@ -1,0 +1,2 @@
+Training_Temperatures,Predicted_Temperature_K,Fitted_Alpha_on_Training,Predicted_a_375,Empirically_Measured_a_375,Relative_Parameter_Prediction_Error_pct,MD_Mean_FPT_375K_ps,Predicted_Mean_FPT_375K_ps,Kinetic_Prediction_RelError_pct,KS_Statistic,KS_pvalue,Verdict
+"300K, 325K, 350K",375.0,2.6109,1.7907,1.5519,15.39,12.67,10.13,19.99,0.1526,0.0775,PASS_OUT_OF_TEMPERATURE_PREDICTION

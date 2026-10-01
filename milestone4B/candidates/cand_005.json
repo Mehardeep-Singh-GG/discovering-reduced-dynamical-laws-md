@@ -1,0 +1,39 @@
+{
+    "candidate_id": "cand_005",
+    "operator_class": "ClassC_StateDep_Diffusion",
+    "name": "Nonlinear Coupled Drift + Diagonal State-Dependent Diffusion D_ii(phi,psi)",
+    "equation": "d_phi = f_phi*dt + sqrt(2*D_phiphi(phi,psi))*dW_phi; d_psi = f_psi*dt + sqrt(2*D_psipsi(phi,psi))*dW_psi",
+    "complexity": {
+        "n_ops": 22,
+        "n_params": 41,
+        "n_mem": 0,
+        "n_latent": 0,
+        "n_nonlocal": 0,
+        "composite_complexity": 42.5
+    },
+    "validation_metrics": {
+        "train_loss": 0.48796,
+        "validation_loss": 0.50077,
+        "test_mse": 0.50387,
+        "equilibrium_error": 0.01436,
+        "correlation_error": 0.0161,
+        "kinetic_error": 0.0694,
+        "mean_fpt_ps": 22.13,
+        "md_mean_fpt_ps": 20.69,
+        "ks_pval": 0.5245,
+        "kl_divergence": 0.271,
+        "mdl_or_bic": -1315.2,
+        "physical_validity": "PASS",
+        "structural_stability": 0.881,
+        "survives": true
+    },
+    "multilag_rmse": {
+        "1": 0.70984,
+        "2": 0.81824,
+        "5": 1.19269,
+        "10": 1.72857,
+        "20": 2.52578,
+        "50": 4.21795,
+        "100": 6.11429
+    }
+}

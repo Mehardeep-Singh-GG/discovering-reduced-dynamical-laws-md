@@ -1,0 +1,8 @@
+{
+    "integrator": "Overdamped Langevin / Brownian Dynamics (Euler-Maruyama)",
+    "timestep_ps": 1.0,
+    "boundary_condition": "Periodic Torus [-pi, pi)",
+    "drift_evaluation": "15-term 2D Fourier series",
+    "diffusion_evaluation": "Bilinear / nearest-neighbor grid interpolation: a(T)*D0(z) + b(T)*G1(z)",
+    "noise_type": "Independent Gaussian white noise with variance 2*D_ii(z)*dt"
+}

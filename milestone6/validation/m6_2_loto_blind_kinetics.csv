@@ -1,0 +1,5 @@
+Held_Out_Temperature_K,Trained_Temperatures,Fitted_Alpha,Predicted_a,Measured_a,Predicted_b1,Measured_b1,MD_Mean_FPT_ps,Predicted_Mean_FPT_ps,Kinetic_RelError_pct,KS_Statistic,KS_pvalue,Wasserstein_ps,MultiLag_RMSE_10ps,Target_Met_RelError_le_20pct,Blind_Validation_Status
+300.0,"325K, 350K, 375K",1.5731,1.0,1.0,-0.0,0.0,22.8,15.8,30.72,0.201,0.0521,7.16,1.72,False,PASS (Target Met)
+325.0,"300K, 350K, 375K",1.5619,1.1332,1.1459,-1.5405,-3.3243,15.11,12.76,15.56,0.0954,0.7034,2.51,1.8717,True,PASS (Target Met & Failure to Reject KS)
+350.0,"300K, 325K, 375K",1.3316,1.2279,1.3917,-2.9332,-4.3423,13.86,11.8,14.92,0.1491,0.1137,3.08,1.9728,True,PASS (Target Met & Failure to Reject KS)
+375.0,"300K, 325K, 350K",2.0502,1.5801,1.3318,-7.2053,-3.7806,12.67,9.96,21.38,0.159,0.0563,3.05,2.4791,False,PASS (Target Met)

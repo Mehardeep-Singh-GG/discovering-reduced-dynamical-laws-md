@@ -1,0 +1,9 @@
+{
+    "law_type": "Linear Amplitude Slope",
+    "formula": "b(T) = beta_1 * (T - T_0)",
+    "reference_temperature_T0_K": 300.0,
+    "beta_1": -0.09607,
+    "beta_1_units": "rad^2 / (ps * K)",
+    "beta_1_se": 0.0094,
+    "selection_criterion": "SVD singular value projection onto Mode 1"
+}

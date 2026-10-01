@@ -1,0 +1,8 @@
+Condition,E_D_BasinA_pct,E_D_Barrier_pct,E_D_BasinB_pct,Mean_Spatial_E_D_pct
+Layer_B_300K,45.06,40.38,5.2,30.21
+Layer_B_325K,33.42,28.9,9.47,23.93
+Layer_B_350K,35.05,5.25,26.36,22.22
+Layer_B_375K,24.99,8.91,32.08,21.99
+Layer_D_400K_Extrap,13.26,7.54,31.52,17.44
+Layer_D_Gamma0.5,58.56,60.99,12.33,43.96
+Layer_D_Gamma2.0,31.02,32.07,3.34,22.14

@@ -1,0 +1,11 @@
+{
+    "tensor_structure": "Diagonal state-dependent 2D tensor D(z) = diag(D_phi(z), D_psi(z))",
+    "spatial_discretization": "50x50 torus grid with Gaussian smoothing (sigma=1.0)",
+    "baseline_local_variance": [
+        0.24798,
+        0.28805
+    ],
+    "deformation_mode": "SVD Mode 1 explaining 72.7% of non-scalar variance",
+    "mode_norm": 1.0,
+    "physical_interpretation": "Accelerated thermal velocity of unhindered psi dihedral relative to barrier coordinate phi"
+}

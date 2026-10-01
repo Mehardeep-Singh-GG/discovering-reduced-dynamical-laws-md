@@ -1,0 +1,5 @@
+Temperature_K,a_mobility,Diffusion_Shape_E_D,Drift_E_eq,Drift_R2_phi,MD_Mean_FPT_ps,Predicted_Mean_FPT_ps,Kinetic_RelError_pct,KS_pvalue,Wasserstein_ps,Blind_Status
+300.0,1.0,0.0,0.0,1.0,22.8,15.8,30.72,0.0521,7.16,PASS (Target Met)
+325.0,1.1459,0.4684,0.01061,0.9937,15.11,12.76,15.56,0.7034,2.51,PASS (Target Met & Failure to Reject KS)
+350.0,1.3917,0.4819,0.12471,0.9545,13.86,11.8,14.92,0.1137,3.08,PASS (Target Met & Failure to Reject KS)
+375.0,1.3318,0.4562,0.0155,0.9955,12.67,9.96,21.38,0.0563,3.05,PASS (Target Met)

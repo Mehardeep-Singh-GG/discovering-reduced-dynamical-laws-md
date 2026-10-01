@@ -1,0 +1,39 @@
+{
+    "candidate_id": "cand_001",
+    "operator_class": "ClassA_Linear_Markov",
+    "name": "Linear Decoupled Drift + Scalar Diffusion",
+    "equation": "d_phi = (a0 + a1*phi)*dt + sqrt(2*D0)*dW_phi; d_psi = (b0 + b1*psi)*dt + sqrt(2*D0)*dW_psi",
+    "complexity": {
+        "n_ops": 4,
+        "n_params": 5,
+        "n_mem": 0,
+        "n_latent": 0,
+        "n_nonlocal": 0,
+        "composite_complexity": 6.5
+    },
+    "validation_metrics": {
+        "train_loss": 0.58248,
+        "validation_loss": 0.58822,
+        "test_mse": 0.58635,
+        "equilibrium_error": 0.02724,
+        "correlation_error": 0.025,
+        "kinetic_error": 0.0755,
+        "mean_fpt_ps": 22.25,
+        "md_mean_fpt_ps": 20.69,
+        "ks_pval": 0.4663,
+        "kl_divergence": 0.9567,
+        "mdl_or_bic": -1233.8,
+        "physical_validity": "FAIL",
+        "structural_stability": 0.88,
+        "survives": false
+    },
+    "multilag_rmse": {
+        "1": 0.76573,
+        "2": 0.87163,
+        "5": 1.10312,
+        "10": 1.48257,
+        "20": 2.01756,
+        "50": 3.18227,
+        "100": 4.5593
+    }
+}

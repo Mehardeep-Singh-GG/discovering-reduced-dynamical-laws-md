@@ -1,0 +1,39 @@
+{
+    "candidate_id": "cand_010",
+    "operator_class": "ClassF_Memory_Kernel",
+    "name": "Finite Autoregressive Memory Kernel (K = 16 ps)",
+    "equation": "dz_t = f(z_t)*dt + [sum_{k=1}^16 A_k * Delta z_{t-k}]*dt + B0*dW",
+    "complexity": {
+        "n_ops": 22,
+        "n_params": 38,
+        "n_mem": 16,
+        "n_latent": 0,
+        "n_nonlocal": 0,
+        "composite_complexity": 73.0
+    },
+    "validation_metrics": {
+        "train_loss": 0.48608,
+        "validation_loss": 0.50357,
+        "test_mse": 0.50498,
+        "equilibrium_error": 0.01834,
+        "correlation_error": 0.0158,
+        "kinetic_error": 0.7169,
+        "mean_fpt_ps": 35.53,
+        "md_mean_fpt_ps": 20.69,
+        "ks_pval": 0.013,
+        "kl_divergence": 0.4722,
+        "mdl_or_bic": -1333.3,
+        "physical_validity": "PASS",
+        "structural_stability": 0.88,
+        "survives": false
+    },
+    "multilag_rmse": {
+        "1": 0.71062,
+        "2": 0.82277,
+        "5": 1.19863,
+        "10": 1.7385,
+        "20": 2.54051,
+        "50": 4.24093,
+        "100": 6.15635
+    }
+}

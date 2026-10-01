@@ -1,0 +1,7 @@
+History_k_ps,M_k_Residual_nats,Statistically_Significant,Practically_Important
+1,0.00786,False,False
+2,0.00879,False,False
+4,0.0108,True,False
+8,0.0133,True,False
+16,0.01785,True,False
+32,0.03113,True,False

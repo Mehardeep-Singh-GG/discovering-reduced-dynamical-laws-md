@@ -1,0 +1,9 @@
+{
+    "angle_convention": "[-pi, pi)",
+    "difference_metric": "circular_difference: (d + pi) % (2*pi) - pi",
+    "grid_dimensions": [
+        50,
+        50
+    ],
+    "bin_spacing_rad": 0.12566370614359174
+}

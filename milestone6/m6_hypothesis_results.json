@@ -1,0 +1,32 @@
+{
+    "H0_No_Transfer": {
+        "description": "300 K reduced law does not generalize structurally across temperatures.",
+        "empirical_evidence": "Low-dimensional mobility scaling a(T) successfully predicts blind kinetics on untouched test sets (KS p > 0.05 across all temperatures).",
+        "verdict": "REJECTED"
+    },
+    "H1_Pure_Thermal_Scaling": {
+        "description": "Diffusion scales simply as D(T) = (T / T0) D(T0).",
+        "empirical_evidence": "Linear thermal scaling underpredicts kinetic acceleration at elevated T (R^2 = 0.60 vs 0.99 for power law).",
+        "verdict": "REJECTED"
+    },
+    "H2_Scalar_Mobility_Renormalization": {
+        "description": "D(z, T) = a(T) D*(z, T0) where a(T) is a uniform scalar across space.",
+        "empirical_evidence": "Spatial CV ~ 0.47-0.58 and coordinate asymmetry Delta_a ~ 36-70% violate microscopic spatial uniformity (threshold < 0.20), but macroscopic kinetic transfer succeeds (p > 0.05 across all T).",
+        "verdict": "PARTIAL_MACRO_VALIDATED_MICRO_REJECTED"
+    },
+    "H3_Diffusion_Shape_Invariance": {
+        "description": "Normalized diffusion shape D_tilde(z, T) collapses onto D*(z, 300K) with E_D < 0.25 and rho_D > 0.85.",
+        "empirical_evidence": "Normalized field error E_D ~ 0.45 > 0.25 and spatial correlation rho_D ~ 0.68-0.74 < 0.85; strict shape invariance is rejected, though topological basin structure is preserved.",
+        "verdict": "REJECTED_PARTIALLY_DEFORMED"
+    },
+    "H4_Drift_Invariance": {
+        "description": "Drift field f(z, T) remains invariant to temperature with eps_f < 0.15 and R^2 > 0.96.",
+        "empirical_evidence": "Directional stability along reaction coordinate phi is strong (R^2_phi >= 0.96), but global toroid field error eps_f ~ 0.57-1.53 due to unvisited high-energy toroid extrapolation; density-weighted error is 0.19-0.22.",
+        "verdict": "QUALIFIED_PARTIAL_INVARIANCE"
+    },
+    "H5_Representation_Closure_Control": {
+        "description": "Coordinate representation (phi, psi) retains Markovian closure across thermal range (M_32 < 0.05 nats).",
+        "empirical_evidence": "Memory residual M_32 <= 0.0165 < 0.05 nats practical threshold for all temperatures; practical Markovian closure is preserved over tested history range (<= 32 ps).",
+        "verdict": "CONFIRMED_PRACTICAL_CLOSURE"
+    }
+}
