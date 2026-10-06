@@ -83,6 +83,9 @@ discovering-reduced-dynamical-laws-md/
 │   ├── SI_APPENDIX_GENERAL.pdf      # Complete 75-page Supporting Information monograph
 │   ├── MANUSCRIPT_GENERAL.docx      # Word format of the main article
 │   └── MANUSCRIPT_GENERAL.md        # Source markdown manuscript
+├── data/                            # Conformational trajectories and starting structures
+│   ├── structures/                  # PDB starting structures for all 7 systems
+│   └── trajectories/                # Backbone conformational trajectories (phi, psi)
 ├── src/reduced_dynamics/            # Core Python package
 │   ├── __init__.py                  # Package exports
 │   ├── operator.py                  # Continuous drift and diffusion operator estimation
@@ -92,7 +95,9 @@ discovering-reduced-dynamical-laws-md/
 │   ├── scaling.py                   # Sub-linear rank scaling & bootstrap resampling
 │   └── transfer.py                  # Cross-protein transfer & experimental B-factor validation
 ├── scripts/                         # Execution & reproduction workflows
-│   └── reproduce_paper_figures.py   # One-command reproduction of Table 1 and Figs 1-6
+│   ├── reproduce_paper_figures.py   # One-command reproduction of Table 1 and Figs 1-6
+│   ├── estimate_operators_from_trajectories.py  # Fit operators directly from MD trajectories
+│   └── simulate_trajectories.py     # OpenMM all-atom trajectory simulation pipeline
 ├── benchmarks/                      # Benchmarks & cryptographic data
 │   └── benchmark_summary.json       # Audited synthesis matrix across all 7 systems
 ├── figures/                         # High-resolution publication figures
@@ -177,6 +182,28 @@ Entropy Elimination Percentage:       90.8%
 ================================================================================
 ALL REPRODUCIBILITY AUDITS PASSED WITH ZERO DISCREPANCIES!
 ================================================================================
+```
+
+---
+
+## 🧬 Direct Trajectory Fitting & Simulation
+
+### 1. Estimating Operators from Real MD Trajectories
+To fit continuous drift vectors $f(z)$, diffusion tensors $D(z)$, GENERIC regularization, and effective rank $r_{90}$ directly on any of the provided conformational trajectories:
+
+```bash
+# Fit on a specific protein (e.g. Chignolin, Trp-cage, Villin HP35, Ubiquitin)
+python scripts/estimate_operators_from_trajectories.py --system chignolin
+
+# Or evaluate all 7 benchmark systems across d = 2 -> 150
+python scripts/estimate_operators_from_trajectories.py --all
+```
+
+### 2. Generating New Atomistic MD Trajectories (OpenMM)
+To simulate fresh atomistic trajectories with custom temperatures, frictions, and lengths:
+
+```bash
+python scripts/simulate_trajectories.py --system chignolin --temp 300.0 --ns 10.0
 ```
 
 ---

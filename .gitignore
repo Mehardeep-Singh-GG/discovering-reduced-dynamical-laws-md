@@ -59,10 +59,11 @@ create_mock_data.py
 RECOVERY.md
 autocorrelation*
 fig1.png
-fig2.png
 *.doc
 *.npz
 *.pdb
+!data/structures/*.pdb
+!data/trajectories/*.npz
 
 # Redundant root manuscript copies (authoritative versions are in manuscripts/)
 /COVER_LETTER_IJMS.pdf
