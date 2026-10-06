@@ -1,5 +1,0 @@
-Fold,Held_Out_Temperature_K,Trained_Temperatures,Fitted_Alpha,Predicted_a,Measured_a,Parameter_RelError_pct,MD_Mean_FPT_ps,Predicted_Mean_FPT_ps,Kinetic_RelError_pct,KS_pvalue,Fold_Status
-1,300.0,"325K, 350K, 375K",2.2115,1.0,1.1196,10.68,22.8,24.01,5.28,0.8987,PASS (Failure to Reject Equality)
-2,325.0,"300K, 350K, 375K",2.1621,1.1889,1.2491,4.81,15.11,16.97,12.31,0.1528,PASS (Failure to Reject Equality)
-3,350.0,"300K, 325K, 375K",2.0617,1.3741,1.4851,7.47,13.86,13.42,3.2,0.0915,PASS (Failure to Reject Equality)
-4,375.0,"300K, 325K, 350K",2.6109,1.7907,1.5519,15.39,12.67,10.13,19.99,0.0775,PASS (Failure to Reject Equality)

@@ -1,2 +1,0 @@
-Dataset,KL_Divergence_nats,JS_Divergence_nats,Wasserstein_Distance_rad,P_A_MD,P_A_Model,Delta_P_A,P_B_MD,P_B_Model,Delta_P_B
-Held_Out_T3,0.3026,0.0803,0.4065,0.2128,0.2308,0.018,0.5492,0.4058,0.1434

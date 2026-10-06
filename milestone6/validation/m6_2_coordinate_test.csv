@@ -1,5 +1,0 @@
-Temperature_K,BasinA_Center_phi,BasinA_Center_psi,Thermal_Spread_phi,Thermal_Spread_psi,Original_Shape_Error_E_D,Transformed_Shape_Error_E_D_u,Delta_E_D_Reduction_pct,Transformed_Spatial_Corr_rho_u,Coordinate_Effect_Verdict
-300.0,-1.3672,-0.3001,0.2176,0.2666,0.0,1.812,-1812007.94,1.0,INTRINSIC_DEFORMATION
-325.0,-1.3712,-0.3048,0.2183,0.268,0.4684,1.8749,-300.27,0.6983,INTRINSIC_DEFORMATION
-350.0,-1.3633,-0.3034,0.2339,0.2876,0.4819,1.6692,-246.39,0.6406,INTRINSIC_DEFORMATION
-375.0,-1.3539,-0.3465,0.242,0.2921,0.4562,1.2472,-173.39,0.6803,INTRINSIC_DEFORMATION

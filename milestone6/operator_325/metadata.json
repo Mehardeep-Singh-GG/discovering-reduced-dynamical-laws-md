@@ -1,9 +1,0 @@
-{
-    "temperature_K": 325.0,
-    "role": "Calibration_Traj1",
-    "sample_frames": 2500,
-    "timestep_ps": 1.0,
-    "regularization_alpha": 1.0,
-    "intercept_phi": 0.37827068567276,
-    "intercept_psi": -0.4487542510032654
-}

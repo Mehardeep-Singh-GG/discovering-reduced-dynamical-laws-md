@@ -1,3 +1,0 @@
-Representation,Model_Class,OneStep_RMSE,MultiStep_RMSE_50ps,Autocorr_Error,Mean_FPT_ps,Kinetic_RelError,KS_pvalue,BIC,Complexity_Rank
-Phi_1,E_GLE,0.70993,5.12213,0.0203,50.0,1.4165,0.0001,-1404.9,4
-Phi_3,E_GLE,0.70977,5.12358,0.0184,46.19,1.2322,0.0004,-1375.0,4

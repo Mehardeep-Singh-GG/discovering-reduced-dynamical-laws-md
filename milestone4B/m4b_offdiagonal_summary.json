@@ -1,9 +1,0 @@
-{
-    "delta_T_mean_ps": 1.04,
-    "ci_95_low_ps": -1.78,
-    "ci_95_high_ps": 3.81,
-    "zero_in_ci": true,
-    "ks_p_between_full_and_diag": 0.5933,
-    "wasserstein_between_full_and_diag_ps": 1.59,
-    "scientific_verdict": "State-dependent anisotropic diffusion is sufficient; off-diagonal coupling is not demonstrably necessary."
-}

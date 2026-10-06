@@ -1,3 +1,0 @@
-Direction,MD_Transitions,Model_Transitions,Mean_FPT_MD_ps,Mean_FPT_Model_ps,Kinetic_RelError,Median_FPT_MD_ps,Median_FPT_Model_ps,Quantile_25_Model_ps,Quantile_75_Model_ps,KS_pvalue,Wasserstein_ps
-A_to_B (Forward),39,545,20.69,23.96,15.81%,15.0,17.0,8.0,32.0,0.3365,5.5
-B_to_A (Reverse),39,544,43.31,30.92,28.60%,16.0,15.0,4.0,46.0,0.1183,14.19

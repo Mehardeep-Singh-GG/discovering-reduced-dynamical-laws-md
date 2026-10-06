@@ -1,6 +1,0 @@
-Dataset,Representation,Law,Multi_lag_RMSE_50ps,Equilibrium_KL_nats,Correlation_Error,FPT_ps,Survival_KS_p,Drift_R2,Diffusion_R2,Memory_Residual_nats,Status
-T2 (Validation),"Frozen (phi, psi)",Frozen cand_005,4.3031,0.2512,0.0165,23.85,0.354,0.985,0.892,0.0,PASS
-T3 (Untouched Held-Out),"Frozen (phi, psi)",Frozen cand_005,4.218,0.3026,0.0161,23.96,0.3365,0.979,0.443,0.0179,PASS (Within-Regime)
-Regime_R2 (350 K Strict Transfer),"Frozen (phi, psi)",Frozen cand_005 (s=1.0),4.1205,0.284,0.0188,25.16,0.0,0.972,0.885,0.0,FAIL (Strict Transfer)
-Regime_R2 (350 K Structural D~T),"Frozen (phi, psi)",Frozen cand_005 (s=1.167),4.1205,0.284,0.0188,18.76,0.0008,0.972,0.885,0.0,PARTIAL_TRANSFER (D ~ T)
-Regime_R2 (350 K Independent Local Scaling),"Frozen (phi, psi)",Frozen cand_005 (s=1.471),4.1205,0.284,0.0188,12.99,0.633,0.972,0.885,0.0,PASS (Hypothesis 2: Local Scaling)

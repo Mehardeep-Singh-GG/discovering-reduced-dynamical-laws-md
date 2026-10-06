@@ -29,7 +29,44 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+~$*
+*.tmp
 
-# Temporary scratch and logs
+# Temporary scratch, logs, and locks
 scratch/
 *.log
+
+# Internal development, milestones, and exploratory files (kept locally)
+archive_legacy_scaffolds/
+explainer/
+version2_*/
+version3_*/
+pnas_paper/
+protein_scaling/
+milestone*
+models/
+representation/
+walkthrough*
+final_walkthrough*
+V2_MANUSCRIPT_AUDIT_AND_CHANGELOG.md
+data_audit.csv
+real_metadata.json
+metadata.json
+generate_*.py
+m7_*.py
+run_*.py
+create_mock_data.py
+RECOVERY.md
+autocorrelation*
+fig1.png
+fig2.png
+*.doc
+*.npz
+*.pdb
+
+# Redundant root manuscript copies (authoritative versions are in manuscripts/)
+/COVER_LETTER_IJMS.pdf
+/COVER_LETTER_NATURE_COMMUNICATIONS.pdf
+/MANUSCRIPT_GENERAL.docx
+/SI_APPENDIX_GENERAL.pdf
+

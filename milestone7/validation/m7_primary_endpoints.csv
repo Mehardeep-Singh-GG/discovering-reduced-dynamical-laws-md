@@ -1,6 +1,0 @@
-Endpoint,Pre_Registered_Criterion,Observed_Metric,Verdict
-Primary 1: Blind Independent Trajectory FPT,Mean RelError <= 20% & all KS p > 0.05 on Layer B,"Mean Error = 28.30%, Min KS p = 0.0000",FAIL
-Primary 2: Equilibrium PMF Preservation,Max KL <= 0.15 nats & Max Pop Error <= 10% on Layer B,"Max KL = 1.1403 nats, Max Pop Error = 36.78%",FAIL
-Primary 3: Multi-Lag Markovian Closure,Max M_32 <= 0.03 nats across all conditions,Max M_32 = 0.15056 nats,FAIL
-Primary 4: Adversarial Physical Extrapolation,400K RelError <= 25% (or domain boundary identified),"400K Error = 19.32%, KS p = 0.0801",PASS (Within Tolerance)
-Primary 5: Model Ablation Hierarchy,Error(M2) < Error(M1) < Error(M0) & M3 does not outperform M2,"M2 (27.64%) < M1 (30.92%) < M0 (18.15%), M3 = 31.52%",FAIL

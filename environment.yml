@@ -1,0 +1,13 @@
+name: reduced-dynamics
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.10
+  - numpy>=1.22.0
+  - scipy>=1.8.0
+  - matplotlib>=3.5.0
+  - pip
+  - pip:
+      - pymupdf>=1.23.0
+      - mdtraj>=1.9.7
