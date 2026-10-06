@@ -82,8 +82,7 @@ discovering-reduced-dynamical-laws-md/
 │   ├── MANUSCRIPT_GENERAL.pdf       # Full 9-page research article (2-column format)
 │   ├── SI_APPENDIX_GENERAL.pdf      # Complete 75-page Supporting Information monograph
 │   ├── MANUSCRIPT_GENERAL.docx      # Word format of the main article
-│   ├── MANUSCRIPT_GENERAL.md        # Source markdown manuscript
-│   └── COVER_LETTER_IJMS.pdf        # Formal 1-page cover letter
+│   └── MANUSCRIPT_GENERAL.md        # Source markdown manuscript
 ├── src/reduced_dynamics/            # Core Python package
 │   ├── __init__.py                  # Package exports
 │   ├── operator.py                  # Continuous drift and diffusion operator estimation
@@ -187,7 +186,7 @@ ALL REPRODUCIBILITY AUDITS PASSED WITH ZERO DISCREPANCIES!
 * **Main Research Article (9 pages):** [`manuscripts/MANUSCRIPT_GENERAL.pdf`](manuscripts/MANUSCRIPT_GENERAL.pdf)
 * **Supporting Information Appendix Monograph (75 pages):** [`manuscripts/SI_APPENDIX_GENERAL.pdf`](manuscripts/SI_APPENDIX_GENERAL.pdf)
 * **Word Document (`.docx`):** [`manuscripts/MANUSCRIPT_GENERAL.docx`](manuscripts/MANUSCRIPT_GENERAL.docx)
-* **Invited Cover Letter:** [`manuscripts/COVER_LETTER_IJMS.pdf`](manuscripts/COVER_LETTER_IJMS.pdf)
+* **Source Markdown:** [`manuscripts/MANUSCRIPT_GENERAL.md`](manuscripts/MANUSCRIPT_GENERAL.md)
 
 ---
 
