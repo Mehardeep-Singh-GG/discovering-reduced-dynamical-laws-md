@@ -84,16 +84,24 @@ def build_part3_s4_to_s6(res_dir: Path) -> str:
         ma = sy["memory_attenuation"]
         gh = sy["generator_hierarchy"]
         mdr = sy["md_reference"]["blind_test_rep3"]
-        def fmt3(x, bold=False):
+        def fmt3(x, bold=False, ubq=False):
             if x is None:
-                return "---"
+                return "---$^{\\ddag}$" if ubq else "---"
             return f"\\textbf{{{x:.3f}}}" if bold else f"{x:.3f}"
 
-        k0 = fmt3(gh["K0_const_D_tau1ps"].get("heldout_log_err"))
-        k1 = fmt3(gh["K1_pos_D_tau1ps"].get("heldout_log_err"))
-        k2 = fmt3(gh["K2_calibrated_1D"].get("heldout_log_err"), bold=True)
-        k3 = fmt3(gh["K3_2D_generic"].get("heldout_log_err"))
-        tp_str = f"{mdr['tp_mean_ps']:.1f}" if mdr.get("tp_mean_ps") else "---"
+        is_ubq = (sk == "ubiquitin")
+        k0 = fmt3(gh["K0_const_D_tau1ps"].get("heldout_log_err"), ubq=is_ubq)
+        k1 = fmt3(gh["K1_pos_D_tau1ps"].get("heldout_log_err"), ubq=is_ubq)
+        k2 = fmt3(gh["K2_calibrated_1D"].get("heldout_log_err"), bold=True, ubq=is_ubq)
+        k3 = fmt3(gh["K3_2D_generic"].get("heldout_log_err"), ubq=is_ubq)
+        tp_pred = gh["K2_calibrated_1D"].get("tp_time_ps")
+        tp_md = mdr.get("tp_mean_ps")
+        if tp_md is not None and tp_pred is not None:
+            tp_str = f"{tp_pred:.1f} / {tp_md:.1f}"
+        elif is_ubq:
+            tp_str = "---$^{\\ddag}$"
+        else:
+            tp_str = "---"
         t_s12_rows.append(
             f"\\textbf{{{slbl}}} & {ma['gamma_M']:.3f} $\\pm$ {ma['gamma_M_ci95_half']:.3f} & "
             f"{ma['attenuation_ratio_D1_over_D400']:.1f}$\\times$ & {ma['tau_calibrated_ps']} & "
@@ -137,7 +145,7 @@ def build_part3_s4_to_s6(res_dir: Path) -> str:
 \section{Macromolecular Functional Discovery: Hinges, Distal Allostery, and Folding Kinetics}
 
 \subsection{Mechanical Domain-Closure Hinges in Explicit-Solvent Apo AdK and MBP}
-Table S10 compares residue-level hinge localization across five methods against both crystallographic open-to-closed dihedral strain $\Delta\theta_i^{\mathrm{xtal}} = \sqrt{\Delta\phi_i^2 + \Delta\psi_i^2}$ (\texttt{1OMP}$\to$\texttt{1ANF} for 370-residue MBP; \texttt{4AKE}$\to$\texttt{1AKE} for 214-residue AdK) and literature DynDom mechanical hinge annotations. Explicit-PME apo toroidal slow modes achieve $\mathrm{AUROC} = \vFourMbpApoMdToroidalAUROC{}$ ($\rho = \vFourMbpApoMdToroidalSpearman{}$) on MBP crystallographic strain and $\mathrm{AUROC} = \vFourMbpDynDomApoToroidalAUROC{}$ on MBP DynDom hinges, outperforming Cartesian ANM ($\vFourMbpANMAUROC{}$ and $\vFourMbpDynDomANMAUROC{}$).
+Table S10 compares residue-level hinge localization across five methods against both crystallographic open-to-closed dihedral strain $\Delta\theta_i^{\mathrm{xtal}} = \sqrt{\Delta\phi_i^2 + \Delta\psi_i^2}$ (\texttt{1OMP}$\to$\texttt{1ANF} for 370-residue MBP; \texttt{4AKE}$\to$\texttt{1AKE} for 214-residue AdK) and literature DynDom mechanical hinge annotations. Although complete ligand-induced domain closure occurs on microsecond-to-millisecond timescales, $10\text{ ns}$ explicit-PME apo trajectories already resolve mechanical pivots via local native-basin curvature $\hat{\bm{\Sigma}}^{-1}$ and mobility $\hat{\mathbf{D}}$: explicit-PME apo toroidal slow modes achieve $\mathrm{AUROC} = \vFourMbpApoMdToroidalAUROC{}$ ($\rho = \vFourMbpApoMdToroidalSpearman{}$) on MBP crystallographic strain and $\mathrm{AUROC} = \vFourMbpDynDomApoToroidalAUROC{}$ on MBP DynDom hinges, outperforming Cartesian ANM ($\vFourMbpANMAUROC{}$ and $\vFourMbpDynDomANMAUROC{}$). Conversely, the trajectory-free static contact-gated toroidal prior accurately localizes buried MBP DynDom inter-lobe pivots ($\mathrm{AUROC} = \vFourMbpDynDomAUROC{}$) yet yields $\mathrm{AUROC} = \vFourMbpHingeAUROC{}$ ($\rho = \vFourMbpStaticSpearman{}$) against global \texttt{1OMP}$\to$\texttt{1ANF} strain because contact-burial weighting ($\log(1 + n_{\mathrm{contacts},i})$) downweights solvent-exposed maltose-binding cleft loops that reorganize locally in holo \texttt{1ANF}, whereas explicit-PME apo MD thermally samples both central pivot compliance and apo cleft breathing.
 
 \begin{table}[!htbp]
 \centering
@@ -156,7 +164,7 @@ Table S10 compares residue-level hinge localization across five methods against 
 \end{table}
 
 \subsection{Blind Distal Allosteric Coupling and Catalytic Loop Relays}
-Table S11 evaluates blind Split 3 distal dynamic coupling ($|i-j|\ge 10$, $\tau = 5\text{ ps}$ propagator $\mathcal{P} = \exp(\tau\mathcal{L})$) across Ubiquitin, HEW Lysozyme, and \textit{E.\ coli} DHFR ($10{,}878$ distal residue pairs at $\vFourDhfrDistalSparsityPct{}\%$ off-diagonal sparsity). On blind trajectories, the contact-gated propagator recovers $\vFourDhfrMetTwentyFGRecoveryPct{}\%$ of held-out MD Met20 (res.\ 14--24) $\leftrightarrow$ FG (res.\ 116--132, Gly121) catalytic loop coupling in DHFR ($0.0327$ vs.\ $0.0458$ MD ground truth; sequence-banded control $0.0238$) and $\vFourUbqPincerIleRatio{}\times$ amplification along Ubiquitin's $\beta_1\text{--}\beta_2$ pincer $\leftrightarrow$ Ile44 hydrophobic patch relay.
+Table S11 evaluates blind Split 3 distal dynamic coupling ($|i-j|\ge 10$, $\tau = 5\text{ ps}$) across Ubiquitin, HEW Lysozyme, and \textit{E.\ coli} DHFR ($10{,}878$ distal residue pairs at $\vFourDhfrDistalSparsityPct{}\%$ off-diagonal sparsity). Specifically, for each fitted generator $\mathbf{A} = -\hat{\mathbf{D}}\hat{\mathbf{C}}(0)^{-1}$, the predicted $\tau = 5\text{ ps}$ time-lagged cross-covariance matrix is $\hat{\mathbf{C}}(\tau) = \exp(\tau\mathbf{A})\hat{\mathbf{C}}(0)$ (where $\hat{\mathbf{C}}(0)$ is the Split 1 empirical equal-time covariance), aggregated into normalized $2\times 2$ residue blocks $\mathcal{P}_{ij}(\tau) = \|[\hat{\mathbf{C}}(\tau)]_{B_i,B_j}\|_F / \sqrt{\|[\hat{\mathbf{C}}(0)]_{B_i,B_i}\|_F \|[\hat{\mathbf{C}}(0)]_{B_j,B_j}\|_F}$. Note why the ``Uncoupled Diagonal Propagator'' ($\mathbf{A}_{\mathrm{diag}} = -\hat{\mathbf{D}}_{\mathrm{diag}}\hat{\mathbf{C}}_{\mathrm{diag}}(0)^{-1}$) exhibits non-zero off-diagonal predictions and elevated global Spearman rank correlation on Lysozyme ($\vFourLysozymeDistalDiagSpearman{}$) and DHFR ($\vFourDhfrDistalDiagSpearman{}$): while $\exp(\tau\mathbf{A}_{\mathrm{diag}})$ itself is strictly diagonal (zero dynamical cross-routing), multiplying against empirical $\hat{\mathbf{C}}(0)$ yields $[\hat{\mathbf{C}}_{\mathrm{diag}}(\tau)]_{ab} = e^{-\tau D_{aa}/C_{aa}(0)}\hat{C}_{ab}(0)$, which simply attenuates pre-existing Split 1 equal-time correlations row-wise. Across $\sim 10^4$ background non-contact pairs this preserves equal-time rank order, yet over-damps cooperative tertiary bridges---causing worse quantitative amplitude error ($\mathrm{RMSE} = \vFourLysozymeDistalDiagRMSE{}$ vs.\ $\vFourLysozymeDistalContactRMSE{}$ in Lysozyme; $\vFourDhfrDistalDiagRMSE{}$ vs.\ $\vFourDhfrDistalContactRMSE{}$ in DHFR) and lower Pearson $r$. On blind trajectories, the contact-gated generator recovers $\vFourDhfrMetTwentyFGRecoveryPct{}\%$ of held-out MD Met20 (res.\ 9--24) $\leftrightarrow$ FG (res.\ 116--132, Gly121) catalytic loop coupling in DHFR ($\vFourDhfrLoopContactPred{}$ vs.\ $\vFourDhfrLoopMDTrue{}$ MD ground truth; sequence-banded control $\vFourDhfrLoopBandedPred{}$) and $\vFourUbqPincerIleRatio{}\times$ amplification along Ubiquitin's $\beta_1\text{--}\beta_2$ pincer $\leftrightarrow$ Ile44 hydrophobic patch relay.
 
 \begin{table}[!htbp]
 \centering
@@ -173,29 +181,32 @@ Table S11 evaluates blind Split 3 distal dynamic coupling ($|i-j|\ge 10$, $\tau 
 \end{tabular}
 \end{table}
 
-\subsection{Sub-Diffusive Mori--Zwanzig Folding Memory and Prospectively Frozen Kinetics}
-Prior to accessing Split 3 folding trajectories, calibrated Markovian coarse-graining lags $\tau^*$ determined solely from Split 1--2 reaction-coordinate attenuation $D_{\mathrm{eff}}(\tau)\propto\tau^{-\gamma_M}$ ($Q$ computed from heavy-atom native contacts within $0.50\text{ nm}$ at $|i-j|\ge 4$) were cryptographically locked (SHA-256 digest: \texttt{""" + freeze_sha[:32] + r"""}\allowbreak\texttt{""" + freeze_sha[32:] + r"""}). Table S12 compares four nested kinetic generators on blind Split 3 mean first-passage times (MFPTs): uncalibrated constant-$D$ ($\tau=1\text{ ps}$), uncalibrated position-dependent $D(Q)$ ($\tau=1\text{ ps}$), memory-calibrated 1D Smoluchowski ($\tau^*$), and 2D $(Q, R_g)$ GENERIC diffusion, reducing mean absolute log-MFPT error from $\vFourMeanKZeroLogErr{}$ to $\vFourMeanKTwoLogErr{}$.
+\subsection{Sub-Diffusive Mori--Zwanzig Reaction-Coordinate Memory and Prospectively Frozen Kinetics}
+Prior to accessing Split 3 trajectories, calibrated Markovian coarse-graining lags $\tau^*$ determined solely from Split 1--2 reaction-coordinate attenuation $D_{\mathrm{eff}}(\tau)\propto\tau^{-\gamma_M}$ ($Q_{\mathrm{BHE}}$ computed from heavy-atom native contacts within $0.50\text{ nm}$ at $|i-j|\ge 4$) were cryptographically locked (SHA-256 digest: \texttt{""" + freeze_sha[:32] + r"""}\allowbreak\texttt{""" + freeze_sha[32:] + r"""}). Table S12 compares four nested kinetic generators on blind Split 3 committed mean first-passage times (MFPTs) across the two physical sampling regimes of the atlas: reversible global folding/unfolding on $150\text{ ns}$ miniproteins (Chignolin, Trp-cage) and local native-basin / near-native sub-basin $Q_{\mathrm{BHE}}$ excursions on $2.5\text{--}10\text{ ns}$ larger proteins (BBA5--GB1; whereas Ubiquitin remains locked at $\langle Q_{\mathrm{BHE}}\rangle = 1.000$ over $2.5\text{ ns}$ with zero unfolding excursions). Memory calibration ($\tau^*$) reduces mean absolute log-MFPT error across the 6 transitioning systems from $\vFourMeanKZeroLogErr{}$ to $\vFourMeanKTwoLogErr{}$. On reactive transition-path durations $\tau_{\mathrm{TP}}$, $\mathcal{K}_2(\tau^*)$ matches blind MD within $1\text{--}2\text{ ps}$ across Trp-cage through GB1, whereas on ultrafast Chignolin ($\vFourChigTauTpMdPs{}\text{ ps}$ blind MD) $\tau^* = \vFourChigTauStarPs{}\text{ ps}$ exceeds the reactive transit time due to slow orthogonal $(\psi_1,\text{Gly7})$ misfolded trapping, inflating 1D $\tau^*$-attenuated $\tau_{\mathrm{TP}}$ to $\vFourChigTauTpPredPs{}\text{ ps}$ (compared to $6.6\text{ ps}$ at unattenuated $\tau = 1\text{ ps}$).
 
 \begin{table}[!htbp]
 \centering
-\caption*{Table S12. Sub-diffusive memory exponents ($\gamma_M$), prospectively frozen lags ($\tau^*$), and blind log-MFPT errors across \vFourFastFoldersCount{} fast-folding proteins}
+\caption*{Table S12. Sub-diffusive memory exponents ($\gamma_M$), prospectively frozen lags ($\tau^*$), and blind global/sub-basin $Q_{\mathrm{BHE}}$ log-MFPT errors across \vFourFastFoldersCount{} proteins}
 \resizebox{\textwidth}{!}{%
 \renewcommand{\arraystretch}{1.12}
 \setlength{\tabcolsep}{4.0pt}
 \begin{tabular}{@{}l c c c c c c c c@{}}
 \toprule[1.1pt]
-\textbf{Protein} & \textbf{Memory $\gamma_M \pm \mathrm{CI}_{95}$} & \textbf{$D(1\text{ ps})/D(400\text{ ps})$} & \textbf{$\tau^*$ (ps)} & \textbf{Const-$D$ ($1\text{ ps}$)} & \textbf{Pos-$D(Q)$ ($1\text{ ps}$)} & \textbf{Calib.\ 1D ($\tau^*$)} & \textbf{2D GENERIC} & \textbf{Blind $\tau_{\mathrm{TP}}$ (ps)} \\
+\textbf{Protein} & \textbf{Memory $\gamma_M \pm \mathrm{CI}_{95}$} & \textbf{$D(1\text{ ps})/D(400\text{ ps})$} & \textbf{$\tau^*$ (ps)} & \textbf{Const-$D$ ($1\text{ ps}$)} & \textbf{Pos-$D(Q)$ ($1\text{ ps}$)} & \textbf{Calib.\ 1D ($\tau^*$)} & \textbf{2D GENERIC} & \textbf{$\tau_{\mathrm{TP}}$ Pred.\ / MD (ps)} \\
 \midrule[0.6pt]
 """ + "\n".join(t_s12_rows) + r"""
 \bottomrule[1.1pt]
 \end{tabular}%
 }
+\begin{flushleft}
+{\scriptsize $^{\ddag}$In $3\times 2.5\text{ ns}$ implicit-OBC2 runs at $300\text{ K}$, Human Ubiquitin remains locked in its native basin ($\langle Q_{\mathrm{BHE}}\rangle = 1.000$, zero blind barrier crossings), contributing to native-basin $\gamma_M$ scaling rather than blind MFPT errors; for BBA5, Villin HP35, WW-FiP35, and GB1 ($2.5\text{--}10\text{ ns}$), MFPTs reflect local native/sub-basin $Q_{\mathrm{BHE}}$ excursions rather than microsecond/millisecond global folding.}
+\end{flushleft}
 \end{table}
 
 \clearpage
 \section{Validation-Tuned 6-Paradigm Benchmark Hyperparameters and Blind Scorecards}
 
-To ensure strict methodological parity across all \vFourNumProteins{} macromolecular proteins, every competing paradigm was tuned on identical Split 2 validation grids before locked Split 3 evaluation: VAMP-2 Markov State Models ($k \in \{10, 20, 40, 80\}$, $\tau \in \{2, 5, 10, 25\}\text{ ps}$), TICA Langevin projections ($\tau_{\mathrm{TICA}} \in \{2, 5, 10, 25\}\text{ ps}$), memory-calibrated 1D Smoluchowski operators ($M \in \{20, 30, 40\}$ bins), unconstrained polynomial basis SDEs ($B \in \{1, 2, 3\}$, ridge penalty $\lambda \in \{10^{-3}, 10^{-2}, 10^{-1}, 1\}$), Contact-Gated GENERIC Operators ($C_\alpha$ contact cutoff $r_c \in \{0.65, 0.75, 0.80\}\text{ nm}$ and shrinkage $\beta_c \in \{0.05, 0.10, 0.20, 0.35, 0.50\}$), and harmonic Gaussian/Anisotropic Elastic Network Models ($r_c \in \{0.7, 0.8, 1.0, 1.2\}\text{ nm}$). Direct Split 3 single-residue NMR disorder correlation evaluates all $N = 398$ BMRB-matched residues across Ubiquitin, GB1, Lysozyme, and DHFR (including 11 chain-border positions omitted from the 387-residue four-torsion quartet Jacobian test in Table S8). Table S13 reports every validation-selected hyperparameter and blind operator error.
+To ensure strict methodological parity across all \vFourNumProteins{} macromolecular proteins, every competing paradigm was tuned on identical Split 2 validation grids before locked Split 3 evaluation: VAMP-2 Markov State Models ($k \in \{10, 20, 40, 80\}$, $\tau \in \{2, 5, 10, 25\}\text{ ps}$), TICA Langevin projections ($\tau_{\mathrm{TICA}} \in \{2, 5, 10, 25\}\text{ ps}$), memory-calibrated 1D Smoluchowski operators ($M \in \{20, 30, 40\}$ bins), unconstrained polynomial basis SDEs ($B \in \{1, 2, 3\}$, ridge penalty $\lambda \in \{10^{-3}, 10^{-2}, 10^{-1}, 1\}$), Contact-Gated GENERIC Operators ($C_\alpha$ contact cutoff $r_c \in \{0.65, 0.75, 0.80\}\text{ nm}$ and shrinkage $\beta_c \in \{0.05, 0.10, 0.20, 0.35, 0.50\}$), and harmonic Gaussian/Anisotropic Elastic Network Models ($r_c \in \{0.7, 0.8, 1.0, 1.2\}\text{ nm}$). Direct Split 3 single-residue NMR disorder correlation evaluates all $N = 398$ BMRB-matched residues across Ubiquitin, GB1, Lysozyme, and DHFR (including 11 chain-border positions omitted from the 387-residue four-torsion quartet Jacobian test in Table S8). Across the \vFourNumProteins{} proteins in Table S13, unconstrained SDE spurious entropy production has median $\vFourSOTAUnconstEntropyMedian{}\,k_B/\text{ns}/d$ and interquartile range $\vFourSOTAUnconstEntropyQOne{}\text{--}\vFourSOTAUnconstEntropyQThree{}\,k_B/\text{ns}/d$ (12-protein mean excluding BBA5 $= \vFourSOTAUnconstEntropyMeanExclBba{}$, range $25.72\text{--}196.28$), whereas BBA5 surges to $\vFourSOTAEntropySdeBba{}\,k_B/\text{ns}/d$ (13-protein mean $\vFourSOTAUnconstEntropyMean{}$) because Split 3 samples unfolded conformations ($\langle Q_{\mathrm{BHE}}\rangle = 0.454$, Table S3) outside the Split 1 polynomial basis support---a finite-sample extrapolation instability eliminated identically by GENERIC projection ($\dot{S}_{\mathrm{irr}} \equiv \vFourSOTAMFiveEntropy{}$ across 13/13 proteins).
 
 \begin{table}[!htbp]
 \centering

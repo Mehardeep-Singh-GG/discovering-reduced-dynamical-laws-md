@@ -507,6 +507,7 @@ def main():
     M("vFourAdkDynDomANMPrecAtFifteen", f"{adk37_dyn['cartesian_anm_displacement']['precision_at_15']:.3f}")
 
     M("vFourMbpHingeAUROC", f"{mbp37['contact_gated_toroidal_operator']['roc_auc']:.3f}")
+    M("vFourMbpStaticSpearman", f"{mbp37['contact_gated_toroidal_operator']['spearman_rho']:+.3f}")
     M("vFourMbpApoMdToroidalAUROC", f"{mbp37['apo_md_toroidal_operator']['roc_auc']:.3f}")
     M("vFourMbpApoMdToroidalSpearman", f"{mbp37['apo_md_toroidal_operator']['spearman_rho']:+.3f}")
     M("vFourMbpANMAUROC", f"{mbp37['cartesian_anm_displacement']['roc_auc']:.3f}")
@@ -525,6 +526,8 @@ def main():
         M(f"vFour{camel}DistalBandedSpearman", f"{b38['metrics_distal_coupling']['banded_operator']['spearman_r']:+.3f}")
         M(f"vFour{camel}DistalBandedPearson", f"{b38['metrics_distal_coupling']['banded_operator']['pearson_r']:+.3f}")
         M(f"vFour{camel}DistalBandedRMSE", f"{b38['metrics_distal_coupling']['banded_operator']['rmse']:.4f}")
+        M(f"vFour{camel}DistalDiagSpearman", f"{b38['metrics_distal_coupling']['diagonal_operator']['spearman_r']:+.3f}")
+        M(f"vFour{camel}DistalDiagRMSE", f"{b38['metrics_distal_coupling']['diagonal_operator']['rmse']:.4f}")
         M(f"vFour{camel}DistalDccmSpearman", f"{b38['metrics_distal_coupling']['cartesian_dccm']['spearman_r']:+.3f}")
         M(f"vFour{camel}DistalDccmRMSE", f"{b38['metrics_distal_coupling']['cartesian_dccm']['rmse']:.4f}")
         M(f"vFour{camel}LoopMDTrue", f"{b38['functional_loop_coupling']['md_heldout_coupling']:.4f}")
@@ -548,8 +551,17 @@ def main():
     M("vFourFoldingBlindCIHitCount", f"{sc39['blind_FU_ci_hits']}/{sc39['blind_FU_ci_total']}")
     M("vFourChigGammaM", f"{chig39['memory_attenuation']['gamma_M']:.3f}")
     M("vFourChigTauStarPs", str(chig39["memory_attenuation"]["tau_calibrated_ps"]))
+    M("vFourChigTauTpPredPs", f"{chig39['generator_hierarchy']['K2_calibrated_1D']['sol']['tau_TP_ps']:.1f}")
+    M("vFourChigTauTpMdPs", f"{chig39['md_reference']['blind_test_rep3']['tp_mean_ps']:.1f}")
 
     # --- M40 App 4: Fair 6-Method SOTA Benchmark ---
+    sde_ents_all = [v["M4_UNCONSTRAINED_SDE"]["entropy_rate"] for v in d40["per_system_benchmarks"].values()]
+    sde_ents_no_bba = [v["M4_UNCONSTRAINED_SDE"]["entropy_rate"] for k, v in d40["per_system_benchmarks"].items() if k != "bba"]
+    sde_q25, sde_med, sde_q75 = np.percentile(sde_ents_all, [25, 50, 75])
+    M("vFourSOTAUnconstEntropyMedian", f"{float(sde_med):.2f}")
+    M("vFourSOTAUnconstEntropyQOne", f"{float(sde_q25):.2f}")
+    M("vFourSOTAUnconstEntropyQThree", f"{float(sde_q75):.2f}")
+    M("vFourSOTAUnconstEntropyMeanExclBba", f"{float(np.mean(sde_ents_no_bba)):.2f}")
     kin40 = d40["metric_A_kinetics_summary"]["mean_mfpt_log_err"]
     frob40 = d40["metric_C_operator_frob_summary"]["mean_frob_err"]
     dir_nmr40 = d40["metric_E_experimental_fidelity"]["direct_rep3_disorder_spearman"]

@@ -459,8 +459,16 @@ def main():
         json.dump(benchmark_results, f, indent=2)
     print(f"\n[M33] Saved master benchmark JSON to {out_json}")
 
-    # Generate 4-Panel Publication Vector Figure (100% real measured data across d = 2 -> 738)
-    fig, axes = plt.subplots(2, 2, figsize=(13, 10))
+    # Generate 4-Panel Publication Vector Figure (boosted >=25% typography for 2-column JCTC readability)
+    plt.rcParams.update({
+        "font.size": 12.5,
+        "axes.titlesize": 13.5,
+        "axes.labelsize": 13.0,
+        "xtick.labelsize": 11.5,
+        "ytick.labelsize": 11.5,
+        "legend.fontsize": 10.4,
+    })
+    fig, axes = plt.subplots(2, 2, figsize=(11.8, 9.2))
     colors = {
         "diag": "#94A3B8",
         "dense_tuned": "#2563EB",
@@ -471,65 +479,65 @@ def main():
     }
     labels = {
         "diag": "Diagonal Null",
-        "dense_tuned": "Full Dense (Tikhonov Tuned)",
+        "dense_tuned": "Dense (Tikhonov Tuned)",
         "ledoit_wolf": "Ledoit-Wolf Shrinkage",
         "graphical_lasso": "Graphical LASSO",
         "chordal_band": "Chordal Band ($O(d)$)",
-        "contact_graph": "Contact-Graph Cholesky ($O(d)$)",
+        "contact_graph": "Contact-Graph DAG ($O(d)$)",
     }
 
     d_vals = summary_for_plots["d"]
 
     ax = axes[0, 0]
     for m in methods:
-        ax.plot(d_vals, summary_for_plots["ell_per_d"][m], marker="o", markersize=4, lw=1.8, color=colors[m], label=labels[m])
+        ax.plot(d_vals, summary_for_plots["ell_per_d"][m], marker="o", markersize=4.8, lw=2.0, color=colors[m], label=labels[m])
     ax.set_xscale("log")
     ax.set_xlabel("Backbone Dihedral Dimension $d$", fontweight="bold")
-    ax.set_ylabel("Held-Out Log-Likelihood per DOF ($\\ell_{\\mathrm{test}} / d$)", fontweight="bold")
-    ax.set_title("A. Blind Generalization Likelihood on Held-Out Replica 3", fontweight="bold")
+    ax.set_ylabel("Held-Out Log-Likelihood ($\\ell_{\\mathrm{test}} / d$)", fontweight="bold")
+    ax.set_title("A. Blind Log-Likelihood on Held-Out Replica 3", fontweight="bold")
     ax.grid(True, alpha=0.3, which="both")
-    ax.legend(frameon=True, fontsize=8)
+    ax.legend(frameon=True, fontsize=10.2)
 
     ax = axes[0, 1]
     for m in methods:
-        ax.plot(d_vals, summary_for_plots["frob_err"][m], marker="s", markersize=4, lw=1.8, color=colors[m], label=labels[m])
+        ax.plot(d_vals, summary_for_plots["frob_err"][m], marker="s", markersize=4.8, lw=2.0, color=colors[m], label=labels[m])
     ax.set_xscale("log")
     ax.set_xlabel("Backbone Dihedral Dimension $d$", fontweight="bold")
     ax.set_ylabel("Relative Frobenius Error $\\|\\hat{\\Sigma} - \\Sigma_{\\mathrm{test}}\\|_F / \\|\\Sigma_{\\mathrm{test}}\\|_F$", fontweight="bold")
-    ax.set_title("B. High-Dimensional Sample-Complexity Crossover", fontweight="bold")
+    ax.set_title("B. Sample-Complexity Crossover (Replica 3)", fontweight="bold")
     ax.grid(True, alpha=0.3, which="both")
-    ax.legend(frameon=True, fontsize=8)
+    ax.legend(frameon=True, fontsize=10.2)
 
     ax = axes[1, 0]
     for m in methods:
-        ax.plot(d_vals, summary_for_plots["eta_subspace"][m], marker="^", markersize=4, lw=1.8, color=colors[m], label=labels[m])
+        ax.plot(d_vals, summary_for_plots["eta_subspace"][m], marker="^", markersize=4.8, lw=2.0, color=colors[m], label=labels[m])
     ax.set_xscale("log")
     ax.set_xlabel("Backbone Dihedral Dimension $d$", fontweight="bold")
     ax.set_ylabel("Principal Subspace Overlap $\\eta_{\\mathrm{subspace}}$", fontweight="bold")
-    ax.set_title("C. Collective Slow-Subspace Fidelity on Replica 3", fontweight="bold")
+    ax.set_title("C. Slow-Subspace Fidelity on Replica 3", fontweight="bold")
     ax.set_ylim([0.0, 1.05])
     ax.grid(True, alpha=0.3, which="both")
-    ax.legend(frameon=True, fontsize=8)
+    ax.legend(frameon=True, fontsize=10.2)
 
     ax = axes[1, 1]
     for m in ("dense_tuned", "graphical_lasso", "chordal_band", "contact_graph"):
-        ax.plot(d_vals, summary_for_plots["mem_kb"][m], marker="o", markersize=4.5, lw=2.0, color=colors[m], label=f"{labels[m]}")
+        ax.plot(d_vals, summary_for_plots["mem_kb"][m], marker="o", markersize=5.2, lw=2.2, color=colors[m], label=f"{labels[m]}")
     ax.set_xscale("log")
     ax.set_yscale("log")
-    ax.set_xlabel("Backbone Dihedral Dimension $d$ (Measured $d=2 \\to 738$)", fontweight="bold")
+    ax.set_xlabel("Backbone Dihedral Dimension $d$ ($d=2 \\to 738$)", fontweight="bold")
     ax.set_ylabel("Measured Stored Operator Memory (KB)", fontweight="bold")
     ax.set_title(
-        f"D. Measured Memory Scaling: Dense $O(d^{{{exp_mem_dense:.2f}}})$ vs Contact $O(d^{{{exp_mem_cg:.2f}}})$",
+        f"D. Memory: Dense $O(d^{{{exp_mem_dense:.2f}}})$ vs Contact $O(d^{{{exp_mem_cg:.2f}}})$",
         fontweight="bold",
     )
     ax.grid(True, alpha=0.3, which="both")
-    ax.legend(frameon=True, fontsize=8.5)
+    ax.legend(frameon=True, fontsize=10.4)
 
-    plt.tight_layout()
+    plt.tight_layout(pad=1.2)
     fig_pdf = os.path.join(FIGS_DIR, "fig33_sparse_operator_scaling_v4.pdf")
     fig_png = os.path.join(FIGS_DIR, "fig33_sparse_operator_scaling_v4.png")
-    fig.savefig(fig_pdf, dpi=300)
-    fig.savefig(fig_png, dpi=300)
+    fig.savefig(fig_pdf, dpi=300, bbox_inches="tight", pad_inches=0.10)
+    fig.savefig(fig_png, dpi=300, bbox_inches="tight", pad_inches=0.10)
     plt.close(fig)
     print(f"[M33] Saved publication figures to {fig_pdf} and {fig_png}")
 

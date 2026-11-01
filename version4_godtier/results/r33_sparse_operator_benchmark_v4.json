@@ -26,7 +26,7 @@
           "frob_err": 0.16449,
           "eta_subspace": 0.88209,
           "mem_kb": 0.016,
-          "time_s": 5.9e-05
+          "time_s": 6.2e-05
         },
         "dense_tuned": {
           "ell_test": -1.8453,
@@ -34,7 +34,7 @@
           "frob_err": 0.10137,
           "eta_subspace": 0.97565,
           "mem_kb": 0.031,
-          "time_s": 0.009562
+          "time_s": 0.014766
         },
         "ledoit_wolf": {
           "ell_test": -1.8452,
@@ -42,7 +42,7 @@
           "frob_err": 0.09904,
           "eta_subspace": 0.97565,
           "mem_kb": 0.031,
-          "time_s": 0.000366
+          "time_s": 0.000419
         },
         "graphical_lasso": {
           "ell_test": -1.8444,
@@ -50,7 +50,7 @@
           "frob_err": 0.09506,
           "eta_subspace": 0.98781,
           "mem_kb": 0.059,
-          "time_s": 0.005069
+          "time_s": 0.007264
         },
         "chordal_band": {
           "ell_test": -1.8444,
@@ -58,7 +58,7 @@
           "frob_err": 0.09049,
           "eta_subspace": 0.97565,
           "mem_kb": 0.039,
-          "time_s": 0.001525
+          "time_s": 0.004758
         },
         "contact_graph": {
           "ell_test": -1.8434,
@@ -66,7 +66,7 @@
           "frob_err": 0.07919,
           "eta_subspace": 0.97565,
           "mem_kb": 0.039,
-          "time_s": 2.5e-05
+          "time_s": 3.6e-05
         }
       }
     },
@@ -86,7 +86,7 @@
           "frob_err": 0.16039,
           "eta_subspace": 0.94944,
           "mem_kb": 0.031,
-          "time_s": 0.000102
+          "time_s": 6.1e-05
         },
         "dense_tuned": {
           "ell_test": -3.1129,
@@ -94,7 +94,7 @@
           "frob_err": 0.05288,
           "eta_subspace": 0.99701,
           "mem_kb": 0.125,
-          "time_s": 0.003117
+          "time_s": 0.002875
         },
         "ledoit_wolf": {
           "ell_test": -3.1118,
@@ -102,7 +102,7 @@
           "frob_err": 0.07262,
           "eta_subspace": 0.99701,
           "mem_kb": 0.125,
-          "time_s": 0.000387
+          "time_s": 0.000447
         },
         "graphical_lasso": {
           "ell_test": -3.1115,
@@ -110,7 +110,7 @@
           "frob_err": 0.07085,
           "eta_subspace": 0.99777,
           "mem_kb": 0.207,
-          "time_s": 0.002518
+          "time_s": 0.003518
         },
         "chordal_band": {
           "ell_test": -3.1122,
@@ -118,7 +118,7 @@
           "frob_err": 0.08048,
           "eta_subspace": 0.99701,
           "mem_kb": 0.121,
-          "time_s": 0.002258
+          "time_s": 0.003006
         },
         "contact_graph": {
           "ell_test": -3.1136,
@@ -126,7 +126,7 @@
           "frob_err": 0.09155,
           "eta_subspace": 0.99701,
           "mem_kb": 0.121,
-          "time_s": 8.6e-05
+          "time_s": 0.000306
         }
       }
     },
@@ -146,7 +146,7 @@
           "frob_err": 0.31024,
           "eta_subspace": 0.77032,
           "mem_kb": 0.141,
-          "time_s": 7.2e-05
+          "time_s": 0.000175
         },
         "dense_tuned": {
           "ell_test": -4.2999,
@@ -154,7 +154,7 @@
           "frob_err": 0.13724,
           "eta_subspace": 0.98973,
           "mem_kb": 2.531,
-          "time_s": 0.001976
+          "time_s": 0.00311
         },
         "ledoit_wolf": {
           "ell_test": -4.3093,
@@ -162,7 +162,7 @@
           "frob_err": 0.13571,
           "eta_subspace": 0.98973,
           "mem_kb": 2.531,
-          "time_s": 0.000595
+          "time_s": 0.000984
         },
         "graphical_lasso": {
           "ell_test": -4.5074,
@@ -170,7 +170,7 @@
           "frob_err": 0.1362,
           "eta_subspace": 0.98963,
           "mem_kb": 3.285,
-          "time_s": 0.01636
+          "time_s": 0.016745
         },
         "chordal_band": {
           "ell_test": -4.4938,
@@ -178,7 +178,7 @@
           "frob_err": 0.18309,
           "eta_subspace": 0.98707,
           "mem_kb": 1.234,
-          "time_s": 0.013641
+          "time_s": 0.011948
         },
         "contact_graph": {
           "ell_test": -4.5737,
@@ -186,7 +186,7 @@
           "frob_err": 0.14269,
           "eta_subspace": 0.98646,
           "mem_kb": 1.352,
-          "time_s": 0.000536
+          "time_s": 0.000866
         }
       }
     },
@@ -206,7 +206,7 @@
           "frob_err": 0.54872,
           "eta_subspace": 0.6847,
           "mem_kb": 0.297,
-          "time_s": 0.000187
+          "time_s": 0.000259
         },
         "dense_tuned": {
           "ell_test": -1.9955,
@@ -214,7 +214,7 @@
           "frob_err": 0.2539,
           "eta_subspace": 0.86418,
           "mem_kb": 11.281,
-          "time_s": 0.020737
+          "time_s": 0.010665
         },
         "ledoit_wolf": {
           "ell_test": -1.955,
@@ -222,7 +222,7 @@
           "frob_err": 0.24911,
           "eta_subspace": 0.86418,
           "mem_kb": 11.281,
-          "time_s": 0.000788
+          "time_s": 0.001113
         },
         "graphical_lasso": {
           "ell_test": -2.2042,
@@ -230,7 +230,7 @@
           "frob_err": 0.24603,
           "eta_subspace": 0.86956,
           "mem_kb": 11.543,
-          "time_s": 0.027635
+          "time_s": 0.033329
         },
         "chordal_band": {
           "ell_test": -2.082,
@@ -238,7 +238,7 @@
           "frob_err": 0.24122,
           "eta_subspace": 0.86542,
           "mem_kb": 2.875,
-          "time_s": 0.013366
+          "time_s": 0.022029
         },
         "contact_graph": {
           "ell_test": -2.2942,
@@ -246,7 +246,7 @@
           "frob_err": 0.25678,
           "eta_subspace": 0.86538,
           "mem_kb": 3.074,
-          "time_s": 0.001142
+          "time_s": 0.001866
         }
       }
     },
@@ -266,7 +266,7 @@
           "frob_err": 0.62317,
           "eta_subspace": 0.39747,
           "mem_kb": 0.422,
-          "time_s": 0.000418
+          "time_s": 0.00032
         },
         "dense_tuned": {
           "ell_test": -10.5692,
@@ -274,7 +274,7 @@
           "frob_err": 0.40243,
           "eta_subspace": 0.63562,
           "mem_kb": 22.781,
-          "time_s": 0.012069
+          "time_s": 0.011587
         },
         "ledoit_wolf": {
           "ell_test": -9.8386,
@@ -282,7 +282,7 @@
           "frob_err": 0.40124,
           "eta_subspace": 0.63562,
           "mem_kb": 22.781,
-          "time_s": 0.001141
+          "time_s": 0.001705
         },
         "graphical_lasso": {
           "ell_test": -9.724,
@@ -290,7 +290,7 @@
           "frob_err": 0.39778,
           "eta_subspace": 0.58587,
           "mem_kb": 21.004,
-          "time_s": 0.030759
+          "time_s": 0.051979
         },
         "chordal_band": {
           "ell_test": -9.7524,
@@ -298,7 +298,7 @@
           "frob_err": 0.38533,
           "eta_subspace": 0.62843,
           "mem_kb": 4.188,
-          "time_s": 0.026608
+          "time_s": 0.036183
         },
         "contact_graph": {
           "ell_test": -9.9902,
@@ -306,7 +306,7 @@
           "frob_err": 0.39021,
           "eta_subspace": 0.63612,
           "mem_kb": 4.316,
-          "time_s": 0.001741
+          "time_s": 0.002636
         }
       }
     },
@@ -326,7 +326,7 @@
           "frob_err": 0.64201,
           "eta_subspace": 0.30768,
           "mem_kb": 0.5,
-          "time_s": 0.000532
+          "time_s": 0.000476
         },
         "dense_tuned": {
           "ell_test": -1.7437,
@@ -334,7 +334,7 @@
           "frob_err": 0.44538,
           "eta_subspace": 0.61658,
           "mem_kb": 32.0,
-          "time_s": 0.007688
+          "time_s": 0.030393
         },
         "ledoit_wolf": {
           "ell_test": -1.724,
@@ -342,7 +342,7 @@
           "frob_err": 0.44443,
           "eta_subspace": 0.61658,
           "mem_kb": 32.0,
-          "time_s": 0.001612
+          "time_s": 0.002057
         },
         "graphical_lasso": {
           "ell_test": -1.8845,
@@ -350,7 +350,7 @@
           "frob_err": 0.44186,
           "eta_subspace": 0.62252,
           "mem_kb": 28.238,
-          "time_s": 0.038275
+          "time_s": 0.07484
         },
         "chordal_band": {
           "ell_test": -1.4343,
@@ -358,7 +358,7 @@
           "frob_err": 0.4289,
           "eta_subspace": 0.63805,
           "mem_kb": 5.008,
-          "time_s": 0.023967
+          "time_s": 0.037143
         },
         "contact_graph": {
           "ell_test": -1.5881,
@@ -366,7 +366,7 @@
           "frob_err": 0.42916,
           "eta_subspace": 0.63715,
           "mem_kb": 4.293,
-          "time_s": 0.001945
+          "time_s": 0.003157
         }
       }
     },
@@ -386,7 +386,7 @@
           "frob_err": 0.65241,
           "eta_subspace": 0.50323,
           "mem_kb": 0.531,
-          "time_s": 0.000216
+          "time_s": 0.000694
         },
         "dense_tuned": {
           "ell_test": -2.4696,
@@ -394,7 +394,7 @@
           "frob_err": 0.37756,
           "eta_subspace": 0.78308,
           "mem_kb": 36.125,
-          "time_s": 0.011164
+          "time_s": 0.014777
         },
         "ledoit_wolf": {
           "ell_test": -2.5502,
@@ -402,7 +402,7 @@
           "frob_err": 0.37058,
           "eta_subspace": 0.78308,
           "mem_kb": 36.125,
-          "time_s": 0.003496
+          "time_s": 0.002603
         },
         "graphical_lasso": {
           "ell_test": -2.854,
@@ -410,7 +410,7 @@
           "frob_err": 0.37328,
           "eta_subspace": 0.78723,
           "mem_kb": 32.051,
-          "time_s": 0.266078
+          "time_s": 0.499796
         },
         "chordal_band": {
           "ell_test": -2.7125,
@@ -418,7 +418,7 @@
           "frob_err": 0.38232,
           "eta_subspace": 0.73832,
           "mem_kb": 5.336,
-          "time_s": 0.027602
+          "time_s": 0.048475
         },
         "contact_graph": {
           "ell_test": -2.9203,
@@ -426,7 +426,7 @@
           "frob_err": 0.37228,
           "eta_subspace": 0.81774,
           "mem_kb": 6.578,
-          "time_s": 0.003048
+          "time_s": 0.004053
         }
       }
     },
@@ -446,7 +446,7 @@
           "frob_err": 0.60768,
           "eta_subspace": 0.44685,
           "mem_kb": 0.859,
-          "time_s": 0.000455
+          "time_s": 0.000389
         },
         "dense_tuned": {
           "ell_test": -2.2566,
@@ -454,7 +454,7 @@
           "frob_err": 0.28976,
           "eta_subspace": 0.80858,
           "mem_kb": 94.531,
-          "time_s": 0.01309
+          "time_s": 0.024993
         },
         "ledoit_wolf": {
           "ell_test": -2.5071,
@@ -462,7 +462,7 @@
           "frob_err": 0.28556,
           "eta_subspace": 0.80858,
           "mem_kb": 94.531,
-          "time_s": 0.002846
+          "time_s": 0.003881
         },
         "graphical_lasso": {
           "ell_test": -4.108,
@@ -470,7 +470,7 @@
           "frob_err": 0.25204,
           "eta_subspace": 0.81259,
           "mem_kb": 22.254,
-          "time_s": 0.057568
+          "time_s": 0.063777
         },
         "chordal_band": {
           "ell_test": -1.823,
@@ -478,7 +478,7 @@
           "frob_err": 0.26422,
           "eta_subspace": 0.82636,
           "mem_kb": 8.781,
-          "time_s": 0.052848
+          "time_s": 0.052907
         },
         "contact_graph": {
           "ell_test": -1.8387,
@@ -486,7 +486,7 @@
           "frob_err": 0.25702,
           "eta_subspace": 0.81266,
           "mem_kb": 10.27,
-          "time_s": 0.003575
+          "time_s": 0.005151
         }
       }
     },
@@ -506,7 +506,7 @@
           "frob_err": 0.62154,
           "eta_subspace": 0.33017,
           "mem_kb": 0.891,
-          "time_s": 0.000843
+          "time_s": 0.000768
         },
         "dense_tuned": {
           "ell_test": -1.4685,
@@ -514,7 +514,7 @@
           "frob_err": 0.39355,
           "eta_subspace": 0.62584,
           "mem_kb": 101.531,
-          "time_s": 0.014776
+          "time_s": 0.017611
         },
         "ledoit_wolf": {
           "ell_test": -1.8706,
@@ -522,7 +522,7 @@
           "frob_err": 0.3832,
           "eta_subspace": 0.62584,
           "mem_kb": 101.531,
-          "time_s": 0.003555
+          "time_s": 0.005007
         },
         "graphical_lasso": {
           "ell_test": -3.8988,
@@ -530,7 +530,7 @@
           "frob_err": 0.35743,
           "eta_subspace": 0.62671,
           "mem_kb": 24.754,
-          "time_s": 0.056925
+          "time_s": 0.088719
         },
         "chordal_band": {
           "ell_test": -1.2135,
@@ -538,7 +538,7 @@
           "frob_err": 0.373,
           "eta_subspace": 0.62624,
           "mem_kb": 9.109,
-          "time_s": 0.049494
+          "time_s": 0.073374
         },
         "contact_graph": {
           "ell_test": -1.5687,
@@ -546,7 +546,7 @@
           "frob_err": 0.36835,
           "eta_subspace": 0.62623,
           "mem_kb": 9.684,
-          "time_s": 0.003905
+          "time_s": 0.005131
         }
       }
     },
@@ -566,7 +566,7 @@
           "frob_err": 0.58187,
           "eta_subspace": 0.43882,
           "mem_kb": 1.172,
-          "time_s": 0.000693
+          "time_s": 0.000774
         },
         "dense_tuned": {
           "ell_test": 4.0021,
@@ -574,7 +574,7 @@
           "frob_err": 0.36183,
           "eta_subspace": 0.61921,
           "mem_kb": 175.781,
-          "time_s": 0.018086
+          "time_s": 0.019823
         },
         "ledoit_wolf": {
           "ell_test": 3.3962,
@@ -582,7 +582,7 @@
           "frob_err": 0.35764,
           "eta_subspace": 0.61921,
           "mem_kb": 175.781,
-          "time_s": 0.006577
+          "time_s": 0.007355
         },
         "graphical_lasso": {
           "ell_test": 1.4932,
@@ -590,7 +590,7 @@
           "frob_err": 0.31981,
           "eta_subspace": 0.61785,
           "mem_kb": 35.676,
-          "time_s": 0.121533
+          "time_s": 0.151082
         },
         "chordal_band": {
           "ell_test": 5.0304,
@@ -598,7 +598,7 @@
           "frob_err": 0.33947,
           "eta_subspace": 0.60045,
           "mem_kb": 12.062,
-          "time_s": 0.066291
+          "time_s": 0.092108
         },
         "contact_graph": {
           "ell_test": 4.8013,
@@ -606,7 +606,7 @@
           "frob_err": 0.32727,
           "eta_subspace": 0.57662,
           "mem_kb": 14.816,
-          "time_s": 0.005031
+          "time_s": 0.00774
         }
       }
     },
@@ -626,7 +626,7 @@
           "frob_err": 0.63125,
           "eta_subspace": 0.38711,
           "mem_kb": 1.703,
-          "time_s": 0.005877
+          "time_s": 0.001964
         },
         "dense_tuned": {
           "ell_test": 8.2022,
@@ -634,7 +634,7 @@
           "frob_err": 0.4259,
           "eta_subspace": 0.57569,
           "mem_kb": 371.281,
-          "time_s": 0.173489
+          "time_s": 0.055185
         },
         "ledoit_wolf": {
           "ell_test": 7.449,
@@ -642,7 +642,7 @@
           "frob_err": 0.41133,
           "eta_subspace": 0.57569,
           "mem_kb": 371.281,
-          "time_s": 0.049467
+          "time_s": 0.021757
         },
         "graphical_lasso": {
           "ell_test": 7.2068,
@@ -650,7 +650,7 @@
           "frob_err": 0.363,
           "eta_subspace": 0.6125,
           "mem_kb": 64.535,
-          "time_s": 0.700611
+          "time_s": 0.371748
         },
         "chordal_band": {
           "ell_test": 12.917,
@@ -658,7 +658,7 @@
           "frob_err": 0.37022,
           "eta_subspace": 0.63126,
           "mem_kb": 17.641,
-          "time_s": 0.57798
+          "time_s": 0.150278
         },
         "contact_graph": {
           "ell_test": 12.332,
@@ -666,7 +666,7 @@
           "frob_err": 0.36967,
           "eta_subspace": 0.62336,
           "mem_kb": 23.02,
-          "time_s": 0.059399
+          "time_s": 0.010371
         }
       }
     },
@@ -686,7 +686,7 @@
           "frob_err": 0.61994,
           "eta_subspace": 0.37697,
           "mem_kb": 2.0,
-          "time_s": 0.001789
+          "time_s": 0.001411
         },
         "dense_tuned": {
           "ell_test": 74.239,
@@ -694,7 +694,7 @@
           "frob_err": 0.40621,
           "eta_subspace": 0.41952,
           "mem_kb": 512.0,
-          "time_s": 0.101599
+          "time_s": 0.089932
         },
         "ledoit_wolf": {
           "ell_test": 70.4557,
@@ -702,7 +702,7 @@
           "frob_err": 0.38941,
           "eta_subspace": 0.41952,
           "mem_kb": 512.0,
-          "time_s": 0.026399
+          "time_s": 0.019892
         },
         "graphical_lasso": {
           "ell_test": 65.335,
@@ -710,7 +710,7 @@
           "frob_err": 0.32665,
           "eta_subspace": 0.47326,
           "mem_kb": 17.363,
-          "time_s": 0.244169
+          "time_s": 0.212338
         },
         "chordal_band": {
           "ell_test": 82.3764,
@@ -718,7 +718,7 @@
           "frob_err": 0.32246,
           "eta_subspace": 0.45847,
           "mem_kb": 20.758,
-          "time_s": 0.147593
+          "time_s": 0.136258
         },
         "contact_graph": {
           "ell_test": 81.2422,
@@ -726,7 +726,7 @@
           "frob_err": 0.32004,
           "eta_subspace": 0.55409,
           "mem_kb": 21.965,
-          "time_s": 0.010029
+          "time_s": 0.010763
         }
       }
     },
@@ -746,7 +746,7 @@
           "frob_err": 0.62624,
           "eta_subspace": 0.28716,
           "mem_kb": 2.469,
-          "time_s": 0.002357
+          "time_s": 0.00245
         },
         "dense_tuned": {
           "ell_test": 72.2035,
@@ -754,7 +754,7 @@
           "frob_err": 0.43573,
           "eta_subspace": 0.44476,
           "mem_kb": 780.125,
-          "time_s": 0.122849
+          "time_s": 0.258128
         },
         "ledoit_wolf": {
           "ell_test": 69.7712,
@@ -762,7 +762,7 @@
           "frob_err": 0.41874,
           "eta_subspace": 0.44476,
           "mem_kb": 780.125,
-          "time_s": 0.118806
+          "time_s": 0.055758
         },
         "graphical_lasso": {
           "ell_test": 69.8762,
@@ -770,7 +770,7 @@
           "frob_err": 0.34456,
           "eta_subspace": 0.49288,
           "mem_kb": 20.598,
-          "time_s": 0.387471
+          "time_s": 0.505447
         },
         "chordal_band": {
           "ell_test": 84.2539,
@@ -778,7 +778,7 @@
           "frob_err": 0.35407,
           "eta_subspace": 0.39617,
           "mem_kb": 25.68,
-          "time_s": 0.155788
+          "time_s": 0.166532
         },
         "contact_graph": {
           "ell_test": 84.0774,
@@ -786,7 +786,7 @@
           "frob_err": 0.34629,
           "eta_subspace": 0.53508,
           "mem_kb": 27.285,
-          "time_s": 0.010718
+          "time_s": 0.010738
         }
       }
     },
@@ -806,7 +806,7 @@
           "frob_err": 0.61708,
           "eta_subspace": 0.30833,
           "mem_kb": 3.328,
-          "time_s": 0.00277
+          "time_s": 0.002315
         },
         "dense_tuned": {
           "ell_test": 106.3905,
@@ -814,7 +814,7 @@
           "frob_err": 0.5161,
           "eta_subspace": 0.42201,
           "mem_kb": 1417.781,
-          "time_s": 0.108143
+          "time_s": 0.10828
         },
         "ledoit_wolf": {
           "ell_test": 100.1145,
@@ -822,7 +822,7 @@
           "frob_err": 0.47708,
           "eta_subspace": 0.42201,
           "mem_kb": 1417.781,
-          "time_s": 0.069517
+          "time_s": 0.094433
         },
         "graphical_lasso": {
           "ell_test": 104.5941,
@@ -830,7 +830,7 @@
           "frob_err": 0.38481,
           "eta_subspace": 0.43387,
           "mem_kb": 28.973,
-          "time_s": 0.506888
+          "time_s": 0.712858
         },
         "chordal_band": {
           "ell_test": 131.3436,
@@ -838,7 +838,7 @@
           "frob_err": 0.3985,
           "eta_subspace": 0.44916,
           "mem_kb": 34.703,
-          "time_s": 0.215516
+          "time_s": 0.298375
         },
         "contact_graph": {
           "ell_test": 130.0103,
@@ -846,7 +846,7 @@
           "frob_err": 0.39922,
           "eta_subspace": 0.49816,
           "mem_kb": 42.402,
-          "time_s": 0.014425
+          "time_s": 0.018714
         }
       }
     },
@@ -866,7 +866,7 @@
           "frob_err": 0.63409,
           "eta_subspace": 0.13227,
           "mem_kb": 5.766,
-          "time_s": 0.005571
+          "time_s": 0.004848
         },
         "dense_tuned": {
           "ell_test": 151.0456,
@@ -874,7 +874,7 @@
           "frob_err": 0.60122,
           "eta_subspace": 0.18671,
           "mem_kb": 4255.031,
-          "time_s": 0.275394
+          "time_s": 0.267387
         },
         "ledoit_wolf": {
           "ell_test": 147.919,
@@ -882,7 +882,7 @@
           "frob_err": 0.58563,
           "eta_subspace": 0.18671,
           "mem_kb": 4255.031,
-          "time_s": 0.314119
+          "time_s": 0.376346
         },
         "graphical_lasso": {
           "ell_test": 182.2728,
@@ -890,7 +890,7 @@
           "frob_err": 0.47873,
           "eta_subspace": 0.31618,
           "mem_kb": 54.543,
-          "time_s": 2.062655
+          "time_s": 2.91049
         },
         "chordal_band": {
           "ell_test": 225.4402,
@@ -898,7 +898,7 @@
           "frob_err": 0.50144,
           "eta_subspace": 0.30699,
           "mem_kb": 60.297,
-          "time_s": 0.462694
+          "time_s": 0.558809
         },
         "contact_graph": {
           "ell_test": 223.6743,
@@ -906,7 +906,7 @@
           "frob_err": 0.50113,
           "eta_subspace": 0.30987,
           "mem_kb": 64.668,
-          "time_s": 0.026666
+          "time_s": 0.029213
         }
       }
     }
@@ -914,9 +914,9 @@
   "empirical_scaling_laws": {
     "dense_memory_exponent_d18_to_738": 2.0,
     "contact_graph_memory_exponent_d18_to_738": 1.0639,
-    "graphical_lasso_time_exponent_d18_to_738": 1.2678,
-    "contact_graph_time_exponent_d18_to_738": 1.1322,
+    "graphical_lasso_time_exponent_d18_to_738": 1.2133,
+    "contact_graph_time_exponent_d18_to_738": 0.92,
     "mbp_d738_memory_compression_ratio": 65.8,
-    "mbp_d738_speedup_vs_glasso": 77.35
+    "mbp_d738_speedup_vs_glasso": 99.63
   }
 }

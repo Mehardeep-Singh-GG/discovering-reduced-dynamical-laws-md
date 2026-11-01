@@ -355,8 +355,16 @@ def main():
         json.dump(results, f, indent=2)
     print(f"[M32] Saved results JSON to {out_json}")
 
-    # Generate 4-Panel Publication Figure
-    fig, axes = plt.subplots(2, 2, figsize=(13, 10))
+    # Generate 4-Panel Publication Figure (boosted >=25% typography for 2-column JCTC readability)
+    plt.rcParams.update({
+        "font.size": 12.5,
+        "axes.titlesize": 13.5,
+        "axes.labelsize": 13.0,
+        "xtick.labelsize": 11.2,
+        "ytick.labelsize": 11.5,
+        "legend.fontsize": 10.6,
+    })
+    fig, axes = plt.subplots(2, 2, figsize=(11.8, 9.2))
     c_coral = "#dc2626"
     c_navy = "#1e3a8a"
     c_cyan = "#0d9488"
@@ -366,13 +374,13 @@ def main():
     for k in highlight_keys:
         if k in profiles:
             deltas, m_abs, _ = profiles[k]
-            ax.plot(deltas[:60], m_abs[:60], marker="o", markersize=2.5, lw=1.4, label=f"{C.SYSTEMS_V4[k]['short']} ($d={C.SYSTEMS_V4[k]['d']}$)")
+            ax.plot(deltas[:60], m_abs[:60], marker="o", markersize=3.2, lw=1.7, label=f"{C.SYSTEMS_V4[k]['short']} ($d={C.SYSTEMS_V4[k]['d']}$)")
     ax.set_xscale("log")
     ax.set_yscale("log")
     ax.set_xlabel("Covalent Dihedral Separation $\\Delta$", fontweight="bold")
     ax.set_ylabel("Mean $|R(\\Delta)|$", fontweight="bold")
-    ax.set_title("A. Universal Covalent Sequence Decay ($d = 18 \\to 738$)", fontweight="bold")
-    ax.legend(frameon=True, fontsize=8, ncol=2)
+    ax.set_title("A. Covalent Sequence Decay ($d = 18 \\to 738$)", fontweight="bold")
+    ax.legend(frameon=True, fontsize=10.2, ncol=2)
     ax.grid(True, alpha=0.3, which="both")
 
     ax = axes[0, 1]
@@ -384,11 +392,11 @@ def main():
     ax.bar(x_idx - w / 2, pep_v, width=w, color=c_coral, label="Peptide Crankshaft $(\\psi_r, \\phi_{r+1})$")
     ax.bar(x_idx + w / 2, intra_v, width=w, color=c_navy, label="Intra-Residue $(\\phi_r, \\psi_r)$")
     ax.set_xticks(x_idx)
-    ax.set_xticklabels([C.SYSTEMS_V4[k]["short"] for k in prot_names], rotation=35, ha="right", fontsize=8.5, fontweight="bold")
+    ax.set_xticklabels([C.SYSTEMS_V4[k]["short"] for k in prot_names], rotation=35, ha="right", fontsize=10.8, fontweight="bold")
     ax.set_ylabel("Signed Increment Correlation $R$", fontweight="bold")
-    ax.set_title("B. Universal Peptide-Plane Crankshaft Counter-Rotation", fontweight="bold")
-    ax.axhline(0, color="black", linestyle="--", linewidth=0.8)
-    ax.legend(frameon=True, fontsize=8.5)
+    ax.set_title("B. Peptide-Plane Crankshaft Counter-Rotation", fontweight="bold")
+    ax.axhline(0, color="black", linestyle="--", linewidth=0.9)
+    ax.legend(frameon=True, fontsize=10.6)
     ax.grid(True, axis="y", alpha=0.3)
 
     ax = axes[1, 0]
@@ -396,23 +404,23 @@ def main():
     rhos = [contact_results[k]["partial_spearman_inv_dist_given_seq"] for k in cg_keys]
     ax.bar([C.SYSTEMS_V4[k]["short"] for k in cg_keys], rhos, color=c_cyan, edgecolor=c_navy, alpha=0.88)
     ax.set_ylabel("Partial Spearman $\\rho$ ($C^{\\mathrm{eq}}_{ij}$ vs $-r_{ij} \\mid |i-j|$)", fontweight="bold")
-    ax.set_title("C. Non-Local 3D Tertiary Contact Gating ($|i - j| \\geq 4$)", fontweight="bold")
-    ax.axhline(0, color="black", linestyle="--", linewidth=0.8)
-    plt.setp(ax.get_xticklabels(), rotation=35, ha="right", fontsize=8.5, fontweight="bold")
+    ax.set_title("C. Non-Local 3D Contact Gating ($|i - j| \\geq 4$)", fontweight="bold")
+    ax.axhline(0, color="black", linestyle="--", linewidth=0.9)
+    plt.setp(ax.get_xticklabels(), rotation=35, ha="right", fontsize=10.8, fontweight="bold")
     ax.grid(True, axis="y", alpha=0.3)
 
     ax = axes[1, 1]
     d_vals = [sparsity_results[k][0] for k in C.PROTEINS_V4 if k in sparsity_results]
     s_vals = [sparsity_results[k][2] * 100.0 for k in C.PROTEINS_V4 if k in sparsity_results]
     mean_keff = float(np.mean(k_eff_prots))
-    ax.scatter(d_vals, s_vals, color=c_coral, s=75, zorder=5, label="Measured Sparsity $S_{0.05}(d)$ (13 Proteins)")
+    ax.scatter(d_vals, s_vals, color=c_coral, s=85, zorder=5, label="Measured $S_{0.05}(d)$ (13 Proteins)")
     d_arr = np.linspace(16, 760, 200)
     s_theory = np.clip((1.0 - mean_keff / (d_arr - 1.0)) * 100.0, 0.0, 100.0)
-    ax.plot(d_arr, s_theory, "--", color=c_navy, lw=2.0, label=f"Bounded-Degree Law: $1 - \\bar{{k}}_{{\\mathrm{{eff}}}}/(d-1)$ ($\\bar{{k}}_{{\\mathrm{{eff}}}}={mean_keff:.2f}$)")
+    ax.plot(d_arr, s_theory, "--", color=c_navy, lw=2.2, label=f"Bounded Degree: $1 - \\bar{{k}}_{{\\mathrm{{eff}}}}/(d-1)$ ($\\bar{{k}}_{{\\mathrm{{eff}}}}={mean_keff:.2f}$)")
     ax.set_xlabel("Backbone Dihedral Dimension $d$", fontweight="bold")
     ax.set_ylabel("Operator Sparsity $S_{0.05}$ (%)", fontweight="bold")
     ax.set_title("D. Asymptotic $O(d)$ Sparsity Scaling ($d = 18 \\to 738$)", fontweight="bold")
-    ax.legend(frameon=True, fontsize=8.5, loc="lower right")
+    ax.legend(frameon=True, fontsize=10.4, loc="lower right")
     ax.grid(True, alpha=0.3)
 
     plt.tight_layout()

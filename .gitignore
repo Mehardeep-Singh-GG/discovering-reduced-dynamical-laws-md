@@ -97,6 +97,7 @@ fig1.png
 /SI_APPENDIX*.tex
 manuscripts/COVER_LETTER*
 manuscripts/RESPONSE_TO_EDITOR*
+manuscripts/RESPONSE_TO_PEER_REVIEW*
 manuscripts/*.html
 manuscripts/*EXACT_PDF_REPLICA.docx
 manuscripts/SI_APPENDIX_V4.docx

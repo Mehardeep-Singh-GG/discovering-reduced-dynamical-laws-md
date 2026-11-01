@@ -129,6 +129,7 @@ def main():
         (os.path.join(ROOT, "MANUSCRIPT_GENERAL_V4.tex"), "ms_v4_page", True),
         (os.path.join(ROOT, "SI_APPENDIX_V4.tex"), "si_v4_page", True),
         (os.path.join(ROOT, "manuscripts", "RESPONSE_TO_EDITOR_LIU.tex"), "resp_v4_page", False),
+        (os.path.join(ROOT, "manuscripts", "RESPONSE_TO_PEER_REVIEW.tex"), "peer_v4_page", False),
         (os.path.join(ROOT, "manuscripts", "COVER_LETTER_JCTC_V4_RESUBMISSION.tex"), "cov_v4_page", False),
     ]
 

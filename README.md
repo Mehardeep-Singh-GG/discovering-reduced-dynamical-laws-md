@@ -5,7 +5,7 @@
 [![OpenMM 8.4/8.6](https://img.shields.io/badge/MD_Engine-OpenMM_8.4%2F8.6-2E8B57.svg)](https://openmm.org/)
 [![Atlas Scale](https://img.shields.io/badge/Atlas-15_Systems_%7C_890%2C000_Frames_%7C_d%3D2--738-002F6C.svg)](version4_godtier/manifests/trajectory_manifest_v4.json)
 [![Manuscript PDF](https://img.shields.io/badge/Manuscript-JCTC_Main_PDF_(8_pp)-C53030.svg)](manuscripts/MANUSCRIPT_GENERAL_V4.pdf)
-[![SI Appendix](https://img.shields.io/badge/Supporting_Info-19_pp_PDF-4A5568.svg)](manuscripts/SI_APPENDIX_V4.pdf)
+[![SI Appendix](https://img.shields.io/badge/Supporting_Info-20_pp_PDF-4A5568.svg)](manuscripts/SI_APPENDIX_V4.pdf)
 
 **Authors:** Mehardeep Singh<sup>a,\*</sup> (`mehardeep.sim@gmail.com`) and Gurarpit Singh<sup>b</sup> (`gurarpit.sml@gmail.com`)  
 <sup>a</sup>*Sri Chaitanya Educational Institutions, Chandigarh, India* · <sup>b</sup>*Vivekananda Institute of Professional Studies (VIPS), Guru Gobind Singh Indraprastha University (GGSIPU), Delhi, India*
@@ -30,11 +30,11 @@ Every empirical claim is governed by a strict **three-way prospective protocol**
 
 ## Key Scientific Advances
 
-1. **Dual Macromolecular Scaling & $\mathcal{O}(d^{1.13})$ Contact-Graph Estimation ($d = 18 \to 738$):** Collective slow modes compress sub-linearly across two orders of magnitude—participation ratio $PR(d) = 1.061\,d^{0.494}$ ($\Delta\mathrm{AIC}_c = -18.15$) and short-time diffusion rank $r_{90}^D(d) = 0.799\,d^{0.930}$ ($\Delta\mathrm{AIC}_c = -14.39$)—whereas cumulative $90\%$ native-basin variance in large $300\text{ K}$ enzymes transitions to extensive proportionality ($10.0\%$ linear blind extrapolation MAPE vs. $35.7\%$ for small-protein power laws). Universal peptide-bond crankshaft counter-rotation ($\bar{R}(\Delta\psi_i, \Delta\phi_{i+1}) = -0.603 \pm 0.054$) and sparse 3D tertiary contact gating ($\bar{k}_{\mathrm{eff}} = 5.97$, reaching **$99.3\%$ sparsity** on MBP) enable a sparse chordal Cholesky estimator scaling as $\mathcal{O}(d^{1.13})$ in time and $\mathcal{O}(d^{1.06})$ in memory (**$65.8\times$ memory compression**, **$77.3\times$ speedup over Graphical LASSO**, and higher blind held-out log-likelihood $+0.303/d$ vs. dense $+0.205/d$ on MBP).
-2. **SASA-Shielded Internal Friction & Parameter-Free Solution NMR $S^2$ Order Parameters:** Relative solvent-accessible surface area ($\mathrm{rSASA}_i$) unifies zero-parameter linear Einstein equipartition in dry protein cores ($\alpha_{\mathrm{core}} = 1.00$, $12.33\%$ blind thermal MAPE) with viscosity-coupled loops ($\alpha_{\mathrm{loop}} = 1.28$) and peptides ($\alpha_{\mathrm{peptide}} = 1.57$). Analytical second-order kinematic Jacobian projection predicts experimental BMRB solution NMR Lipari–Szabo $S^2$ order parameters without fitted scaling parameters ($\bar{r}_s = +0.525$ across 4 enzymes vs. $+0.344$ diagonal variance and $+0.458$ tuned GNM; Ubiquitin Pearson $r = +0.921, \mathrm{RMSE} = 0.075$) and crystallographic $B$-factors across 8 structures ($\bar{r}_s = +0.340$).
-3. **13-Fold Zero-Shot PDB-to-Operator Transfer:** Training strictly on 12 proteins predicts the $d\times d$ stochastic operator of the held-out 13th protein from static PDB coordinates alone ($r_s = +0.706, R^2 = 0.453$ linear ridge; $r_s = +0.742, R^2 = 0.517$ GBDT, reducing full-matrix Frobenius error from $72.2\%$ null to $41.3\%$).
-4. **Functional Allosteric Hinges, Distal Catalytic Loop Routing, & Folding Memory:** Explicit-PME apo toroidal slow modes localize mechanical hinges in 370-residue MBP ($\mathrm{AUROC} = 0.690$ vs. $0.446$ Cartesian ANM; DynDom $\mathrm{AUROC} = 0.619$ vs. $0.409$ ANM) and AdK ($\mathrm{PR\text{-}AUC} = 0.348$ vs. $0.230$ ANM), recover **$71.6\%$** of blind held-out Met20 $\leftrightarrow$ FG catalytic loop coupling in DHFR at $93.2\%$ sparsity (RMSE $0.088$ vs. $0.296$ Cartesian DCCM), and characterize sub-diffusive Mori–Zwanzig folding memory ($\bar{\gamma}_M = 0.614 \pm 0.097$) across 7 proteins.
-5. **Validation-Tuned 6-Paradigm Benchmark:** Across all 13 proteins, Contact-Gated GENERIC operators win blind diffusion tensor Frobenius error on **13/13 proteins** ($0.288$), guarantee **exact $0.000$ spurious entropy production** (vs. $346.17\,k_B/\text{ns}/d$ for unconstrained SDEs), win zero-shot PDB transfer ($+0.706$ vs. $+0.328$ ENM), and tie calibrated 1D Smoluchowski on 1D barrier MFPT log-error ($1.76$).
+1. **Dual Macromolecular Scaling & $\mathcal{O}(d^{0.92})$ Contact-Graph Estimation ($d = 18 \to 738$):** Collective slow modes compress sub-linearly across two orders of magnitude—participation ratio $PR(d) = 1.061\,d^{0.494}$ ($\Delta\mathrm{AIC}_c = -18.15$) and short-time diffusion rank $r_{90}^D(d) = 0.799\,d^{0.930}$ ($\Delta\mathrm{AIC}_c = -14.39$)—whereas cumulative $90\%$ native-basin variance in large $300\text{ K}$ enzymes transitions to extensive proportionality ($10.0\%$ linear blind extrapolation MAPE vs. $35.7\%$ for small-protein power laws). Universal peptide-bond crankshaft counter-rotation ($\bar{R}(\Delta\psi_i, \Delta\phi_{i+1}) = -0.603 \pm 0.054$) and sparse 3D tertiary contact gating ($\bar{k}_{\mathrm{eff}} = 5.97$, reaching **$99.3\%$ sparsity** on MBP) enable a sparse directed acyclic contact-graph Cholesky estimator scaling empirically as $\mathcal{O}(d^{0.92})$ in time and $\mathcal{O}(d^{1.06})$ in memory (**$65.8\times$ memory compression**, **$99.6\times$ speedup over Graphical LASSO**, and higher blind held-out log-likelihood $+0.303/d$ vs. dense $+0.205/d$ on MBP).
+2. **SASA-Shielded Internal Friction & Parameter-Free Solution NMR $S^2$ Order Parameters:** Relative solvent-accessible surface area ($\mathrm{rSASA}_i$) unifies zero-parameter linear Einstein equipartition in dry protein cores ($\alpha_{\mathrm{core}} = 1.00$, $12.33\%$ blind thermal MAPE) with viscosity-coupled loops ($\alpha_{\mathrm{loop}} = 1.28$) and peptides ($\alpha_{\mathrm{peptide}} = 1.57$). Analytical second-order kinematic Jacobian projection predicts experimental BMRB solution NMR Lipari–Szabo $S^2$ order parameters without fitted scaling parameters ($\bar{r}_s = +0.483$ across 4 enzymes vs. $+0.462$ diagonal variance and $+0.408$ tuned GNM; Ubiquitin Pearson $r = +0.921, \mathrm{RMSE} = 0.110$) and crystallographic $B$-factors across 8 structures ($\bar{r}_s = +0.276$).
+3. **13-Fold Zero-Shot PDB-to-Operator Transfer:** Training strictly on 12 proteins predicts the $d\times d$ stochastic operator of the held-out 13th protein from static PDB coordinates alone ($r_s = +0.706, R^2 = +0.359$ linear ridge; $r_s = +0.721, R^2 = +0.410$ GBDT, reducing full-matrix Frobenius error from $60.0\%$ null to $44.8\%$).
+4. **Functional Allosteric Hinges, Distal Catalytic Loop Routing, & Reaction-Coordinate Memory:** Explicit-PME apo toroidal slow modes localize mechanical hinges in 370-residue MBP ($\mathrm{AUROC} = 0.690$ vs. $0.446$ Cartesian ANM; DynDom $\mathrm{AUROC} = 0.619$ vs. $0.306$ ANM) and AdK ($\mathrm{PR\text{-}AUC} = 0.348$ vs. $0.230$ ANM), recover **$71.6\%$** of blind held-out Met20 $\leftrightarrow$ FG catalytic loop coupling in DHFR at $93.2\%$ sparsity (RMSE $0.0470$ vs. $0.1289$ Cartesian DCCM), and characterize sub-diffusive Mori–Zwanzig $Q_{\mathrm{BHE}}$ reaction-coordinate memory ($\bar{\gamma}_M = 0.593 \pm 0.126$) across 7 proteins (global folding on $150\text{ ns}$ miniproteins and local native/sub-basin excursions on $2.5\text{–}10\text{ ns}$ larger folds).
+5. **Validation-Tuned 6-Paradigm Benchmark:** Across all 13 proteins, Contact-Gated GENERIC operators (reversible linear Ornstein–Uhlenbeck GENERIC in full $d = 18 \to 738$ native-basin space paired with nonlinear position-dependent GENERIC on projected 1D/2D reaction coordinates) win blind diffusion tensor Frobenius error on **13/13 proteins** ($0.288$), guarantee **exact $0.000$ spurious entropy production** (vs. median **$65.79\,k_B/\text{ns}/d$**, IQR $53.76\text{–}104.66$, mean $346.17$ for unconstrained SDEs), win zero-shot PDB transfer ($+0.706$ vs. $+0.328$ ENM), and tie calibrated 1D Smoluchowski on blind $Q_{\mathrm{BHE}}$ MFPT log-error ($1.76$).
 
 ---
 
@@ -52,7 +52,7 @@ Every empirical claim is governed by a strict **three-way prospective protocol**
 | **Ubiquitin (`1UBQ`)** | $\alpha+\beta$ signaling hub | 76 | 150 | 7,500 (OBC2) | 55 (54.34) | 11.53 | $-0.613$ | 94.7% | NMR $S^2$: $r_s = +0.512$ ($r = +0.921$) | 50.0% ($+0.551$) |
 | **Barnase (`1BNI`)** | $\alpha+\beta$ microbial RNase | 110 | 218 | 30,000 (GBn2) | 75 (74.15) | 10.74 | $-0.614$ | 96.9% | X-ray $B$-factor: $r_s = +0.322$ | 46.8% ($+0.529$) |
 | **HEW Lysozyme (`1AKI`)** | Two-domain glycosidase | 129 | 256 | 30,000 (PME: 17,110 atoms) | 106 (105.41) | 13.29 | $-0.642$ | 97.9% | NMR $S^2$: $r_s = +0.491$; $B$: $+0.467$ | 37.4% ($+0.562$) |
-| **E. coli DHFR (`1RX2`)** | Catalytic $\alpha/\beta$ Rossmann | 159 | 316 | 30,000 (PME: 20,837 atoms) | 161 (160.58) | 19.15 | $-0.663$ | 98.0% | Distal $r_s = +0.229$; $71.6\%$ loop relay | 45.8% ($+0.480$) |
+| **E. coli DHFR (`1RX2`)** | Catalytic $\alpha/\beta$ Rossmann | 159 | 316 | 30,000 (PME: 20,837 atoms) | 161 (160.58) | 79.15 | $-0.663$ | 98.0% | Distal $r_s = +0.229$; $71.6\%$ loop relay | 45.8% ($+0.480$) |
 | **Adenylate Kinase (`4AKE`)** | 3-domain allosteric enzyme | 214 | 426 | 30,000 (PME: 40,110 atoms) | 178 (177.57) | 13.41 | $-0.635$ | 98.8% | Hinge PR-AUC: $0.348$ (AUC $0.644$) | 37.0% ($+0.630$) |
 | **Maltose-Binding (`1OMP`)** | 2-lobe periplasmic receptor | 370 | 738 | 30,000 (PME: 49,215 atoms) | 312 (311.86) | 17.83 | $-0.643$ | 99.3% | Hinge AUROC: $0.690$ (DynDom $0.619$) | 39.4% ($+0.556$) |
 | *Dialanine (`ACE-Ala-NME`)* | *Analytical peptide control* | $1^\dagger$ | 2 | 155,000 (GBn2/PME) | 2 (1.48) | 1.45 | --- | 0.0% | Exact 5-tier barrier MFPT err: $+7.8\%$ | Extended VACF $R^2 \ge 0.995$ |
@@ -62,13 +62,13 @@ Every empirical claim is governed by a strict **three-way prospective protocol**
 
 ## Validation-Tuned 6-Paradigm Benchmark Across All 13 Proteins
 
-| Method Family | Validation (Replica 2) Grid | Blind MFPT Log-Err | Spurious $\dot{S}_{\text{irr}}$ ($k_B$/ns/$d$) | Blind $\mathbf{D}$ Frob. Err | 13-Fold LOPO ($r_s$) | Direct Disorder / Cal. $S^2$ | Optimal Physical Regime |
+| Method Family | Validation (Replica 2) Grid | $Q_{\text{BHE}}$ MFPT Log-Err | $\dot{S}_{\text{irr}}$ Med. / Mean ($k_B$/ns/$d$) | Blind $\mathbf{D}$ Frob. Err | 13-Fold LOPO ($r_s$) | Direct Disorder / Cal. $S^2$ | Optimal Physical Regime |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Contact-Gated GENERIC (Ours)** | $r_c=0.65\text{ nm}, \beta_c \in [0, 0.5], \tau^*$ | **1.76 (Tie #1)** | **0.000 (Exact, 13/13)** | **0.288 (#1 on 13/13)** | **+0.706 (#1)** | **+0.348 (#1)** / +0.255 | Full $d$-dim reversible operator, hinges, distal allostery, PDB transfer |
+| **Contact-Gated GENERIC (Ours)** | $r_c=0.65\text{ nm}, \beta_c \in [0, 0.5], \tau^*$ | **1.76 (Tie #1)** | **0.000 / 0.000 (13/13)** | **0.288 (#1 on 13/13)** | **+0.706 (#1)** | **+0.348 (#1)** / +0.255 | Full $d$-dim reversible OU + 1D GENERIC, hinges, allostery, LOPO |
 | **VAMP-2 Reversible MSM** | $k \in [20, 200], \tau \in [2, 50]\text{ ps}$ | 3.68 | **0.000** (0.79 non-rev) | N/A (discrete $k\times k$) | N/A (traj-only) | +0.307 / +0.307 | Coarse multi-basin populations & flux networks with long sampling |
 | **TICA Linear Langevin** | $r \in [3, 12], \tau \in [2, 20]\text{ ps}$ | 3.34 | **0.000** (Gaussian OU) | 1.759 | N/A (traj-only) | +0.145 / +0.145 | Optimal linear slow-subspace basis; underfits anharmonic barriers |
 | **Calibrated 1D Smoluchowski** | $M \in [20, 40], \tau^* \in [1, 100]\text{ ps}$ | **1.76 (Tie #1)** | **0.000** (1D exact) | 0.754 (diag null) | N/A (1D $Q$ only) | $-0.110$ / $-0.110$ | Fast, exact 1D barrier kinetics once reaction coordinate $Q$ is known |
-| **Unconstrained Basis/Poly SDE** | $B \in [1, 3], \lambda \in [10^{-4}, 10^{-1}]$ | 2.19 | **346.17** ($J_{\text{ss}} \ne 0$) | 0.497 | N/A (overfits fold) | +0.250 / +0.250 | Flexible drift regression, but violates detailed balance ($\dot{S}_{\text{irr}} \gg 0$) |
+| **Unconstrained Basis/Poly SDE** | $B \in [1, 3], \lambda \in [10^{-4}, 10^{-1}]$ | 2.19 | **65.79 / 346.17** ($J_{\text{ss}} \ne 0$) | 0.497 | N/A (overfits fold) | +0.250 / +0.250 | Flexible drift regression, but violates detailed balance ($\dot{S}_{\text{irr}} \gg 0$) |
 | **Calibrated GNM / ENM** | $r_c \in [0.7, 1.5]\text{ nm}$ | N/A (harmonic) | **0.000** (static eq.) | N/A (unscaled $C_\alpha$) | +0.328 | +0.169 / **+0.378 (#1 cal.)** | $<0.2\text{ s}$ zero-MD crystal $B$-factors & linearly rescaled pooled $S^2$ |
 
 ---
@@ -79,9 +79,9 @@ Every empirical claim is governed by a strict **three-way prospective protocol**
 discovering-reduced-dynamical-laws-md/
 ├── manuscripts/
 │   ├── MANUSCRIPT_GENERAL_V4.pdf       # Main JCTC Manuscript (8 pages, Figures 1–9, Tables 1–2)
-│   ├── MANUSCRIPT_GENERAL_V4.tex       # LaTeX source bound to 527 verified metrics macros
+│   ├── MANUSCRIPT_GENERAL_V4.tex       # LaTeX source bound to 540 verified metrics macros
 │   ├── MANUSCRIPT_GENERAL_V4.docx      # Native editable Word manuscript
-│   ├── SI_APPENDIX_V4.pdf              # Comprehensive Supporting Information (19 pages, Tables S1–S15, Theorems S1–S7)
+│   ├── SI_APPENDIX_V4.pdf              # Comprehensive Supporting Information (20 pages, Tables S1–S15, Theorems S1–S7)
 │   └── SI_APPENDIX_V4.tex              # Supporting Information LaTeX source
 ├── version4_godtier/
 │   ├── structures/                     # Curated atomic PDB coordinates (Chignolin 1UAO -> MBP 1OMP/1ANF)
@@ -111,8 +111,8 @@ conda activate reduced-md-laws
 ### 2. Verify SHA-256 Manifests, Regenerate Macros, & Compile Manuscripts
 All empirical tables, macro bindings (`version4_godtier/results/v4_metrics_macros.tex`), figures, and compiled PDFs can be audited and rebuilt directly from the verified JSON results:
 ```bash
-# Regenerate all 527 verified LaTeX metrics macros from results/*.json
-python3 version4_godtier/analysis/export_v4_macros.py
+# Regenerate all 540 verified LaTeX metrics macros & run 7 fail-closed audits from results/*.json
+python3 version4_godtier/analysis/r41_master_synthesis.py
 
 # Regenerate Supporting Information TeX and compile Main Manuscript + 19-page SI PDF
 python3 version4_godtier/analysis/generate_si_and_letters_tex.py

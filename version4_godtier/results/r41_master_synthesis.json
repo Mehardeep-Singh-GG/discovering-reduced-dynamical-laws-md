@@ -1,6 +1,6 @@
 {
   "milestone": "M41_MASTER_CROSS_MILESTONE_SYNTHESIS",
-  "n_latex_macros_emitted": 527,
+  "n_latex_macros_emitted": 540,
   "audits": {
     "audit_1_cryptographic_provenance": {
       "status": "PASS",
@@ -173,10 +173,10 @@
     "Law3_Sparse_Chordal_Estimator": {
       "dense_memory_exponent_d18_to_738": 2.0,
       "contact_graph_memory_exponent_d18_to_738": 1.0639,
-      "graphical_lasso_time_exponent_d18_to_738": 1.2678,
-      "contact_graph_time_exponent_d18_to_738": 1.1322,
+      "graphical_lasso_time_exponent_d18_to_738": 1.2133,
+      "contact_graph_time_exponent_d18_to_738": 0.92,
       "mbp_d738_memory_compression_ratio": 65.8,
-      "mbp_d738_speedup_vs_glasso": 77.35
+      "mbp_d738_speedup_vs_glasso": 99.63
     },
     "Law4_Solvent_Internal_Friction": {
       "winner": "H4a_linear_0p",

@@ -2,7 +2,7 @@
 
 **Status:** ALL 7 FAIL-CLOSED AUDITS PASSED STRICTLY (100% Mathematical & Cryptographic Compliance)  
 **Verified Systems:** 15/15 Macromolecular & Peptide Systems ($d = 2 \to 738$, 890,000 total frames = 0.89 $\mu$s)  
-**Emitted LaTeX Macros:** 527 zero-hardcoding macros in `v4_metrics_macros.tex`  
+**Emitted LaTeX Macros:** 540 zero-hardcoding macros in `v4_metrics_macros.tex`  
 
 ## 1. Automated Verification Audits
 | Audit ID | Description | Status | Checks Run | Passed |
@@ -18,7 +18,7 @@
 ## 2. Six Universal Reduction Laws Across $d = 2 \to 738$
 1. **Law 1 (Spectral Rank Compression & Extensive Tail Scaling):** Across $d = 2 \to 738$, participation ratio compresses sub-linearly as $PR(d) = 1.061\,d^{0.494}$ ($\Delta\mathrm{AIC}_c = -18.15$), short-time diffusion rank scales as $r_{90}^D(d) = 0.799\,d^{0.930}$ ($\Delta\mathrm{AIC}_c = -14.39$), and static $r_{90}(d) = 0.735\,d^{0.874}$ ($R^2 = 0.969$), while out-of-scale native-basin extrapolation ($d = 218 \to 738$) confirms extensive cumulative variance (**10.0%** proportional linear MAPE vs **35.7%** small-protein power law).
 2. **Law 2 (Crankshaft Locality & Contact Gating):** Universal anti-correlated peptide-bond crankshaft compensation ($\bar{R}(\psi_i, \phi_{i+1}) = -0.603 \pm 0.054$) and bounded effective degree ($\bar{k}_{\rm eff} = 5.97$), driving sparsity to **99.3%** in MBP ($d=738$).
-3. **Law 3 (Sparse Contact-Graph Operator):** Time scales as $\mathcal{O}(d^{1.13})$ and memory as $\mathcal{O}(d^{1.06})$ vs dense $\mathcal{O}(d^{2.00})$ (**65.8x** compression and **77.3x** speedup over Graphical LASSO on MBP).
+3. **Law 3 (Sparse Contact-Graph Operator):** Time scales as $\mathcal{O}(d^{0.92})$ and memory as $\mathcal{O}(d^{1.06})$ vs dense $\mathcal{O}(d^{2.00})$ (**65.8x** compression and **99.6x** speedup over Graphical LASSO on MBP).
 4. **Law 4 (Internal vs Solvent Friction):** Buried protein cores obey `H4a_linear_0p` (**12.33%** held-out temperature MAPE), unified with exposed loops and peptides via $r\mathrm{SASA}_i$ solvent shielding.
 5. **Law 5 (Solution NMR $S^2$ & X-Ray B-Factors):** Toroidal crankshaft operator achieves mean per-protein Spearman $\bar{r}_s = +0.483$ across 4 BMRB enzymes (beating flanking diagonal +0.462 and tuned GNM +0.408) and pooled Pearson $r = +0.522$, while LOPO-calibrated GNM leads un-normalized cross-temperature pooled Spearman ($r_s = +0.378$ vs +0.255).
 6. **Law 6 (13-Fold Zero-Shot LOPO Transfer):** Static PDB structure predicts full $d$-dimensional operators across 13 unseen folds with pooled $r_s = +0.706$ ($R^2 = +0.359$ linear ridge; $r_s = +0.721, R^2 = +0.410$ nonlinear GBDT).

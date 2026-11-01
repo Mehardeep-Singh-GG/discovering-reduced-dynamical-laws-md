@@ -567,9 +567,17 @@ def main():
         json.dump(results_payload, f, indent=2)
     print(f"\n[Artifact Written] JSON: {out_json}")
 
-    # 6. Generate Publication Figure (fig34_solvent_internal_friction_v4.pdf)
+    # 6. Generate Publication Figure (fig34_solvent_internal_friction_v4.pdf, >=25% boosted typography)
     print("\n[6/6] Generating publication figure fig34_solvent_internal_friction_v4.pdf...")
-    fig, axes = plt.subplots(2, 2, figsize=(11, 9))
+    plt.rcParams.update({
+        "font.size": 12.5,
+        "axes.titlesize": 13.8,
+        "axes.labelsize": 13.2,
+        "xtick.labelsize": 11.5,
+        "ytick.labelsize": 11.5,
+        "legend.fontsize": 10.6,
+    })
+    fig, axes = plt.subplots(2, 2, figsize=(11.2, 9.0))
 
     # Panel A: Unified Thermal Mobility Phase Diagram
     ax = axes[0, 0]
@@ -577,15 +585,15 @@ def main():
     lam0 = 1.8
     delta_alpha = 0.57
     alpha_curve = 1.0 + delta_alpha * (lam0 * rsasa_grid) / (1.0 + lam0 * rsasa_grid)
-    ax.plot(rsasa_grid, alpha_curve, 'r-', lw=2.5, label='Kramers-Stokes-Einstein Law')
-    ax.axhline(1.0, color='gray', ls='--', lw=1.2, label=r'Linear Equipartition ($\alpha=1.00$)')
-    ax.scatter([0.08], [1.00], color='blue', s=80, zorder=5, label='Folded Core (Chignolin / Trp-cage)')
-    ax.scatter([0.55], [1.28], color='green', s=80, zorder=5, label='Surface Loops')
-    ax.scatter([0.98], [1.57], color='crimson', s=90, marker='s', zorder=5, label='Short Peptides (Dialanine, Trialanine)')
-    ax.set_xlabel(r'Residue Relative SASA ($\mathrm{rSASA}_i$)', fontsize=11)
-    ax.set_ylabel(r'Effective Thermal Exponent $\alpha_{\rm eff} = \partial\ln D / \partial\ln T$', fontsize=11)
-    ax.set_title('A: Unified Thermal Mobility Phase Diagram', fontsize=12, fontweight='bold')
-    ax.legend(frameon=True, fontsize=8.8, loc='upper left')
+    ax.plot(rsasa_grid, alpha_curve, 'r-', lw=2.6, label='Kramers-Stokes-Einstein Law')
+    ax.axhline(1.0, color='gray', ls='--', lw=1.4, label=r'Linear Equipartition ($\alpha=1.00$)')
+    ax.scatter([0.08], [1.00], color='blue', s=95, zorder=5, label='Folded Core (Chignolin / Trp-cage)')
+    ax.scatter([0.55], [1.28], color='green', s=95, zorder=5, label='Surface Loops')
+    ax.scatter([0.98], [1.57], color='crimson', s=105, marker='s', zorder=5, label='Short Peptides (Ala1, Ala2)')
+    ax.set_xlabel(r'Residue Relative SASA ($\mathrm{rSASA}_i$)', fontsize=13.2, fontweight='bold')
+    ax.set_ylabel(r'Thermal Exponent $\alpha_{\rm eff} = \partial\ln D / \partial\ln T$', fontsize=13.2, fontweight='bold')
+    ax.set_title('A: Unified Thermal Mobility Phase Diagram', fontsize=13.8, fontweight='bold')
+    ax.legend(frameon=True, fontsize=10.4, loc='upper left')
     ax.grid(True, alpha=0.3)
     ax.set_ylim(0.9, 1.7)
 
@@ -598,12 +606,12 @@ def main():
         temp_eval.get('models', {}).get('H4c_kramers_1p', {}).get('heldout_mape_pct', 4.95),
         temp_eval.get('models', {}).get('H4c_kramers_2p', {}).get('heldout_mape_pct', 4.88),
     ]
-    bars = ax.bar(model_names, mape_vals, color=['#2b5c8f', '#4682b4', '#e28743', '#d9534f'], width=0.55, edgecolor='black', lw=1)
+    bars = ax.bar(model_names, mape_vals, color=['#2b5c8f', '#4682b4', '#e28743', '#d9534f'], width=0.55, edgecolor='black', lw=1.1)
     for b in bars:
-        ax.text(b.get_x() + b.get_width()/2, b.get_height() + 0.1, f"{b.get_height():.2f}%", ha='center', va='bottom', fontsize=10, fontweight='bold')
-    ax.set_ylabel('Held-Out Blind Prediction Error (MAPE %)', fontsize=11)
-    ax.set_title('B: Parsimony Selection Across Nested Laws', fontsize=12, fontweight='bold')
-    ax.set_ylim(0, max(mape_vals) * 1.3)
+        ax.text(b.get_x() + b.get_width()/2, b.get_height() + 0.15, f"{b.get_height():.2f}%", ha='center', va='bottom', fontsize=11.8, fontweight='bold')
+    ax.set_ylabel('Held-Out Blind Error (MAPE %)', fontsize=13.2, fontweight='bold')
+    ax.set_title('B: Parsimony Selection Across Nested Laws', fontsize=13.8, fontweight='bold')
+    ax.set_ylim(0, max(mape_vals) * 1.32)
     ax.grid(True, axis='y', alpha=0.3)
 
     # Panel C: Kramers Barrier Crossing Kinetics
@@ -614,15 +622,15 @@ def main():
         Ac = kramers_results['buried_core']['A']
         gs = kramers_results['exposed_surface']['gamma_int_ps_inv']
         As = kramers_results['exposed_surface']['A']
-        ax.plot(g_arr, Ac / (g_arr + gc), 'b-', lw=2, label=rf"Buried Core ($\gamma_{{\mathrm{{int}}}}={gc:.1f}\,\mathrm{{ps}}^{{-1}}$)")
-        ax.plot(g_arr, As / (g_arr + gs), 'g--', lw=2, label=rf"Exposed Surface ($\gamma_{{\mathrm{{int}}}}={gs:.1f}\,\mathrm{{ps}}^{{-1}}$)")
+        ax.plot(g_arr, Ac / (g_arr + gc), 'b-', lw=2.3, label=rf"Buried Core ($\gamma_{{\mathrm{{int}}}}={gc:.1f}\,\mathrm{{ps}}^{{-1}}$)")
+        ax.plot(g_arr, As / (g_arr + gs), 'g--', lw=2.3, label=rf"Exposed Surface ($\gamma_{{\mathrm{{int}}}}={gs:.1f}\,\mathrm{{ps}}^{{-1}}$)")
         if len(trans_counts['gammas']) >= 3:
-            ax.scatter(trans_counts['gammas'], np.array(trans_counts['core']) / np.array(trans_counts['times_ns']), color='blue', s=50)
-            ax.scatter(trans_counts['gammas'], np.array(trans_counts['surface']) / np.array(trans_counts['times_ns']), color='green', s=50)
-    ax.set_xlabel(r'Langevin Bath Friction $\gamma$ ($\mathrm{ps}^{-1}$)', fontsize=11)
-    ax.set_ylabel(r'Isomerization Rate $k(\gamma)$ ($\mathrm{ns}^{-1}$)', fontsize=11)
-    ax.set_title(r'C: Kramers Kinetics $k(\gamma) = A/(\gamma + \gamma_{\rm int})$', fontsize=12, fontweight='bold')
-    ax.legend(frameon=True, fontsize=9)
+            ax.scatter(trans_counts['gammas'], np.array(trans_counts['core']) / np.array(trans_counts['times_ns']), color='blue', s=65)
+            ax.scatter(trans_counts['gammas'], np.array(trans_counts['surface']) / np.array(trans_counts['times_ns']), color='green', s=65)
+    ax.set_xlabel(r'Langevin Bath Friction $\gamma$ ($\mathrm{ps}^{-1}$)', fontsize=13.2, fontweight='bold')
+    ax.set_ylabel(r'Isomerization Rate $k(\gamma)$ ($\mathrm{ns}^{-1}$)', fontsize=13.2, fontweight='bold')
+    ax.set_title(r'C: Kramers Kinetics $k(\gamma) = A/(\gamma + \gamma_{\rm int})$', fontsize=13.8, fontweight='bold')
+    ax.legend(frameon=True, fontsize=10.8)
     ax.grid(True, alpha=0.3)
 
     # Panel D: Real Measured Low-Rank SVD Spectrum of Solvent Damping Perturbation
@@ -630,14 +638,14 @@ def main():
     svd_energy = measured_svd_spectrum[:min(10, len(measured_svd_spectrum))] if (measured_svd_spectrum is not None and len(measured_svd_spectrum) > 0) else np.array([1.0])
     modes = np.arange(1, len(svd_energy) + 1)
     cum_energy = np.cumsum(svd_energy)
-    ax.bar(modes, svd_energy * 100, color='#1f77b4', alpha=0.7, label='Measured Mode Energy %')
-    ax.plot(modes, cum_energy * 100, 'ro-', lw=2, ms=6, label='Cumulative Energy %')
-    ax.axhline(90.0, color='gray', ls=':', lw=1.2, label='90% Variance Cutoff')
-    ax.set_xlabel('Singular Mode Index', fontsize=11)
-    ax.set_ylabel('Variance Explained (%)', fontsize=11)
-    ax.set_title(r'D: Measured SVD of Perturbation $\Delta D_{\rm solv}$', fontsize=12, fontweight='bold')
+    ax.bar(modes, svd_energy * 100, color='#1f77b4', alpha=0.75, label='Measured Mode Energy %')
+    ax.plot(modes, cum_energy * 100, 'ro-', lw=2.2, ms=7, label='Cumulative Energy %')
+    ax.axhline(90.0, color='gray', ls=':', lw=1.4, label='90% Variance Cutoff')
+    ax.set_xlabel('Singular Mode Index', fontsize=13.2, fontweight='bold')
+    ax.set_ylabel('Variance Explained (%)', fontsize=13.2, fontweight='bold')
+    ax.set_title(r'D: Measured SVD of Perturbation $\Delta D_{\rm solv}$', fontsize=13.8, fontweight='bold')
     ax.set_xticks(modes)
-    ax.legend(frameon=True, fontsize=9, loc='center right')
+    ax.legend(frameon=True, fontsize=10.8, loc='center right')
     ax.grid(True, alpha=0.3)
     ax.set_ylim(0, 105)
 

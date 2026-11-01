@@ -602,9 +602,17 @@ def main():
         json.dump(payload, f, indent=2)
     print(f"\n[Artifact Written] JSON: {out_json}")
 
-    # 6. Generate Publication Figure (fig35_nmr_s2_and_bfactor_benchmarks.pdf)
+    # 6. Generate Publication Figure (fig35_nmr_s2_and_bfactor_benchmarks.pdf, >=25% boosted typography)
     print("\n[6/6] Generating publication figure fig35_nmr_s2_and_bfactor_benchmarks.pdf...")
-    fig, axes = plt.subplots(2, 2, figsize=(11, 9))
+    plt.rcParams.update({
+        "font.size": 12.5,
+        "axes.titlesize": 13.8,
+        "axes.labelsize": 13.2,
+        "xtick.labelsize": 11.5,
+        "ytick.labelsize": 11.5,
+        "legend.fontsize": 10.6,
+    })
+    fig, axes = plt.subplots(2, 2, figsize=(11.2, 9.0))
 
     # Panel A: Parity Plot: H5b Crankshaft vs Experimental NMR S^2
     ax = axes[0, 0]
@@ -612,12 +620,12 @@ def main():
     yp = np.array(lopo_results['H5b_crankshaft']['y_pred'])
     r_val = global_lopo_summary['H5b_crankshaft']['pooled_spearman_r']
     rmse_val = global_lopo_summary['H5b_crankshaft']['pooled_rmse']
-    ax.scatter(yt, yp, color='#2b5c8f', alpha=0.7, s=40, edgecolors='none', label=f'LOPO Held-Out Residues (n={len(yt)})')
-    ax.plot([0.1, 1.0], [0.1, 1.0], 'k--', lw=1.5, label='Perfect Agreement (y = x)')
-    ax.set_xlabel(r'Experimental Solution NMR $S^2$ (BMRB)', fontsize=11)
-    ax.set_ylabel(r'Predicted $\hat{S}^2$ (Zero-Shot LOPO Crankshaft)', fontsize=11)
-    ax.set_title(rf'A: LOPO Prediction of NMR $S^2$ ($r_s = {r_val:+.3f}$, RMSE = {rmse_val:.3f})', fontsize=12, fontweight='bold')
-    ax.legend(frameon=True, fontsize=9, loc='upper left')
+    ax.scatter(yt, yp, color='#2b5c8f', alpha=0.72, s=52, edgecolors='none', label=f'Held-Out Residues (n={len(yt)})')
+    ax.plot([0.1, 1.0], [0.1, 1.0], 'k--', lw=1.8, label='Identity (y = x)')
+    ax.set_xlabel(r'Experimental Solution NMR $S^2$ (BMRB)', fontsize=13.2, fontweight='bold')
+    ax.set_ylabel(r'Predicted $\hat{S}^2$ (Parameter-Free Crankshaft)', fontsize=13.2, fontweight='bold')
+    ax.set_title(rf'A: Parameter-Free NMR $S^2$ ($r_s={r_val:+.3f}$, RMSE$={rmse_val:.3f}$)', fontsize=12.4, fontweight='bold')
+    ax.legend(frameon=True, fontsize=10.8, loc='upper left')
     ax.grid(True, alpha=0.3)
     ax.set_xlim(0.1, 1.0)
     ax.set_ylim(0.1, 1.0)
@@ -627,16 +635,16 @@ def main():
     ubi = aligned_datasets.get('ubiquitin')
     if ubi is not None:
         res_nums = ubi['common_res'] + 1 # 1-based PDB numbering
-        ax.plot(res_nums, ubi['y_exp'], 'ko-', ms=4, lw=1.5, label=r'Experimental $^{15}$N $S^2$ (Tjandra 1995)')
+        ax.plot(res_nums, ubi['y_exp'], 'ko-', ms=4.8, lw=1.8, label=r'Exp. $^{15}$N $S^2$ (Tjandra 1995)')
         if 'pred_H5b' in ubi:
-            ax.plot(res_nums, ubi['pred_H5b'], 'r-', lw=1.6, label=r'LOPO Toroidal Crankshaft $\hat{S}^2$')
-        ax.plot(res_nums, ubi['y_md'], 'b--', lw=1.2, label=r'Direct MD $S^2_{\rm MD-NH}$')
-        ax.set_xlabel('Ubiquitin Residue Number', fontsize=11)
-        ax.set_ylabel(r'Order Parameter $S^2$', fontsize=11)
-        ax.set_title('B: Ubiquitin Backbone Dynamics Profile', fontsize=12, fontweight='bold')
-        ax.axvspan(7, 11, color='orange', alpha=0.2, label=r'$\beta_1-\beta_2$ Turn')
-        ax.axvspan(46, 49, color='green', alpha=0.2, label='Loop 46-49')
-        ax.legend(frameon=True, fontsize=8, loc='lower left')
+            ax.plot(res_nums, ubi['pred_H5b'], 'r-', lw=1.9, label=r'Toroidal Crankshaft $\hat{S}^2$')
+        ax.plot(res_nums, ubi['y_md'], 'b--', lw=1.5, label=r'Direct MD $S^2_{\rm MD-NH}$')
+        ax.set_xlabel('Ubiquitin Residue Number', fontsize=13.2, fontweight='bold')
+        ax.set_ylabel(r'Order Parameter $S^2$', fontsize=13.2, fontweight='bold')
+        ax.set_title('B: Ubiquitin Backbone Dynamics Profile', fontsize=13.8, fontweight='bold')
+        ax.axvspan(7, 11, color='orange', alpha=0.22, label=r'$\beta_1-\beta_2$ Turn')
+        ax.axvspan(46, 49, color='green', alpha=0.22, label='Loop 46-49')
+        ax.legend(frameon=True, fontsize=10.2, loc='lower left')
         ax.grid(True, alpha=0.3)
         ax.set_ylim(0.0, 1.05)
 
@@ -651,11 +659,11 @@ def main():
         global_lopo_summary['baseline_tuned_gnm']['pooled_spearman_r'],
     ]
     colors = ['#2b5c8f', '#4682b4', '#999999', '#2ca02c', '#d9534f']
-    bars = ax.bar(bar_models, r_bars, color=colors, width=0.55, edgecolor='black', lw=1)
+    bars = ax.bar(bar_models, r_bars, color=colors, width=0.55, edgecolor='black', lw=1.1)
     for b in bars:
-        ax.text(b.get_x() + b.get_width()/2, b.get_height() + 0.02, f"{b.get_height():+.3f}", ha='center', va='bottom', fontsize=10, fontweight='bold')
-    ax.set_ylabel('Pooled LOPO Spearman Correlation ($r_s$)', fontsize=11)
-    ax.set_title('C: Head-to-Head Fair Baseline Benchmark', fontsize=12, fontweight='bold')
+        ax.text(b.get_x() + b.get_width()/2, b.get_height() + 0.02, f"{b.get_height():+.3f}", ha='center', va='bottom', fontsize=11.8, fontweight='bold')
+    ax.set_ylabel('Pooled LOPO Spearman ($r_s$)', fontsize=13.2, fontweight='bold')
+    ax.set_title('C: Head-to-Head Baseline Benchmark', fontsize=13.8, fontweight='bold')
     ax.set_ylim(0, max(r_bars) * 1.35)
     ax.grid(True, axis='y', alpha=0.3)
 
@@ -668,23 +676,22 @@ def main():
         idx_t = [np.where(d_ub['torus']['res_indices'] == r)[0][0] for r in common]
         cross_vals = np.abs(d_ub['torus']['flank_cross'][idx_t])
         plane_b = d_ub['b_plane'][idx_b]
-        ax.scatter(cross_vals, plane_b, color='#e28743', s=45, alpha=0.8, edgecolors='black', lw=0.5)
-        # Linear fit line
+        ax.scatter(cross_vals, plane_b, color='#e28743', s=55, alpha=0.82, edgecolors='black', lw=0.6)
         m_slope, b_intercept = np.polyfit(cross_vals, plane_b, 1)
         x_line = np.linspace(cross_vals.min(), cross_vals.max(), 50)
-        ax.plot(x_line, m_slope * x_line + b_intercept, 'r-', lw=1.5, label='Linear Trend')
+        ax.plot(x_line, m_slope * x_line + b_intercept, 'r-', lw=1.8, label='Linear Trend')
         r_xt, p_xt = stats.spearmanr(cross_vals, plane_b)
-        ax.set_xlabel(r'Crankshaft Cross-Covariance $|\Sigma_{\psi_{i-1}\phi_i}|$', fontsize=11)
-        ax.set_ylabel(r'Excess Peptide-Plane B-Factor $\Delta B_{\rm plane}$ ($\rm \AA^2$)', fontsize=11)
-        ax.set_title(rf'D: X-Ray Peptide Plane Rocking ($r_s = {r_xt:+.3f}$)', fontsize=12, fontweight='bold')
-        ax.legend(frameon=True, fontsize=9)
+        ax.set_xlabel(r'Crankshaft Cross-Covariance $|\Sigma_{\psi_{i-1}\phi_i}|$', fontsize=13.2, fontweight='bold')
+        ax.set_ylabel(r'Excess Plane B-Factor $\Delta B_{\rm plane}$ ($\rm \AA^2$)', fontsize=13.2, fontweight='bold')
+        ax.set_title(rf'D: X-Ray Peptide Plane Rocking ($r_s = {r_xt:+.3f}$)', fontsize=13.8, fontweight='bold')
+        ax.legend(frameon=True, fontsize=10.8)
         ax.grid(True, alpha=0.3)
 
-    plt.tight_layout()
+    plt.tight_layout(pad=1.2)
     out_pdf = os.path.join(V4_FIG, "fig35_nmr_s2_and_bfactor_benchmarks.pdf")
     out_png = os.path.join(V4_FIG, "fig35_nmr_s2_and_bfactor_benchmarks.png")
-    plt.savefig(out_pdf, dpi=300)
-    plt.savefig(out_png, dpi=300)
+    plt.savefig(out_pdf, dpi=300, bbox_inches="tight", pad_inches=0.10)
+    plt.savefig(out_png, dpi=300, bbox_inches="tight", pad_inches=0.10)
     plt.close()
     print(f"[Artifact Written] PDF: {out_pdf}")
     print(f"[Artifact Written] PNG: {out_png}")
