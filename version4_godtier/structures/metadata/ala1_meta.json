@@ -1,0 +1,101 @@
+{
+  "key": "ala1",
+  "name": "Alanine Dipeptide (ACE-Ala-NME)",
+  "pdb_id": "ACE-ALA-NME",
+  "tier": 1,
+  "fold": "peptide",
+  "pdb_relpath": "version4_godtier/structures/ala1_ACE_ALA_NME.pdb",
+  "pdb_sha256": "f08fd39875964c77f9a0f0b10fa6f5b57099eeac58b23e0f24d9d38e9fdc6a0d",
+  "n_atoms": 22,
+  "n_heavy_atoms": 10,
+  "n_residues": 3,
+  "n_phi": 1,
+  "n_psi": 1,
+  "d": 2,
+  "n_chi1": 0,
+  "phi_atoms": [
+    [
+      4,
+      6,
+      8,
+      14
+    ]
+  ],
+  "psi_atoms": [
+    [
+      6,
+      8,
+      14,
+      16
+    ]
+  ],
+  "chi1_atoms": [],
+  "phi_res": [
+    1
+  ],
+  "psi_res": [
+    1
+  ],
+  "chi1_res": [],
+  "chain_order": [
+    0,
+    1
+  ],
+  "chain_res": [
+    1,
+    1
+  ],
+  "chain_type": [
+    "phi",
+    "psi"
+  ],
+  "block_res": [
+    1
+  ],
+  "block_idx_res": [
+    [
+      0,
+      1
+    ]
+  ],
+  "block_idx_pep": [],
+  "dssp_3state": [
+    "NA",
+    "C",
+    "NA"
+  ],
+  "dssp_8state": [
+    "NA",
+    " ",
+    "NA"
+  ],
+  "sasa_nm2": [
+    1.2176,
+    1.2463,
+    1.0095
+  ],
+  "rsasa": [
+    0.6764,
+    0.9661,
+    0.5609
+  ],
+  "ca_burial_rho": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "heavy_packing_rho": [
+    1,
+    0,
+    2
+  ],
+  "ca_contact_degree": [
+    0,
+    0,
+    0
+  ],
+  "n_bhe_heavy_pairs": 0,
+  "n_ca_contact_pairs": 0,
+  "disulfide_bridges_verified": [],
+  "rg_native_nm": 0.2952
+}

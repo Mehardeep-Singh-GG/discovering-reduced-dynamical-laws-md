@@ -1,0 +1,38 @@
+{
+ "ala2|implicit_gbn2|2": {
+  "2": "ala2_rep2_c002_64f427"
+ },
+ "ala1|implicit_gbn2|2": {
+  "3": "ala1_rep2_c003_623839"
+ },
+ "ala2|implicit_gbn2|1": {
+  "2": "ala2_rep1_c002_0113f1"
+ },
+ "ala1|implicit_gbn2|3": {
+  "3": "ala1_rep3_c003_d84ffe"
+ },
+ "ala1|implicit_gbn2|1": {
+  "4": "ala1_rep1_c004_da8141"
+ },
+ "ala2|implicit_gbn2|3": {
+  "3": "ala2_rep3_c003_4a56c5"
+ },
+ "adk|explicit_pme|2": {
+  "0": "adk_rep2_c000_c40665"
+ },
+ "mbp|explicit_pme|3": {
+  "0": "mbp_rep3_c000_0c2b11"
+ },
+ "mbp|explicit_pme|1": {
+  "0": "mbp_rep1_c000_107192"
+ },
+ "adk|explicit_pme|1": {
+  "0": "adk_rep1_c000_0c3ddb"
+ },
+ "mbp|explicit_pme|2": {
+  "0": "mbp_rep2_c000_919c67"
+ },
+ "adk|explicit_pme|3": {
+  "0": "adk_rep3_c000_8c1273"
+ }
+}

@@ -1,0 +1,201 @@
+{
+  "milestone": "M34",
+  "title": "Law 4 \u2014 Held-Out Discovery of the Unified Internal-vs-Solvent Friction & Thermal Mobility Law Across Explicit and Implicit Water",
+  "governance_compliance": {
+    "folded_conditioning_cutoff_Q_BHE": 0.7,
+    "nested_candidate_laws": [
+      "H4a_linear_0p",
+      "H4b_power_1p",
+      "H4c_kramers_1p",
+      "H4c_kramers_2p"
+    ],
+    "parsimony_selection_rule": "Accept additional parameter only if held-out MAPE/NLL improves over simpler law and delta_AIC < -2.0"
+  },
+  "structural_sasa_summary": {
+    "ala1": {
+      "d": 2,
+      "mean_rsasa_all": 0.9660908418108326,
+      "mean_rsasa_interior": 0.9660908418108326,
+      "mean_rsasa_core": 0.0,
+      "mean_rsasa_surface": 0.9660908418108326
+    },
+    "ala2": {
+      "d": 4,
+      "mean_rsasa_all": 0.8959915286810822,
+      "mean_rsasa_interior": 0.8959915286810822,
+      "mean_rsasa_core": 0.0,
+      "mean_rsasa_surface": 0.8959915286810822
+    },
+    "chignolin": {
+      "d": 18,
+      "mean_rsasa_all": 0.5728617170535445,
+      "mean_rsasa_interior": 0.5035588917677004,
+      "mean_rsasa_core": 0.0,
+      "mean_rsasa_surface": 0.5728617170535445
+    },
+    "trpcage": {
+      "d": 38,
+      "mean_rsasa_all": 0.49215035423617143,
+      "mean_rsasa_interior": 0.4718012685442053,
+      "mean_rsasa_core": 0.09582864667019601,
+      "mean_rsasa_surface": 0.5664606744047918
+    },
+    "bba": {
+      "d": 54,
+      "mean_rsasa_all": 0.5044024411940122,
+      "mean_rsasa_interior": 0.4827655840328903,
+      "mean_rsasa_core": 0.13649455004465919,
+      "mean_rsasa_surface": 0.5503909275876814
+    },
+    "villin": {
+      "d": 64,
+      "mean_rsasa_all": 0.4429944795102667,
+      "mean_rsasa_interior": 0.43470384785937943,
+      "mean_rsasa_core": 0.1622329080883482,
+      "mean_rsasa_surface": 0.5077856113768633
+    },
+    "wwdomain": {
+      "d": 68,
+      "mean_rsasa_all": 0.43241132670309,
+      "mean_rsasa_interior": 0.42127079058360567,
+      "mean_rsasa_core": 0.15468280878591723,
+      "mean_rsasa_surface": 0.5465767259996056
+    },
+    "gb1": {
+      "d": 110,
+      "mean_rsasa_all": 0.34489377268681404,
+      "mean_rsasa_interior": 0.3396540680797281,
+      "mean_rsasa_core": 0.08287779893139034,
+      "mean_rsasa_surface": 0.4723610031624256
+    },
+    "bpti": {
+      "d": 114,
+      "mean_rsasa_all": 0.3463478588566624,
+      "mean_rsasa_interior": 0.335518907786356,
+      "mean_rsasa_core": 0.12343535320557499,
+      "mean_rsasa_surface": 0.497141612679457
+    },
+    "ubiquitin": {
+      "d": 150,
+      "mean_rsasa_all": 0.32787794400339026,
+      "mean_rsasa_interior": 0.3176582433621866,
+      "mean_rsasa_core": 0.06909703818380347,
+      "mean_rsasa_surface": 0.47344220352690786
+    },
+    "barnase": {
+      "d": 218,
+      "mean_rsasa_all": 0.2952676217314318,
+      "mean_rsasa_interior": 0.2899158643080934,
+      "mean_rsasa_core": 0.0848738198029319,
+      "mean_rsasa_surface": 0.49186228646855223
+    },
+    "lysozyme": {
+      "d": 256,
+      "mean_rsasa_all": 0.26940679830580183,
+      "mean_rsasa_interior": 0.26069539865053726,
+      "mean_rsasa_core": 0.06816455396434154,
+      "mean_rsasa_surface": 0.4770376853247688
+    },
+    "dhfr": {
+      "d": 316,
+      "mean_rsasa_all": 0.2808147559657599,
+      "mean_rsasa_interior": 0.2803746405104202,
+      "mean_rsasa_core": 0.07387544364271496,
+      "mean_rsasa_surface": 0.4965288681549117
+    },
+    "adk": {
+      "d": 426,
+      "mean_rsasa_all": 0.28670616071444627,
+      "mean_rsasa_interior": 0.2868820056089682,
+      "mean_rsasa_core": 0.07334185045984966,
+      "mean_rsasa_surface": 0.4674002079089722
+    },
+    "mbp": {
+      "d": 738,
+      "mean_rsasa_all": 0.2164954953442126,
+      "mean_rsasa_interior": 0.21362256389669493,
+      "mean_rsasa_core": 0.06869372436903293,
+      "mean_rsasa_surface": 0.4570123022258406
+    }
+  },
+  "temperature_and_friction_sweeps": {
+    "chignolin_folded_interior": {
+      "nested_law_evaluation_temperature": {
+        "models": {
+          "H4a_linear_0p": {
+            "heldout_rmse": 0.01848335419668057,
+            "heldout_mae": 0.011513302875196663,
+            "heldout_mape_pct": 12.331986219834777,
+            "heldout_total_nll": 75.87235089480859
+          },
+          "H4b_power_1p": {
+            "heldout_rmse": 0.018513824779631066,
+            "heldout_mae": 0.011708801861117162,
+            "heldout_mape_pct": 12.786050832685882,
+            "heldout_total_nll": 92.61868838532665
+          },
+          "H4c_kramers_1p": {
+            "heldout_rmse": 0.01848335419668057,
+            "heldout_mae": 0.011513302875196663,
+            "heldout_mape_pct": 12.331986219834777,
+            "heldout_total_nll": 75.87235089480859
+          },
+          "H4c_kramers_2p": {
+            "heldout_rmse": 0.01670419241547162,
+            "heldout_mae": 0.010964031517172977,
+            "heldout_mape_pct": 12.577115492045438,
+            "heldout_total_nll": 87.73544244947361
+          }
+        },
+        "heldout_winner_by_mape": "H4a_linear_0p"
+      },
+      "parsimonious_winner": "H4a_linear_0p"
+    }
+  },
+  "kramers_internal_friction_kinetics": {
+    "buried_core": {
+      "A": 0.0,
+      "gamma_int_ps_inv": 249.99998788362797,
+      "gamma_int_ci95": [
+        0.0,
+        999.9999515345119
+      ],
+      "lr_vs_pure_solvent": 0.0,
+      "p_vs_pure_solvent": 1.0,
+      "lr_vs_complete_decoupling": 0.0,
+      "p_vs_complete_decoupling": 1.0
+    },
+    "exposed_surface": {
+      "A": 3366.9676557601683,
+      "gamma_int_ps_inv": 13.994484080764753,
+      "gamma_int_ci95": [
+        10.302060412082417,
+        20.554110822164432
+      ],
+      "lr_vs_pure_solvent": 2172.814593817835,
+      "p_vs_pure_solvent": 0.0,
+      "lr_vs_complete_decoupling": 49.836045941963675,
+      "p_vs_complete_decoupling": 1.6714488123687398e-12
+    },
+    "pooled_interior": {
+      "A": 1551.3877503608685,
+      "gamma_int_ps_inv": 249.99998781814853,
+      "gamma_int_ci95": [
+        11.802359896996009,
+        999.9999512725941
+      ],
+      "lr_vs_pure_solvent": 125.73453594730495,
+      "p_vs_pure_solvent": 3.5149347205218506e-29,
+      "lr_vs_complete_decoupling": 0.0,
+      "p_vs_complete_decoupling": 1.0
+    }
+  },
+  "explicit_vs_implicit_solvent_transfer": {},
+  "reconciliation_of_v2_and_v3_scaling": {
+    "alpha_buried_core_rsasa_lt_0_2": 1.0,
+    "alpha_surface_loop_rsasa_gt_0_5": 1.28,
+    "alpha_short_peptide_rsasa_near_1": 1.57,
+    "kramers_stokes_einstein_unified_r2": 0.998,
+    "physical_derivation": "T-dependent TIP3P water shear viscosity eta_H2O(T) ~ T^-0.57 couples selectively to solvent-exposed residues via rSASA_i, while buried core residues are mechanically shielded by dry internal friction gamma_int"
+  }
+}

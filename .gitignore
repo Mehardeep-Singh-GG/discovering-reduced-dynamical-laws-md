@@ -17,7 +17,7 @@ __pycache__/
 .ipynb_checkpoints/
 .mypy_cache/
 
-# OS and Editor files
+# OS, Editor, and LaTeX auxiliary files
 .DS_Store
 .DS_Store?
 ._*
@@ -31,16 +31,33 @@ Thumbs.db
 *.swo
 ~$*
 *.tmp
+*.aux
+*.out
+*.toc
+*.xdv
+*.fls
+*.fdb_latexmk
+*.synctex.gz
 
-# Temporary scratch, logs, and locks
+# Temporary scratch, logs, and local license notices
 scratch/
 *.log
+.licenses/
 
-# Internal development, milestones, and exploratory files (kept locally)
+# Internal development, exploratory workspaces, and raw multi-GB trajectory chunks
 archive_legacy_scaffolds/
 explainer/
+colab_v4_workspace/
+physical_review_letter/
 version2_*/
 version3_*/
+version4_godtier/trajectories/
+version4_godtier/cache/
+version4_godtier/specs/
+version4_godtier/figures/qa_pages/
+version4_godtier/figures/_tmp_*.png
+version4_godtier/figures/_raw_*.png
+version4_godtier/figures/*.pse
 pnas_paper/
 protein_scaling/
 milestone*
@@ -49,12 +66,16 @@ representation/
 walkthrough*
 final_walkthrough*
 V2_MANUSCRIPT_AUDIT_AND_CHANGELOG.md
+*V2*
 data_audit.csv
 real_metadata.json
 metadata.json
 generate_*.py
 m7_*.py
 run_*.py
+!version4_godtier/analysis/*.py
+!version4_godtier/lib/*.py
+!version4_godtier/sims/*.py
 create_mock_data.py
 RECOVERY.md
 autocorrelation*
@@ -64,10 +85,19 @@ fig1.png
 *.pdb
 !data/structures/*.pdb
 !data/trajectories/*.npz
+!version4_godtier/structures/*.pdb
 
-# Redundant root manuscript copies (authoritative versions are in manuscripts/)
-/COVER_LETTER_IJMS.pdf
-/COVER_LETTER_NATURE_COMMUNICATIONS.pdf
-/MANUSCRIPT_GENERAL.docx
-/SI_APPENDIX_GENERAL.pdf
-
+# Redundant root manuscript copies & private editorial correspondence (kept locally)
+/COVER_LETTER*.pdf
+/MANUSCRIPT_GENERAL*.pdf
+/MANUSCRIPT_GENERAL*.docx
+/MANUSCRIPT_GENERAL*.tex
+/SI_APPENDIX*.pdf
+/SI_APPENDIX*.docx
+/SI_APPENDIX*.tex
+manuscripts/COVER_LETTER*
+manuscripts/RESPONSE_TO_EDITOR*
+manuscripts/*.html
+manuscripts/*EXACT_PDF_REPLICA.docx
+manuscripts/SI_APPENDIX_V4.docx
+manuscripts/SI_APPENDIX_GENERAL.md

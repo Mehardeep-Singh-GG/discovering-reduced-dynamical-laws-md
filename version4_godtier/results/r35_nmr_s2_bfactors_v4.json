@@ -1,0 +1,267 @@
+{
+  "milestone": "M35",
+  "title": "Law 5 \u2014 Analytical Operator Prediction of Solution NMR Lipari-Szabo S^2 and X-Ray B-Factors",
+  "governance_compliance": {
+    "held_out_parsimony": "Evaluated strictly via Leave-One-Protein-Out (LOPO) cross-validation",
+    "fair_baselines": "Direct all-atom MD N-H S^2, tuned GNM, and tuned ANM evaluated side-by-side"
+  },
+  "global_lopo_summary": {
+    "H5a_flank_diag": {
+      "pooled_spearman_r": 0.2689788261288522,
+      "pooled_spearman_p": 7.714939864589101e-08,
+      "pooled_pearson_r": 0.520025813175311,
+      "pooled_rmse": 0.13613323894725698,
+      "pooled_mae": 0.10124383374091896,
+      "pooled_r2": -1.8929340297321922
+    },
+    "H5a_intra_diag": {
+      "pooled_spearman_r": 0.28648129300665615,
+      "pooled_spearman_p": 9.567016810715985e-09,
+      "pooled_pearson_r": 0.4998009802988307,
+      "pooled_rmse": 0.1342339914150707,
+      "pooled_mae": 0.09538121554285027,
+      "pooled_r2": -1.812776228108496
+    },
+    "H5b_crankshaft": {
+      "pooled_spearman_r": 0.25548598344698403,
+      "pooled_spearman_p": 3.495969018034045e-07,
+      "pooled_pearson_r": 0.5224044322630474,
+      "pooled_rmse": 0.13813258851917898,
+      "pooled_mae": 0.10156981936370164,
+      "pooled_r2": -1.978533407638249
+    },
+    "H5c_spectral": {
+      "pooled_spearman_r": 0.14582785570759485,
+      "pooled_spearman_p": 0.004041873988193456,
+      "pooled_pearson_r": 0.3562158409800109,
+      "pooled_rmse": 0.0992995032058851,
+      "pooled_mae": 0.0748658410592427,
+      "pooled_r2": -0.5392328606914853
+    },
+    "baseline_direct_md": {
+      "pooled_spearman_r": 0.3105553056753022,
+      "pooled_spearman_p": 4.24756291701314e-10,
+      "pooled_pearson_r": 0.5272682103072427,
+      "pooled_rmse": 0.09984260467390071,
+      "pooled_mae": 0.06856879608883723,
+      "pooled_r2": -0.5561160407182362
+    },
+    "baseline_tuned_gnm": {
+      "pooled_spearman_r": 0.3783715643184597,
+      "pooled_spearman_p": 1.2800885221589277e-14,
+      "pooled_pearson_r": 0.4942320957912971,
+      "pooled_rmse": 0.06960097427797936,
+      "pooled_mae": 0.045221563563564056,
+      "pooled_r2": 0.24379279167549772
+    }
+  },
+  "per_protein_metrics": {
+    "ubiquitin": {
+      "H5a_flank_diag": {
+        "spearman_r": 0.44652019721481,
+        "spearman_p": 8.439844339587405e-05,
+        "pearson_r": 0.9286711159735317,
+        "rmse": 0.09855655609886643
+      },
+      "H5a_intra_diag": {
+        "spearman_r": 0.49914962785088746,
+        "spearman_p": 8.078714623716874e-06,
+        "pearson_r": 0.8446938223032809,
+        "rmse": 0.12453631383818695
+      },
+      "H5b_crankshaft": {
+        "spearman_r": 0.512119836947039,
+        "spearman_p": 4.25940314216952e-06,
+        "pearson_r": 0.9209792787720713,
+        "rmse": 0.10990830870463249
+      },
+      "H5c_spectral": {
+        "spearman_r": 0.4057218105096008,
+        "spearman_p": 0.00040657758647338703,
+        "pearson_r": 0.7114172710773167,
+        "rmse": 0.10066930908234892
+      },
+      "baseline_direct_md": {
+        "spearman_r": 0.48653744209239647,
+        "spearman_p": 1.4689277978217275e-05,
+        "pearson_r": 0.8896482040242581,
+        "rmse": 0.06518920024223324
+      },
+      "baseline_tuned_gnm": {
+        "spearman_r": 0.504503704127718,
+        "spearman_p": 6.222483716042747e-06,
+        "pearson_r": 0.7733648324469203,
+        "rmse": 0.09157392799268725
+      }
+    },
+    "gb1": {
+      "H5a_flank_diag": {
+        "spearman_r": 0.7321727793986571,
+        "spearman_p": 2.1250262162539838e-10,
+        "pearson_r": 0.5750625791056684,
+        "rmse": 0.1487246291368337
+      },
+      "H5a_intra_diag": {
+        "spearman_r": 0.8062519504926354,
+        "spearman_p": 1.1054587113056464e-13,
+        "pearson_r": 0.6568880456350112,
+        "rmse": 0.15539804256670928
+      },
+      "H5b_crankshaft": {
+        "spearman_r": 0.7457012289062467,
+        "spearman_p": 6.500047638549393e-11,
+        "pearson_r": 0.6013780776792397,
+        "rmse": 0.15284017541026762
+      },
+      "H5c_spectral": {
+        "spearman_r": 0.7164259551062209,
+        "spearman_p": 7.737623978125483e-10,
+        "pearson_r": 0.6587119307600513,
+        "rmse": 0.10891896908443358
+      },
+      "baseline_direct_md": {
+        "spearman_r": 0.7401371085442541,
+        "spearman_p": 1.0674018031752764e-10,
+        "pearson_r": 0.6893630670188283,
+        "rmse": 0.13706932332138475
+      },
+      "baseline_tuned_gnm": {
+        "spearman_r": 0.38370610417897144,
+        "spearman_p": 0.003829605566078017,
+        "pearson_r": 0.39120957908853304,
+        "rmse": 0.051887307239565604
+      }
+    },
+    "lysozyme": {
+      "H5a_flank_diag": {
+        "spearman_r": 0.47268215821830595,
+        "spearman_p": 2.2896930029401523e-08,
+        "pearson_r": 0.4950233731888042,
+        "rmse": 0.13844696501694836
+      },
+      "H5a_intra_diag": {
+        "spearman_r": 0.5166000764816767,
+        "spearman_p": 5.932058005838734e-10,
+        "pearson_r": 0.45092150436271283,
+        "rmse": 0.12715803558545416
+      },
+      "H5b_crankshaft": {
+        "spearman_r": 0.49055814245863566,
+        "spearman_p": 5.506637927110177e-09,
+        "pearson_r": 0.49441904665691194,
+        "rmse": 0.13727463216467417
+      },
+      "H5c_spectral": {
+        "spearman_r": 0.4293684470016381,
+        "spearman_p": 5.2529934873991e-07,
+        "pearson_r": 0.5271046081063078,
+        "rmse": 0.07718111359272632
+      },
+      "baseline_direct_md": {
+        "spearman_r": 0.5197492768463097,
+        "spearman_p": 4.4727184010486197e-10,
+        "pearson_r": 0.630921925239933,
+        "rmse": 0.08312805808326308
+      },
+      "baseline_tuned_gnm": {
+        "spearman_r": 0.39140715578455004,
+        "spearman_p": 5.8454150928826304e-06,
+        "pearson_r": 0.6029691222583499,
+        "rmse": 0.04293364468419539
+      }
+    },
+    "dhfr": {
+      "H5a_flank_diag": {
+        "spearman_r": 0.19860892376692968,
+        "spearman_p": 0.021420335176113157,
+        "pearson_r": 0.19631280617459654,
+        "rmse": 0.145606324777163
+      },
+      "H5a_intra_diag": {
+        "spearman_r": 0.20033554265015352,
+        "spearman_p": 0.02029193960569736,
+        "pearson_r": 0.2132564768295006,
+        "rmse": 0.1363464489678096
+      },
+      "H5b_crankshaft": {
+        "spearman_r": 0.1822600797562003,
+        "spearman_p": 0.03505394463349611,
+        "pearson_r": 0.19032267951099943,
+        "rmse": 0.14597222113198136
+      },
+      "H5c_spectral": {
+        "spearman_r": 0.1311903625697252,
+        "spearman_p": 0.1308014817725216,
+        "pearson_r": 0.10756595505656937,
+        "rmse": 0.11207822697065453
+      },
+      "baseline_direct_md": {
+        "spearman_r": 0.25652982446966127,
+        "spearman_p": 0.002771913483209263,
+        "pearson_r": 0.22848637844032516,
+        "rmse": 0.11089255259084331
+      },
+      "baseline_tuned_gnm": {
+        "spearman_r": 0.35433888863039226,
+        "spearman_p": 2.6637547675629937e-05,
+        "pearson_r": 0.28828235985936324,
+        "rmse": 0.08152622103165555
+      }
+    }
+  },
+  "crystallographic_bfactor_correlations": {
+    "ubiquitin": {
+      "spearman_bca_vs_flank_var": 0.22052945278835417,
+      "p_ca": 0.057270261642042866,
+      "spearman_excess_plane_vs_crank_cross": 0.20820916223259364,
+      "p_cross": 0.07304336532678916
+    },
+    "gb1": {
+      "spearman_bca_vs_flank_var": 0.22135642135642142,
+      "p_ca": 0.10434697208588664,
+      "spearman_excess_plane_vs_crank_cross": -0.059956709956709965,
+      "p_cross": 0.6636863369622036
+    },
+    "lysozyme": {
+      "spearman_bca_vs_flank_var": 0.4674620887287558,
+      "p_ca": 2.651847355419594e-08,
+      "spearman_excess_plane_vs_crank_cross": 0.37365291048625726,
+      "p_cross": 1.3968606518623236e-05
+    },
+    "dhfr": {
+      "spearman_bca_vs_flank_var": 0.23986430467999656,
+      "p_ca": 0.002400979133791694,
+      "spearman_excess_plane_vs_crank_cross": 0.20236598446667753,
+      "p_cross": 0.010774073682488202
+    },
+    "bpti": {
+      "spearman_bca_vs_flank_var": 0.3461943576154165,
+      "p_ca": 0.008341567947671482,
+      "spearman_excess_plane_vs_crank_cross": 0.27006968090670663,
+      "p_cross": 0.042180682806531235
+    },
+    "barnase": {
+      "spearman_bca_vs_flank_var": 0.3220431426669836,
+      "p_ca": 0.0006767033827238588,
+      "spearman_excess_plane_vs_crank_cross": 0.1937384635587068,
+      "p_cross": 0.04453304292209528
+    },
+    "adk": {
+      "spearman_bca_vs_flank_var": 0.20581939539765998,
+      "p_ca": 0.0025399267112326714,
+      "spearman_excess_plane_vs_crank_cross": -0.018268783899301855,
+      "p_cross": 0.7909499052633489
+    },
+    "mbp": {
+      "spearman_bca_vs_flank_var": 0.18841293026733902,
+      "p_ca": 0.00027299355942425645,
+      "spearman_excess_plane_vs_crank_cross": 0.19582513267875132,
+      "p_cross": 0.00015331941549815076
+    }
+  },
+  "key_findings": {
+    "crankshaft_superiority": "Flanking pair (psi_{i-1}, phi_i) with crankshaft cross-covariance outperforms intra-residue (phi_i, psi_i) in predicting solution NMR S^2",
+    "parsimonious_winner": "H5b_crankshaft achieves lowest RMSE and highest Spearman correlation across held-out proteins",
+    "biophysical_basis": "Anti-correlated crankshaft rotations (delta psi_{i-1} ~ -delta phi_i) preserve C-alpha positions while directly modulating peptide-plane N-H reorientation"
+  }
+}

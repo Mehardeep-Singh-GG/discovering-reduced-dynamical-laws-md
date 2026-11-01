@@ -1,0 +1,392 @@
+{
+  "milestone": "M39_FROZEN_MODELS",
+  "frozen_systems": {
+    "chignolin": {
+      "name": "Chignolin",
+      "full_name": "Chignolin (1UAO)",
+      "pdb_id": "1UAO",
+      "solvent": "implicit_obc2_v3",
+      "files": [
+        "protein_scaling/trajectories/chignolin/chignolin_rep1_discovery.npz",
+        "protein_scaling/trajectories/chignolin/chignolin_rep2_cv.npz",
+        "protein_scaling/trajectories/chignolin/chignolin_rep3_test.npz"
+      ],
+      "d_dihedrals": 18,
+      "n_residues": 10,
+      "r90": 8,
+      "participation_ratio": 4.9580124539212305,
+      "d_orthogonal_bath": 17,
+      "d_fast_bath": 10
+    },
+    "trpcage": {
+      "name": "Trp-cage",
+      "full_name": "Trp-cage TC5b (1L2Y)",
+      "pdb_id": "1L2Y",
+      "solvent": "implicit_obc2_v3",
+      "files": [
+        "protein_scaling/trajectories/trpcage/trpcage_rep1_discovery.npz",
+        "protein_scaling/trajectories/trpcage/trpcage_rep2_cv.npz",
+        "protein_scaling/trajectories/trpcage/trpcage_rep3_test.npz"
+      ],
+      "d_dihedrals": 38,
+      "n_residues": 20,
+      "r90": 15,
+      "participation_ratio": 5.958461736152723,
+      "d_orthogonal_bath": 37,
+      "d_fast_bath": 23
+    },
+    "bba": {
+      "name": "BBA5",
+      "full_name": "BBA5 Mini-Protein (1FME)",
+      "pdb_id": "1FME",
+      "solvent": "implicit_gbn2",
+      "files": [
+        "version4_godtier/trajectories/bba/implicit_gbn2/bba_rep1_chunk000.npz",
+        "version4_godtier/trajectories/bba/implicit_gbn2/bba_rep2_chunk000.npz",
+        "version4_godtier/trajectories/bba/implicit_gbn2/bba_rep3_chunk000.npz"
+      ],
+      "d_dihedrals": 54,
+      "n_residues": 28,
+      "r90": 17,
+      "participation_ratio": 6.565296515334743,
+      "d_orthogonal_bath": 53,
+      "d_fast_bath": 37
+    },
+    "villin": {
+      "name": "Villin",
+      "full_name": "Villin HP35 (2F4K)",
+      "pdb_id": "2F4K",
+      "solvent": "implicit_obc2_v3",
+      "files": [
+        "protein_scaling/trajectories/villin/villin_rep1_discovery.npz",
+        "protein_scaling/trajectories/villin/villin_rep2_cv.npz",
+        "protein_scaling/trajectories/villin/villin_rep3_test.npz"
+      ],
+      "d_dihedrals": 64,
+      "n_residues": 33,
+      "r90": 21,
+      "participation_ratio": 6.2407269197232065,
+      "d_orthogonal_bath": 63,
+      "d_fast_bath": 43
+    },
+    "wwdomain": {
+      "name": "WW-FiP35",
+      "full_name": "WW Domain FiP35 (2F21)",
+      "pdb_id": "2F21",
+      "solvent": "implicit_gbn2",
+      "files": [
+        "version4_godtier/trajectories/wwdomain/implicit_gbn2/wwdomain_rep1_chunk000.npz",
+        "version4_godtier/trajectories/wwdomain/implicit_gbn2/wwdomain_rep2_chunk000.npz",
+        "version4_godtier/trajectories/wwdomain/implicit_gbn2/wwdomain_rep3_chunk000.npz"
+      ],
+      "d_dihedrals": 68,
+      "n_residues": 35,
+      "r90": 23,
+      "participation_ratio": 9.913160477059357,
+      "d_orthogonal_bath": 67,
+      "d_fast_bath": 45
+    },
+    "gb1": {
+      "name": "GB1",
+      "full_name": "GB1 Domain (1PGA)",
+      "pdb_id": "1PGA",
+      "solvent": "implicit_obc2_v3",
+      "files": [
+        "protein_scaling/trajectories/gb1/gb1_rep1_discovery.npz",
+        "protein_scaling/trajectories/gb1/gb1_rep2_cv.npz",
+        "protein_scaling/trajectories/gb1/gb1_rep3_test.npz"
+      ],
+      "d_dihedrals": 110,
+      "n_residues": 56,
+      "r90": 50,
+      "participation_ratio": 16.03526634319019,
+      "d_orthogonal_bath": 109,
+      "d_fast_bath": 60
+    },
+    "ubiquitin": {
+      "name": "Ubiquitin",
+      "full_name": "Human Ubiquitin (1UBQ)",
+      "pdb_id": "1UBQ",
+      "solvent": "implicit_obc2_v3",
+      "files": [
+        "protein_scaling/trajectories/ubiquitin/ubiquitin_rep1_discovery.npz",
+        "protein_scaling/trajectories/ubiquitin/ubiquitin_rep2_cv.npz",
+        "protein_scaling/trajectories/ubiquitin/ubiquitin_rep3_test.npz"
+      ],
+      "d_dihedrals": 150,
+      "n_residues": 76,
+      "r90": 60,
+      "participation_ratio": 12.910894768731163,
+      "d_orthogonal_bath": 149,
+      "d_fast_bath": 90
+    }
+  },
+  "frozen_parameters": {
+    "chignolin": {
+      "lags_ps": [
+        1,
+        2,
+        5,
+        10,
+        20,
+        30,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        400
+      ],
+      "median_D_vs_lag": [
+        0.0038150044700974452,
+        0.0023938279632777777,
+        0.0011130477179738698,
+        0.0006589008181362324,
+        0.0003803409808736791,
+        0.00029327081436791733,
+        0.00021661816793599453,
+        0.00015574955271727167,
+        0.00012174930047777596,
+        0.00010506114138137671,
+        8.682415701112298e-05,
+        6.12258391853563e-05,
+        5.405540530329353e-05
+      ],
+      "gamma_M": 0.7155677099210374,
+      "gamma_M_ci95_half": 0.021129475687037227,
+      "gamma_M_r2": 0.9975095743153221,
+      "attenuation_ratio_D1_over_D400": 70.57581843466451,
+      "tau_calibrated_ps": 50,
+      "calibration_mode": "MFPT_UF_train"
+    },
+    "trpcage": {
+      "lags_ps": [
+        1,
+        2,
+        5,
+        10,
+        20,
+        30,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        400
+      ],
+      "median_D_vs_lag": [
+        0.0007202759419023077,
+        0.0004602659906104425,
+        0.0002808436634051031,
+        0.0001843598953268176,
+        0.00011753487461758626,
+        9.244914193783727e-05,
+        6.600129205102228e-05,
+        5.02301651986022e-05,
+        4.281261536060462e-05,
+        3.301906811228317e-05,
+        2.714414372558067e-05,
+        2.377676210529239e-05,
+        2.040866859499531e-05
+      ],
+      "gamma_M": 0.6066879010437364,
+      "gamma_M_ci95_half": 0.012494853974022635,
+      "gamma_M_r2": 0.9987869321416408,
+      "attenuation_ratio_D1_over_D400": 35.29264726651186,
+      "tau_calibrated_ps": 20,
+      "calibration_mode": "MFPT_UF_train"
+    },
+    "bba": {
+      "lags_ps": [
+        1,
+        2,
+        5,
+        10,
+        20,
+        30,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        400
+      ],
+      "median_D_vs_lag": [
+        0.000389520882521427,
+        0.0002543184464904049,
+        0.00013247724105885762,
+        8.259525380702225e-05,
+        5.293665300537053e-05,
+        4.299606682440777e-05,
+        3.263362581676865e-05,
+        2.4978865472489808e-05,
+        2.104671878102379e-05,
+        1.689708008352945e-05,
+        1.4651747354790456e-05,
+        9.274984498605793e-06,
+        7.33387370811197e-06
+      ],
+      "gamma_M": 0.6398659404942989,
+      "gamma_M_ci95_half": 0.02145671788746436,
+      "gamma_M_r2": 0.9967905320612539,
+      "attenuation_ratio_D1_over_D400": 53.112570249277596,
+      "tau_calibrated_ps": 5,
+      "calibration_mode": "MFPT_UF_train"
+    },
+    "villin": {
+      "lags_ps": [
+        1,
+        2,
+        5,
+        10,
+        20,
+        30,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        400
+      ],
+      "median_D_vs_lag": [
+        0.00037194398944488747,
+        0.00023105080969255143,
+        0.00011911255110820095,
+        6.94004606047772e-05,
+        4.3929754758498646e-05,
+        3.341517857396917e-05,
+        2.4777612850813036e-05,
+        1.9668478503084082e-05,
+        1.6295512713127605e-05,
+        1.3189841867632996e-05,
+        1.1395900554660718e-05,
+        8.668791961438084e-06,
+        7.120680741414243e-06
+      ],
+      "gamma_M": 0.6540016726632487,
+      "gamma_M_ci95_half": 0.020561537789136282,
+      "gamma_M_r2": 0.9971776780266856,
+      "attenuation_ratio_D1_over_D400": 52.23433024902271,
+      "tau_calibrated_ps": 5,
+      "calibration_mode": "MFPT_UF_train"
+    },
+    "wwdomain": {
+      "lags_ps": [
+        1,
+        2,
+        5,
+        10,
+        20,
+        30,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        400
+      ],
+      "median_D_vs_lag": [
+        0.00014618481176593238,
+        0.0001160306515193654,
+        5.6699358769065434e-05,
+        3.176391905194129e-05,
+        1.9270475688808243e-05,
+        1.466746700908981e-05,
+        9.798585656736278e-06,
+        7.2957664133551665e-06,
+        6.726575188966575e-06,
+        5.634996874587003e-06,
+        5.112201263783343e-06,
+        4.478117343230725e-06,
+        4.836471237075698e-06
+      ],
+      "gamma_M": 0.6314825928786533,
+      "gamma_M_ci95_half": 0.05651167731442228,
+      "gamma_M_r2": 0.9775824792635561,
+      "attenuation_ratio_D1_over_D400": 30.225510418691318,
+      "tau_calibrated_ps": 5,
+      "calibration_mode": "MFPT_UF_train"
+    },
+    "gb1": {
+      "lags_ps": [
+        1,
+        2,
+        5,
+        10,
+        20,
+        30,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        400
+      ],
+      "median_D_vs_lag": [
+        5.1305958936091534e-05,
+        3.440543342933487e-05,
+        1.787358943409446e-05,
+        1.1512455238726958e-05,
+        8.241810015956908e-06,
+        6.934983066100225e-06,
+        6.042035387665823e-06,
+        6.345007492541697e-06,
+        1.0574747609261437e-05,
+        1.7925802001031953e-05,
+        1.910984849695257e-05,
+        5.91589049105651e-06,
+        1.7792925746296727e-06
+      ],
+      "gamma_M": 0.3243845402490365,
+      "gamma_M_ci95_half": 0.18852675215743883,
+      "gamma_M_r2": 0.5083425174244969,
+      "attenuation_ratio_D1_over_D400": 28.835032342429653,
+      "tau_calibrated_ps": 5,
+      "calibration_mode": "MFPT_UF_train"
+    },
+    "ubiquitin": {
+      "lags_ps": [
+        1,
+        2,
+        5,
+        10,
+        20,
+        30,
+        50,
+        75,
+        100,
+        150,
+        200,
+        300,
+        400
+      ],
+      "median_D_vs_lag": [
+        4.082974787093678e-05,
+        2.7746107657389885e-05,
+        1.585745687566482e-05,
+        9.960363315068754e-06,
+        6.503469741588947e-06,
+        5.800492335725739e-06,
+        3.859706631476358e-06,
+        3.454269578459148e-06,
+        2.242504686099528e-06,
+        3.6365952756604553e-06,
+        1.8133890537449323e-06,
+        1.481818230459293e-06,
+        1.1067888678770864e-06
+      ],
+      "gamma_M": 0.5761161680675612,
+      "gamma_M_ci95_half": 0.051497218587894134,
+      "gamma_M_r2": 0.9776331975360545,
+      "attenuation_ratio_D1_over_D400": 36.890276958831045,
+      "tau_calibrated_ps": 10,
+      "calibration_mode": "MFPT_UF_train"
+    }
+  }
+}

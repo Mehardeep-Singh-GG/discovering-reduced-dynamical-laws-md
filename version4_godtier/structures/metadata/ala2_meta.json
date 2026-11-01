@@ -1,0 +1,138 @@
+{
+  "key": "ala2",
+  "name": "Trialanine / Capped Ala2 (ACE-Ala-Ala-NME)",
+  "pdb_id": "ACE-ALA2-NME",
+  "tier": 1,
+  "fold": "peptide",
+  "pdb_relpath": "version4_godtier/structures/ala2_ACE_ALA_ALA_NME.pdb",
+  "pdb_sha256": "967dd11e64a89d7b315fc286cd253d7446f47eb771a347f2300dca1f9770a668",
+  "n_atoms": 32,
+  "n_heavy_atoms": 15,
+  "n_residues": 4,
+  "n_phi": 2,
+  "n_psi": 2,
+  "d": 4,
+  "n_chi1": 0,
+  "phi_atoms": [
+    [
+      4,
+      6,
+      8,
+      14
+    ],
+    [
+      14,
+      16,
+      18,
+      24
+    ]
+  ],
+  "psi_atoms": [
+    [
+      6,
+      8,
+      14,
+      16
+    ],
+    [
+      16,
+      18,
+      24,
+      26
+    ]
+  ],
+  "chi1_atoms": [],
+  "phi_res": [
+    1,
+    2
+  ],
+  "psi_res": [
+    1,
+    2
+  ],
+  "chi1_res": [],
+  "chain_order": [
+    0,
+    2,
+    1,
+    3
+  ],
+  "chain_res": [
+    1,
+    1,
+    2,
+    2
+  ],
+  "chain_type": [
+    "phi",
+    "psi",
+    "phi",
+    "psi"
+  ],
+  "block_res": [
+    1,
+    2
+  ],
+  "block_idx_res": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "block_idx_pep": [
+    [
+      2,
+      1
+    ]
+  ],
+  "dssp_3state": [
+    "NA",
+    "C",
+    "C",
+    "NA"
+  ],
+  "dssp_8state": [
+    "NA",
+    " ",
+    " ",
+    "NA"
+  ],
+  "sasa_nm2": [
+    1.2655,
+    1.1593,
+    1.1524,
+    1.0618
+  ],
+  "rsasa": [
+    0.703,
+    0.8986,
+    0.8933,
+    0.5899
+  ],
+  "ca_burial_rho": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "heavy_packing_rho": [
+    2,
+    1,
+    2,
+    4
+  ],
+  "ca_contact_degree": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "n_bhe_heavy_pairs": 0,
+  "n_ca_contact_pairs": 0,
+  "disulfide_bridges_verified": [],
+  "rg_native_nm": 0.362
+}

@@ -1,22 +1,27 @@
 cff-version: 1.2.0
-message: "If you use this software, code, or scaling laws in your research, please cite it as below."
+message: "If you use this software, trajectory manifests, or stochastic operator framework, please cite it as below."
+type: software
+title: "Scalable Contact-Gated Stochastic Operators and Universal Reduction Laws for Macromolecular Protein Dynamics, Allostery, and Kinetics"
+version: 4.0.0
+date-released: 2026-11-01
+url: "https://github.com/Mehardeep-Singh-GG/discovering-reduced-dynamical-laws-md"
+repository-code: "https://github.com/Mehardeep-Singh-GG/discovering-reduced-dynamical-laws-md"
+license: MIT
 authors:
   - family-names: "Singh"
     given-names: "Mehardeep"
+    email: "mehardeep.sim@gmail.com"
     affiliation: "Sri Chaitanya Educational Institutions, Chandigarh, India"
   - family-names: "Singh"
     given-names: "Gurarpit"
+    email: "gurarpit.sml@gmail.com"
     affiliation: "Vivekananda Institute of Professional Studies (VIPS), Guru Gobind Singh Indraprastha University (GGSIPU), Delhi, India"
-title: "General Scaling Laws and Thermodynamically Consistent Reduced Stochastic Operators for Macromolecular Protein Dynamics"
-date-released: 2026-10-07
-url: "https://github.com/Mehardeep-Singh-GG/discovering-reduced-dynamical-laws-md"
-repository-code: "https://github.com/Mehardeep-Singh-GG/discovering-reduced-dynamical-laws-md"
-license: "MIT"
 keywords:
-  - "molecular-dynamics"
-  - "stochastic-differential-equations"
-  - "mori-zwanzig"
-  - "dimensional-reduction"
-  - "protein-dynamics"
-  - "detailed-balance"
-  - "generic"
+  - molecular-dynamics
+  - macromolecular-proteins
+  - stochastic-differential-equations
+  - mori-zwanzig-projection
+  - generic-thermodynamics
+  - allosteric-hinges
+  - nmr-order-parameters
+  - coarse-graining

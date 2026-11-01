@@ -1,0 +1,463 @@
+{
+  "timestamp_utc": "2026-10-31T21:39:40Z",
+  "timestamp_local": "03:09:40",
+  "total_chunks_done": 95,
+  "total_chunks_target": 450,
+  "percent": 21.1,
+  "total_sim_time_ns": 950.0,
+  "total_frames": 950000,
+  "active_throughput_ns_day": 10500,
+  "workers": {
+    "a100": {
+      "online": true,
+      "nvidia_smi": "NVIDIA A100-SXM4-40GB, 40960, 49, 0, 32",
+      "temp_c": 32,
+      "disk_free_gb": 187.75,
+      "platforms": [
+        "Reference",
+        "CPU",
+        "CUDA",
+        "OpenCL"
+      ]
+    },
+    "blackwell": {
+      "online": true,
+      "nvidia_smi": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887, 69, 0, 30",
+      "temp_c": 30,
+      "disk_free_gb": 231.33,
+      "platforms": [
+        "Reference",
+        "CPU",
+        "CUDA",
+        "OpenCL"
+      ]
+    },
+    "blackwell2": {
+      "online": true,
+      "nvidia_smi": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887, 67, 0, 28",
+      "temp_c": 28,
+      "disk_free_gb": 234.11,
+      "platforms": [
+        "Reference",
+        "CPU",
+        "CUDA",
+        "OpenCL"
+      ]
+    }
+  },
+  "systems": [
+    {
+      "key": "ala1",
+      "d": 2,
+      "name": "Alanine Dipeptide",
+      "status": "COMPLETED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 150.0
+    },
+    {
+      "key": "ala2",
+      "d": 4,
+      "name": "Alanine Tripeptide",
+      "status": "COMPLETED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 150.0
+    },
+    {
+      "key": "chignolin",
+      "d": 18,
+      "name": "Chignolin beta-hairpin",
+      "status": "COMPLETED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 150.0
+    },
+    {
+      "key": "trpcage",
+      "d": 38,
+      "name": "Trp-cage Folded Mini-Protein",
+      "status": "COMPLETED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 50.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": true,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 150.0
+    },
+    {
+      "key": "bba",
+      "d": 54,
+      "name": "BBA Mini-Protein",
+      "status": "IN_PROGRESS",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 10.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 10.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 10.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 30.0
+    },
+    {
+      "key": "villin",
+      "d": 68,
+      "name": "Villin Headpiece HP35",
+      "status": "IN_PROGRESS",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 10.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 10.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 10.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 30.0
+    },
+    {
+      "key": "ww_domain",
+      "d": 64,
+      "name": "Pin1 WW Domain",
+      "status": "QUEUED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 0.0
+    },
+    {
+      "key": "protein_g",
+      "d": 110,
+      "name": "Protein G B1 Domain",
+      "status": "QUEUED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 0.0
+    },
+    {
+      "key": "protein_l",
+      "d": 114,
+      "name": "Protein L B1 Domain",
+      "status": "QUEUED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 0.0
+    },
+    {
+      "key": "ubiquitin",
+      "d": 150,
+      "name": "Ubiquitin",
+      "status": "QUEUED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 30.0
+    },
+    {
+      "key": "barnase",
+      "d": 218,
+      "name": "Barnase Ribonuclease",
+      "status": "IN_PROGRESS",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 10.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 10.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 10.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 60.0
+    },
+    {
+      "key": "lysozyme",
+      "d": 256,
+      "name": "T4 / Hen Egg Lysozyme",
+      "status": "QUEUED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 30.0
+    },
+    {
+      "key": "dhfr",
+      "d": 316,
+      "name": "Dihydrofolate Reductase",
+      "status": "QUEUED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 10.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 30.0
+    },
+    {
+      "key": "t4_lysozyme",
+      "d": 426,
+      "name": "T4 Lysozyme L99A",
+      "status": "QUEUED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 0.0
+    },
+    {
+      "key": "hsp90",
+      "d": 738,
+      "name": "Hsp90 N-terminal Domain",
+      "status": "QUEUED",
+      "replicas": {
+        "rep1": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep2": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        },
+        "rep3": {
+          "implicit_ns": 0.0,
+          "explicit_ns": 0.0,
+          "is_complete_implicit": false,
+          "is_complete_explicit": false
+        }
+      },
+      "total_ns_done": 0.0
+    }
+  ],
+  "recent_events": [
+    "[02:11:18] Verified mbp rep3 chunk0 (176 ns/day) SHA: 0cef6dcc...",
+    "[01:40:17] Verified barnase rep3 chunk0 (1700 ns/day) SHA: a6aa15ff...",
+    "[01:32:48] Verified bpti rep3 chunk0 (2064 ns/day) SHA: f00aa400...",
+    "[01:16:38] Verified mbp rep2 chunk0 (176 ns/day) SHA: efc71970...",
+    "[01:09:46] Verified bpti rep2 chunk0 (2051 ns/day) SHA: d11736e8...",
+    "[00:58:33] Verified barnase rep2 chunk0 (1725 ns/day) SHA: e1c95d90..."
+  ]
+}

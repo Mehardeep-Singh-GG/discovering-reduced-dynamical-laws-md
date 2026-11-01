@@ -1,0 +1,716 @@
+{
+  "milestone": "M32_Law2_Sequence_Contact_Coupling_and_Sparsity",
+  "n_systems_verified": 15,
+  "systems": {
+    "ala1": {
+      "d": 2,
+      "name": "Alanine Dipeptide (ACE-Ala-NME)",
+      "solvent": "implicit_gbn2",
+      "noise_floor": {
+        "mean_abs_R": 0.004364227031019078,
+        "p95": 0.004364227031019078,
+        "p99": 0.004364227031019078
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.13423252149693532,
+        "R_delta1_peptide_bond_signed": null,
+        "R_delta1_intra_res_signed": -0.13423252149693532,
+        "R_delta1_peptide_bond_abs": null,
+        "R_delta1_intra_res_abs": 0.13423252149693532
+      },
+      "decay_models": {
+        "note": "insufficient points for decay fit"
+      },
+      "contact_gating": null,
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 1.0,
+        "sparsity_negligible_fraction": 0.0,
+        "theoretical_bound": 0.0
+      }
+    },
+    "ala2": {
+      "d": 4,
+      "name": "Trialanine / Capped Ala2 (ACE-Ala-Ala-NME)",
+      "solvent": "implicit_gbn2",
+      "noise_floor": {
+        "mean_abs_R": 0.003693671481603056,
+        "p95": 0.00792032182771297,
+        "p99": 0.008754694213368342
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.007602690900787791,
+        "R_delta1_peptide_bond_signed": 0.1709624351643815,
+        "R_delta1_intra_res_signed": -0.09688525393337244,
+        "R_delta1_peptide_bond_abs": 0.1709624351643815,
+        "R_delta1_intra_res_abs": 0.09688525393337244
+      },
+      "decay_models": {
+        "note": "insufficient points for decay fit"
+      },
+      "contact_gating": null,
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 1.5,
+        "sparsity_negligible_fraction": 0.5,
+        "theoretical_bound": 0.5
+      }
+    },
+    "chignolin": {
+      "d": 18,
+      "name": "Chignolin (1UAO)",
+      "solvent": "implicit_gbn2",
+      "noise_floor": {
+        "mean_abs_R": 0.004670989401390451,
+        "p95": 0.011204006287500394,
+        "p99": 0.014561527262702673
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.3505466484903653,
+        "R_delta1_peptide_bond_signed": -0.5119068210514557,
+        "R_delta1_intra_res_signed": -0.16901645435913853,
+        "R_delta1_peptide_bond_abs": 0.5119068210514557,
+        "R_delta1_intra_res_abs": 0.1870852219142818
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 2.8178399921153967,
+          "xi": 0.4819063761778965,
+          "wrss": 0.017195386339413282,
+          "aic": -113.23756769178212,
+          "aicc": -112.38042483463926
+        },
+        "power_law": {
+          "B": 0.34895804888903054,
+          "beta": 2.2052390715820165,
+          "wrss": 0.01542170531584712,
+          "aic": -115.08827538740837,
+          "aicc": -114.23113253026551
+        },
+        "delta_aicc_pow_minus_exp": -1.8507076956262551
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 21,
+        "enrichment_ratio": 3.008506230555815,
+        "spearman_coupling_vs_contact_prob": 0.6402597402597403,
+        "spearman_coupling_vs_inv_distance": 0.6662337662337662,
+        "partial_spearman_contact_given_seq": 0.7118059950745329,
+        "partial_p_value": 0.0002957688463377321,
+        "partial_spearman_inv_dist_given_seq": 0.7834289788741844,
+        "partial_p_inv_dist": 2.6653400320983354e-05,
+        "mean_dynamic_susceptibility_chi": 0.11021930739573868
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 4.8889,
+        "sparsity_negligible_fraction": 0.71242,
+        "theoretical_bound": 0.71242
+      }
+    },
+    "trpcage": {
+      "d": 38,
+      "name": "Trp-cage TC5b (1L2Y)",
+      "solvent": "implicit_gbn2",
+      "noise_floor": {
+        "mean_abs_R": 0.004438905917245174,
+        "p95": 0.010823347824103591,
+        "p99": 0.01432628065077006
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.4026055785372905,
+        "R_delta1_peptide_bond_signed": -0.4689983694930821,
+        "R_delta1_intra_res_signed": -0.332524299195066,
+        "R_delta1_peptide_bond_abs": 0.4689983694930821,
+        "R_delta1_intra_res_abs": 0.332524299195066
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 2.990939997594858,
+          "xi": 0.49535123002660325,
+          "wrss": 0.007139006422871194,
+          "aic": -246.30137151309725,
+          "aicc": -245.8569270686528
+        },
+        "power_law": {
+          "B": 0.39383301416223715,
+          "beta": 2.3033326212746323,
+          "wrss": 0.004884478677095495,
+          "aic": -257.68670299895336,
+          "aicc": -257.2422585545089
+        },
+        "delta_aicc_pow_minus_exp": -11.385331485856113
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 136,
+        "enrichment_ratio": 1.8281979584727308,
+        "spearman_coupling_vs_contact_prob": 0.2592959182562113,
+        "spearman_coupling_vs_inv_distance": 0.41427412814274134,
+        "partial_spearman_contact_given_seq": 0.22329162438339378,
+        "partial_p_value": 0.008973869326712838,
+        "partial_spearman_inv_dist_given_seq": 0.33952071336225625,
+        "partial_p_inv_dist": 5.261436924564468e-05,
+        "mean_dynamic_susceptibility_chi": 0.06017001481107777
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 5.3684,
+        "sparsity_negligible_fraction": 0.85491,
+        "theoretical_bound": 0.85491
+      }
+    },
+    "bba": {
+      "d": 54,
+      "name": "BBA5 Mini-Protein (1FME)",
+      "solvent": "implicit_gbn2",
+      "noise_floor": {
+        "mean_abs_R": 0.00547666323353533,
+        "p95": 0.013290480545234462,
+        "p99": 0.017666501956875455
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.41855296618175286,
+        "R_delta1_peptide_bond_signed": -0.6046782065666707,
+        "R_delta1_intra_res_signed": -0.22526906270510733,
+        "R_delta1_peptide_bond_abs": 0.6046782065666707,
+        "R_delta1_intra_res_abs": 0.22526906270510733
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 4.145470424991185,
+          "xi": 0.4334643781654205,
+          "wrss": 0.0026468578141260065,
+          "aic": -276.06738364097816,
+          "aicc": -275.6229391965337
+        },
+        "power_law": {
+          "B": 0.4119672082646859,
+          "beta": 2.9696363167229483,
+          "wrss": 0.0018965510316374154,
+          "aic": -286.06747011604995,
+          "aicc": -285.6230256716055
+        },
+        "delta_aicc_pow_minus_exp": -10.000086475071782
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 300,
+        "enrichment_ratio": 1.8841165195775236,
+        "spearman_coupling_vs_contact_prob": 0.16540170578407923,
+        "spearman_coupling_vs_inv_distance": 0.19630795897732195,
+        "partial_spearman_contact_given_seq": 0.1495383332442871,
+        "partial_p_value": 0.009490297157777647,
+        "partial_spearman_inv_dist_given_seq": 0.20601941863955553,
+        "partial_p_inv_dist": 0.00032805740142164493,
+        "mean_dynamic_susceptibility_chi": 0.04456790442553403
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 4.7037,
+        "sparsity_negligible_fraction": 0.91125,
+        "theoretical_bound": 0.91125
+      }
+    },
+    "villin": {
+      "d": 64,
+      "name": "Villin HP35 (2F4K)",
+      "solvent": "implicit_gbn2",
+      "noise_floor": {
+        "mean_abs_R": 0.005587466008982113,
+        "p95": 0.0137287266249667,
+        "p99": 0.018176875780496468
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.43110752388272294,
+        "R_delta1_peptide_bond_signed": -0.5659662690163878,
+        "R_delta1_intra_res_signed": -0.291898496647972,
+        "R_delta1_peptide_bond_abs": 0.5659662690163878,
+        "R_delta1_intra_res_abs": 0.29375532050000747
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 3.5041378190788395,
+          "xi": 0.47453411773929716,
+          "wrss": 0.003369072227936034,
+          "aic": -268.8294577239801,
+          "aicc": -268.38501327953566
+        },
+        "power_law": {
+          "B": 0.42486807491871176,
+          "beta": 2.727093091686771,
+          "wrss": 0.0023184913134730533,
+          "aic": -280.0410794725089,
+          "aicc": -279.59663502806444
+        },
+        "delta_aicc_pow_minus_exp": -11.211621748528785
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 435,
+        "enrichment_ratio": 1.0714420594002054,
+        "spearman_coupling_vs_contact_prob": 0.22035932697553023,
+        "spearman_coupling_vs_inv_distance": 0.08222402348903762,
+        "partial_spearman_contact_given_seq": 0.24128107029072696,
+        "partial_p_value": 3.519248021285055e-07,
+        "partial_spearman_inv_dist_given_seq": 0.13245251142972397,
+        "partial_p_inv_dist": 0.005661516620604365,
+        "mean_dynamic_susceptibility_chi": 0.03896562576659038
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 4.75,
+        "sparsity_negligible_fraction": 0.9246,
+        "theoretical_bound": 0.9246
+      }
+    },
+    "wwdomain": {
+      "d": 68,
+      "name": "WW Domain FiP35 (2F21)",
+      "solvent": "implicit_gbn2",
+      "noise_floor": {
+        "mean_abs_R": 0.0055754375661877294,
+        "p95": 0.013657470820079287,
+        "p99": 0.018155098402542216
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.38608907828271405,
+        "R_delta1_peptide_bond_signed": -0.6159186392574223,
+        "R_delta1_intra_res_signed": -0.1492949851572572,
+        "R_delta1_peptide_bond_abs": 0.6159186392574223,
+        "R_delta1_intra_res_abs": 0.16977719255254892
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 1.9693888215987472,
+          "xi": 0.6165178501110062,
+          "wrss": 0.006188714019381764,
+          "aic": -250.5867604052777,
+          "aicc": -250.14231596083323
+        },
+        "power_law": {
+          "B": 0.3865866374301568,
+          "beta": 2.104510460645934,
+          "wrss": 0.0038200598394474324,
+          "aic": -265.06059720115053,
+          "aicc": -264.6161527567061
+        },
+        "delta_aicc_pow_minus_exp": -14.473836795872842
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 496,
+        "enrichment_ratio": 2.5127853034616354,
+        "spearman_coupling_vs_contact_prob": 0.4377797474922409,
+        "spearman_coupling_vs_inv_distance": 0.5179816926977309,
+        "partial_spearman_contact_given_seq": 0.4517532948875068,
+        "partial_p_value": 2.577573942359011e-26,
+        "partial_spearman_inv_dist_given_seq": 0.5306945505486504,
+        "partial_p_inv_dist": 2.212114518885555e-37,
+        "mean_dynamic_susceptibility_chi": 0.013744116965763158
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 6.8235,
+        "sparsity_negligible_fraction": 0.89816,
+        "theoretical_bound": 0.89816
+      }
+    },
+    "gb1": {
+      "d": 110,
+      "name": "GB1 Domain (1PGA)",
+      "solvent": "implicit_obc2_v3",
+      "noise_floor": {
+        "mean_abs_R": 0.011131025889122941,
+        "p95": 0.027247090221416838,
+        "p99": 0.03606623935385364
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.3982799197076098,
+        "R_delta1_peptide_bond_signed": -0.6407823702217996,
+        "R_delta1_intra_res_signed": -0.15128668307278692,
+        "R_delta1_peptide_bond_abs": 0.6407823702217996,
+        "R_delta1_intra_res_abs": 0.18108640683138158
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 2.5210104958298873,
+          "xi": 0.5438033870744651,
+          "wrss": 0.0037197339420397967,
+          "aic": -265.8590154762208,
+          "aicc": -265.41457103177635
+        },
+        "power_law": {
+          "B": 0.399509558238455,
+          "beta": 2.4038667773522246,
+          "wrss": 0.00209081313513685,
+          "aic": -283.1419883137295,
+          "aicc": -282.697543869285
+        },
+        "delta_aicc_pow_minus_exp": -17.28297283750868
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 1378,
+        "enrichment_ratio": 3.0498050122600238,
+        "spearman_coupling_vs_contact_prob": 0.35498237783020414,
+        "spearman_coupling_vs_inv_distance": 0.23605729872878048,
+        "partial_spearman_contact_given_seq": 0.35489530097060207,
+        "partial_p_value": 3.605947981965957e-42,
+        "partial_spearman_inv_dist_given_seq": 0.23594062770366625,
+        "partial_p_inv_dist": 6.924087148249985e-19,
+        "mean_dynamic_susceptibility_chi": 0.0108952599434898
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 7.8727,
+        "sparsity_negligible_fraction": 0.92777,
+        "theoretical_bound": 0.92777
+      }
+    },
+    "bpti": {
+      "d": 114,
+      "name": "BPTI (5PTI)",
+      "solvent": "implicit_gbn2",
+      "noise_floor": {
+        "mean_abs_R": 0.005553506472375898,
+        "p95": 0.013559768420196763,
+        "p99": 0.017861953426342822
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.3961025158951726,
+        "R_delta1_peptide_bond_signed": -0.6227185281214136,
+        "R_delta1_intra_res_signed": -0.1654397891648917,
+        "R_delta1_peptide_bond_abs": 0.6227185281214136,
+        "R_delta1_intra_res_abs": 0.19113689557578922
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 2.3869163312655006,
+          "xi": 0.5615377684415163,
+          "wrss": 0.0037077589312546236,
+          "aic": -265.955750846004,
+          "aicc": -265.5113064015595
+        },
+        "power_law": {
+          "B": 0.4008521334790056,
+          "beta": 2.3504282575002464,
+          "wrss": 0.002017216657152606,
+          "aic": -284.2170197569003,
+          "aicc": -283.77257531245584
+        },
+        "delta_aicc_pow_minus_exp": -18.26126891089632
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 1485,
+        "enrichment_ratio": 2.2162189933558123,
+        "spearman_coupling_vs_contact_prob": 0.23336338009007027,
+        "spearman_coupling_vs_inv_distance": 0.13747393288011384,
+        "partial_spearman_contact_given_seq": 0.23329184399002656,
+        "partial_p_value": 8.355983570630739e-20,
+        "partial_spearman_inv_dist_given_seq": 0.13667104268546001,
+        "partial_p_inv_dist": 1.2426683824464567e-07,
+        "mean_dynamic_susceptibility_chi": 0.016843032473672213
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 6.3333,
+        "sparsity_negligible_fraction": 0.94395,
+        "theoretical_bound": 0.94395
+      }
+    },
+    "ubiquitin": {
+      "d": 150,
+      "name": "Human Ubiquitin (1UBQ)",
+      "solvent": "implicit_obc2_v3",
+      "noise_floor": {
+        "mean_abs_R": 0.011141638230356531,
+        "p95": 0.027362884638682406,
+        "p99": 0.03591157988045242
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.4058878038864762,
+        "R_delta1_peptide_bond_signed": -0.6132079803392014,
+        "R_delta1_intra_res_signed": -0.19576600342763323,
+        "R_delta1_peptide_bond_abs": 0.6132079803392014,
+        "R_delta1_intra_res_abs": 0.22589237368904067
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 2.9523634122321503,
+          "xi": 0.5059347025016981,
+          "wrss": 0.0031379252304783475,
+          "aic": -270.9617250123022,
+          "aicc": -270.51728056785777
+        },
+        "power_law": {
+          "B": 0.40794464582835305,
+          "beta": 2.5888354219260443,
+          "wrss": 0.0019506387875352859,
+          "aic": -285.2238727508276,
+          "aicc": -284.7794283063831
+        },
+        "delta_aicc_pow_minus_exp": -14.262147738525357
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 2628,
+        "enrichment_ratio": 2.6811703221879224,
+        "spearman_coupling_vs_contact_prob": 0.28439860449574667,
+        "spearman_coupling_vs_inv_distance": 0.2148908649344174,
+        "partial_spearman_contact_given_seq": 0.28095255136470976,
+        "partial_p_value": 7.165708762985278e-49,
+        "partial_spearman_inv_dist_given_seq": 0.2086752614347025,
+        "partial_p_inv_dist": 3.0307450779410458e-27,
+        "mean_dynamic_susceptibility_chi": 0.006664313654909215
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 7.9467,
+        "sparsity_negligible_fraction": 0.94667,
+        "theoretical_bound": 0.94667
+      }
+    },
+    "barnase": {
+      "d": 218,
+      "name": "Barnase (1BNI)",
+      "solvent": "implicit_gbn2",
+      "noise_floor": {
+        "mean_abs_R": 0.0055684411702883125,
+        "p95": 0.013680493353398026,
+        "p99": 0.01800933332431461
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.4001308387387768,
+        "R_delta1_peptide_bond_signed": -0.6141383966226809,
+        "R_delta1_intra_res_signed": -0.18414172939298445,
+        "R_delta1_peptide_bond_abs": 0.6141383966226809,
+        "R_delta1_intra_res_abs": 0.20749193488077686
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 2.2713485803562725,
+          "xi": 0.5798778963488165,
+          "wrss": 0.0036849363031695474,
+          "aic": -266.1409826176418,
+          "aicc": -265.6965381731973
+        },
+        "power_law": {
+          "B": 0.40352700096274297,
+          "beta": 2.2896299191551575,
+          "wrss": 0.0018091051886123647,
+          "aic": -287.4836092562166,
+          "aicc": -287.03916481177214
+        },
+        "delta_aicc_pow_minus_exp": -21.342626638574814
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 5671,
+        "enrichment_ratio": 1.7941691871826733,
+        "spearman_coupling_vs_contact_prob": 0.18673806712975746,
+        "spearman_coupling_vs_inv_distance": 0.0834777727447458,
+        "partial_spearman_contact_given_seq": 0.15748584876488442,
+        "partial_p_value": 8.105398686569254e-33,
+        "partial_spearman_inv_dist_given_seq": 0.04775832223759231,
+        "partial_p_inv_dist": 0.0003209815483765673,
+        "mean_dynamic_susceptibility_chi": 0.007593580047233581
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 6.6239,
+        "sparsity_negligible_fraction": 0.96948,
+        "theoretical_bound": 0.96948
+      }
+    },
+    "lysozyme": {
+      "d": 256,
+      "name": "HEWL Lysozyme (1AKI)",
+      "solvent": "explicit_pme",
+      "noise_floor": {
+        "mean_abs_R": 0.0055464735943415305,
+        "p95": 0.01360512565220467,
+        "p99": 0.017831779922409655
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.45540447617949265,
+        "R_delta1_peptide_bond_signed": -0.6423601285001621,
+        "R_delta1_intra_res_signed": -0.2669767321082669,
+        "R_delta1_peptide_bond_abs": 0.6423601285001621,
+        "R_delta1_intra_res_abs": 0.2844742526301426
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 3.9435179323549137,
+          "xi": 0.46451891444896026,
+          "wrss": 0.0033661571504182107,
+          "aic": -268.855426351352,
+          "aicc": -268.4109819069075
+        },
+        "power_law": {
+          "B": 0.4570422911799271,
+          "beta": 2.7874877806157476,
+          "wrss": 0.0022187909484149924,
+          "aic": -281.3597069284804,
+          "aicc": -280.91526248403596
+        },
+        "delta_aicc_pow_minus_exp": -12.50428057712844
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 7875,
+        "enrichment_ratio": 2.384645281861156,
+        "spearman_coupling_vs_contact_prob": 0.2137906119106908,
+        "spearman_coupling_vs_inv_distance": 0.09996019853995257,
+        "partial_spearman_contact_given_seq": 0.19373656899237301,
+        "partial_p_value": 1.8285521989188e-67,
+        "partial_spearman_inv_dist_given_seq": 0.06938151411670365,
+        "partial_p_inv_dist": 7.117724878669842e-10,
+        "mean_dynamic_susceptibility_chi": 0.0048560052589481486
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 5.4219,
+        "sparsity_negligible_fraction": 0.97874,
+        "theoretical_bound": 0.97874
+      }
+    },
+    "dhfr": {
+      "d": 316,
+      "name": "E. coli DHFR (1RX2)",
+      "solvent": "explicit_pme",
+      "noise_floor": {
+        "mean_abs_R": 0.005561387824277488,
+        "p95": 0.013671170213766756,
+        "p99": 0.017959164890162565
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.3980491471333847,
+        "R_delta1_peptide_bond_signed": -0.6627198414465724,
+        "R_delta1_intra_res_signed": -0.13169265221947613,
+        "R_delta1_peptide_bond_abs": 0.6703905002184175,
+        "R_delta1_intra_res_abs": 0.20376978907608131
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 3.7516025970000593,
+          "xi": 0.4625211647387814,
+          "wrss": 0.002939592021522895,
+          "aic": -272.9204557133717,
+          "aicc": -272.47601126892727
+        },
+        "power_law": {
+          "B": 0.4308167322943232,
+          "beta": 2.794900544327301,
+          "wrss": 0.0018855269809475432,
+          "aic": -286.24235939978166,
+          "aicc": -285.7979149553372
+        },
+        "delta_aicc_pow_minus_exp": -13.32190368640994
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 12090,
+        "enrichment_ratio": 2.46271450064693,
+        "spearman_coupling_vs_contact_prob": 0.22465665711186106,
+        "spearman_coupling_vs_inv_distance": 0.18137507037143324,
+        "partial_spearman_contact_given_seq": 0.22234574535533136,
+        "partial_p_value": 2.6784897874413227e-135,
+        "partial_spearman_inv_dist_given_seq": 0.17806531389906863,
+        "partial_p_inv_dist": 1.080047236985354e-86,
+        "mean_dynamic_susceptibility_chi": 0.0030858644965685448
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 6.2089,
+        "sparsity_negligible_fraction": 0.98029,
+        "theoretical_bound": 0.98029
+      }
+    },
+    "adk": {
+      "d": 426,
+      "name": "Adenylate Kinase Open (4AKE)",
+      "solvent": "explicit_pme",
+      "noise_floor": {
+        "mean_abs_R": 0.005554738826567878,
+        "p95": 0.013643688939456347,
+        "p99": 0.017940231785406234
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.4417286446117481,
+        "R_delta1_peptide_bond_signed": -0.635480589665117,
+        "R_delta1_intra_res_signed": -0.24706277528925938,
+        "R_delta1_peptide_bond_abs": 0.6404502418777293,
+        "R_delta1_intra_res_abs": 0.27840198447958997
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 4.861950920361957,
+          "xi": 0.4217464921756372,
+          "wrss": 0.0028534233509566287,
+          "aic": -273.81299634271767,
+          "aicc": -273.3685518982732
+        },
+        "power_law": {
+          "B": 0.4532425079741459,
+          "beta": 3.054844017361925,
+          "wrss": 0.002070798522888637,
+          "aic": -283.430551037109,
+          "aicc": -282.98610659266456
+        },
+        "delta_aicc_pow_minus_exp": -9.617554694391345
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 22155,
+        "enrichment_ratio": 1.7383624567556861,
+        "spearman_coupling_vs_contact_prob": 0.12193283449362075,
+        "spearman_coupling_vs_inv_distance": 0.21404786140381052,
+        "partial_spearman_contact_given_seq": 0.13554939186109932,
+        "partial_p_value": 2.44517990705149e-91,
+        "partial_spearman_inv_dist_given_seq": 0.2408781006006203,
+        "partial_p_inv_dist": 6.430676748541026e-290,
+        "mean_dynamic_susceptibility_chi": 0.002978749497045537
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 5.277,
+        "sparsity_negligible_fraction": 0.98758,
+        "theoretical_bound": 0.98758
+      }
+    },
+    "mbp": {
+      "d": 738,
+      "name": "Maltose-Binding Protein Open (1OMP)",
+      "solvent": "explicit_pme",
+      "noise_floor": {
+        "mean_abs_R": 0.005568634071243472,
+        "p95": 0.013675807507332377,
+        "p99": 0.017942227799757467
+      },
+      "crankshaft_parity": {
+        "R_delta1_signed_overall": -0.43577383382383644,
+        "R_delta1_peptide_bond_signed": -0.6426960287449314,
+        "R_delta1_intra_res_signed": -0.22828935032958644,
+        "R_delta1_peptide_bond_abs": 0.6426960287449314,
+        "R_delta1_intra_res_abs": 0.26110558260439515
+      },
+      "decay_models": {
+        "exponential": {
+          "A": 4.227521645087905,
+          "xi": 0.4447312633955368,
+          "wrss": 0.0027989750627880326,
+          "aic": -274.39098078439093,
+          "aicc": -273.9465363399465
+        },
+        "power_law": {
+          "B": 0.445391558672838,
+          "beta": 2.920365543932783,
+          "wrss": 0.0019124715038196418,
+          "aic": -285.8166882200099,
+          "aicc": -285.37224377556544
+        },
+        "delta_aicc_pow_minus_exp": -11.42570743561896
+      },
+      "contact_gating": {
+        "n_nonlocal_pairs": 67161,
+        "enrichment_ratio": 1.5818652811608127,
+        "spearman_coupling_vs_contact_prob": 0.07926073824333783,
+        "spearman_coupling_vs_inv_distance": 0.09599136697397563,
+        "partial_spearman_contact_given_seq": 0.07693890249281972,
+        "partial_p_value": 1.039604097257254e-88,
+        "partial_spearman_inv_dist_given_seq": 0.0925084309004239,
+        "partial_p_inv_dist": 1.5222511146105689e-127,
+        "mean_dynamic_susceptibility_chi": 0.002149711993377734
+      },
+      "sparsity_eps_0.05": {
+        "k_eff_mean_partners": 5.4173,
+        "sparsity_negligible_fraction": 0.99265,
+        "theoretical_bound": 0.99265
+      }
+    }
+  },
+  "universal_summary": {
+    "proteins_mean_peptide_crankshaft_R": -0.6032,
+    "proteins_std_peptide_crankshaft_R": 0.0538,
+    "proteins_mean_intra_residue_R": -0.2107,
+    "proteins_mean_k_eff_eps005": 5.972,
+    "min_protein_sparsity_pct": 71.24,
+    "max_protein_sparsity_pct": 99.26
+  }
+}

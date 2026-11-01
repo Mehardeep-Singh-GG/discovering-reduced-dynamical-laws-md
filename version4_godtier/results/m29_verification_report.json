@@ -1,0 +1,124 @@
+{
+  "milestone": "M29",
+  "timestamp_utc": "2026-10-27T11:45:21Z",
+  "gates": {
+    "M29_G1_15_system_dimensions": {
+      "status": "PASS",
+      "n_systems": 15,
+      "dimensions_d": [
+        2,
+        4,
+        18,
+        38,
+        54,
+        64,
+        68,
+        110,
+        114,
+        150,
+        218,
+        256,
+        316,
+        426,
+        738
+      ]
+    },
+    "M29_G2_v3_backward_compatibility": {
+      "status": "PASS",
+      "verified_identical_sha256": {
+        "ala1": "f08fd39875964c77f9a0f0b10fa6f5b57099eeac58b23e0f24d9d38e9fdc6a0d",
+        "ala2": "967dd11e64a89d7b315fc286cd253d7446f47eb771a347f2300dca1f9770a668",
+        "chignolin": "428c6c8624530627aa486fd162cee30e6b2620a5b66a657d4f8ddcf89f88bb91",
+        "trpcage": "e1dbfe36d843938ab14d7f2b049c98eda47e273a1feb1f1bb9c23630e164f1e6",
+        "villin": "63bd05279c073225a344045ef71dbe2d141edd7c7803e447fd30cea86e28a6c5",
+        "gb1": "7f14ae75384b9ba5b6680c8a4c5388f2a0a231e79198e0b36ee567e3bfc8af11",
+        "ubiquitin": "f042ab5dc2923ea7f32fd5f14dc1c9acf7518466f2fd4a89ff906e3568385fe2"
+      }
+    },
+    "M29_G3_disulfide_topology": {
+      "status": "PASS",
+      "bpti_5PTI_bridges_nm": [
+        [
+          5,
+          55,
+          0.203
+        ],
+        [
+          14,
+          38,
+          0.2029
+        ],
+        [
+          30,
+          51,
+          0.2023
+        ]
+      ],
+      "lysozyme_1AKI_bridges_nm": [
+        [
+          6,
+          127,
+          0.2033
+        ],
+        [
+          30,
+          115,
+          0.203
+        ],
+        [
+          64,
+          80,
+          0.2038
+        ],
+        [
+          76,
+          94,
+          0.204
+        ]
+      ]
+    },
+    "M29_G4_allosteric_reference_pairs": {
+      "status": "PASS",
+      "pairs": {
+        "gb1": {
+          "alt_pdb": "version4_godtier/structures/gb1_3GB1_alt.pdb",
+          "ca_rmsd_open_vs_closed_nm": 0.0529
+        },
+        "ubiquitin": {
+          "alt_pdb": "version4_godtier/structures/ubiquitin_1D3Z_alt.pdb",
+          "ca_rmsd_open_vs_closed_nm": 0.0524
+        },
+        "dhfr": {
+          "alt_pdb": "version4_godtier/structures/dhfr_1RA1_alt.pdb",
+          "ca_rmsd_open_vs_closed_nm": 0.0871
+        },
+        "adk": {
+          "alt_pdb": "version4_godtier/structures/adk_1AKE_closed_ref.pdb",
+          "ca_rmsd_open_vs_closed_nm": 0.7142
+        },
+        "mbp": {
+          "alt_pdb": "version4_godtier/structures/mbp_1ANF_closed_ref.pdb",
+          "ca_rmsd_open_vs_closed_nm": 0.3772
+        }
+      }
+    },
+    "M29_G5_live_bridge_smoke_test": {
+      "status": "PASS",
+      "n_chunks_stitched": 2,
+      "stitched_shape": [
+        8,
+        2
+      ],
+      "times_ps": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0
+      ]
+    }
+  }
+}
